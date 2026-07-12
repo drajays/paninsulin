@@ -480,6 +480,45 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
       <text x="277.5" y="161" fontSize="6.5" textAnchor="middle" fill="#64748b">Timestamp Log</text>
     </g>
   );
+  else if (kind === 'bleedingafterinjection') art = (
+    <g>
+      {/* Panel 1: Microscopic Capillary Network Nick */}
+      <rect x="15" y="25" width="65" height="145" rx="5" fill="#fff1f2" stroke="#e11d48" strokeWidth="1.5" />
+      <path d="M 25 70 C 45 65, 60 75, 75 68" fill="none" stroke="#f43f5e" strokeWidth="2" strokeDasharray="2,2" />
+      <line x1="47.5" y1="35" x2="47.5" y2="72" stroke="#0284c7" strokeWidth="2.5" />
+      <circle cx="47.5" cy="45" r="4" fill="#e11d48" />
+      <text x="47.5" y="140" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#9f1239">1. Capillary Nick</text>
+      <text x="47.5" y="152" fontSize="6.5" textAnchor="middle" fill="#64748b">Invisible Microvessel</text>
+      <text x="47.5" y="162" fontSize="6" textAnchor="middle" fill="#64748b">Blood Follows Needle</text>
+
+      {/* Panel 2: Immediate Care - Gentle Pressure 5-10s */}
+      <rect x="90" y="25" width="65" height="145" rx="5" fill="#f0fdf4" stroke="#16a34a" strokeWidth="1.5" />
+      <rect x="110" y="50" width="25" height="18" rx="4" fill="#ffffff" stroke="#16a34a" strokeWidth="1.5" />
+      <text x="122.5" y="62" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#15803d">5-10s</text>
+      <text x="122.5" y="140" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#15803d">2. Gentle Press</text>
+      <text x="122.5" y="152" fontSize="6.5" textAnchor="middle" fill="#16a34a">Clean Tissue/Cotton</text>
+      <text x="122.5" y="162" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#dc2626">DO NOT RUB</text>
+
+      {/* Panel 3: Do Not Redose Warning */}
+      <rect x="165" y="25" width="65" height="145" rx="5" fill="#fef2f2" stroke="#dc2626" strokeWidth="1.5" />
+      <circle cx="197.5" cy="65" r="16" fill="#fee2e2" stroke="#dc2626" strokeWidth="1.5" />
+      <text x="197.5" y="69" fontSize="11" fontWeight="bold" textAnchor="middle" fill="#dc2626">STOP</text>
+      <text x="197.5" y="140" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#b91c1c">3. Do NOT Redose</text>
+      <text x="197.5" y="152" fontSize="6.5" textAnchor="middle" fill="#64748b">Dose Still Absorbed</text>
+      <text x="197.5" y="162" fontSize="6" textAnchor="middle" fill="#dc2626">Avoid Hypoglycemia</text>
+
+      {/* Panel 4: 5 Prevention Steps */}
+      <rect x="240" y="25" width="65" height="145" rx="5" fill="#eff6ff" stroke="#2563eb" strokeWidth="1.5" />
+      <text x="272.5" y="48" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#1d4ed8">• Fresh 4mm Needle</text>
+      <text x="272.5" y="64" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#1d4ed8">• Pull Out Straight</text>
+      <text x="272.5" y="80" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#1d4ed8">• No Wiggle/Twist</text>
+      <text x="272.5" y="96" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#1d4ed8">• Rotate Site</text>
+      <text x="272.5" y="112" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#1d4ed8">• Inspect Skin</text>
+      <text x="272.5" y="140" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#1e40af">4. Prevention</text>
+      <text x="272.5" y="152" fontSize="6.5" textAnchor="middle" fill="#64748b">Minimizes Bruising</text>
+      <text x="272.5" y="162" fontSize="6" textAnchor="middle" fill="#2563eb">Smooth Tissue Entry</text>
+    </g>
+  );
   else if (kind === 'atlas' || kind === 'regimens') art = (
     <g>
       <rect x="40" y="30" width="240" height="130" rx="6" fill="#fffbeb" stroke="#f59e0b" strokeWidth="1.5" />

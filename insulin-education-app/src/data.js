@@ -439,6 +439,31 @@ export const modules = [
         "id": "2-61",
         "question": "How do connected smart insulin pens improve clinical decision-making and glycemic optimization?",
         "answer": "Smart insulin pens (or connected pen caps) record the exact timestamp and unit dose of every insulin injection delivered. This objective dosing log allows clinicians and patients to differentiate between true insulin resistance versus missed basal doses, insulin stacking, or dose omission, leading to safer and more precise therapy optimization."
+      },
+      {
+        "id": "2-62",
+        "question": "Why does a drop of blood occasionally appear at the injection site even with correct 90-degree technique?",
+        "answer": "Right beneath the surface of your skin lies a rich, microscopic dermal capillary network. Because these tiny capillary vessels are invisible from the skin surface, even with perfect injection technique a needle will occasionally pass through or nick a capillary. When the needle is withdrawn, a small drop of blood simply follows the needle tract to the skin surface. This is common and harmless, and does not indicate an intramuscular or intravenous injection."
+      },
+      {
+        "id": "2-63",
+        "question": "What should a patient do immediately if they see a drop of blood after withdrawing the needle?",
+        "answer": "Do not panic; apply gentle, light pressure over the injection site using a clean tissue, dry swab, or cotton ball for 5 to 10 seconds until the bleeding stops."
+      },
+      {
+        "id": "2-64",
+        "question": "Why must patients avoid rubbing or massaging an injection site that bleeds?",
+        "answer": "Rubbing or massaging the injection site accelerates subcutaneous local blood flow, which can cause the insulin to be absorbed too rapidly (increasing unpredictable hypoglycemia risk) and can worsen local subcutaneous bruising."
+      },
+      {
+        "id": "2-65",
+        "question": "Should a patient administer an extra or replacement dose if a small droplet of blood or insulin appears at the skin surface?",
+        "answer": "No. Never administer an extra dose. Even if a tiny bit of clear insulin fluid mixes with the blood droplet at the skin surface, the subcutaneous tissue still absorbed the vast majority of the dose. Taking extra insulin carries a severe risk of hypoglycemia."
+      },
+      {
+        "id": "2-66",
+        "question": "What five clinical practices minimize the frequency of bleeding and bruising after insulin injection?",
+        "answer": "(1) Use a fresh single-use needle every time (reused needles develop dull, bent, jagged micro-burrs that tear tissue and capillaries); (2) Use a shorter 4 mm pen needle to stay safely within subcutaneous fat and avoid deeper vessels; (3) Pull the needle straight out at the exact same 90-degree angle of entry (wiggling or twisting slices adjacent capillaries); (4) Rotate injection sites systematically (1–2 finger-widths away from previous sites); and (5) Inspect the skin prior to injection to avoid visible surface veins, bruises, lumpy tissue, or stretch marks."
       }
     ],
     "kind": "insulin",
