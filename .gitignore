@@ -28,6 +28,7 @@ pnpm-debug.log*
 !.env.example
 
 # Generated artifacts (source of truth is insulin_education_module.md)
+noupload/
 insulin_education_module.docx
 part1.md
 part2.md

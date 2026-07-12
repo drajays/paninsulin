@@ -33,7 +33,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outl
   * { transition-duration: .001ms !important; animation-duration: .001ms !important; }
 }
 
-.app { min-height: 100vh; background: var(--canvas); display: flex; }
+.app { min-height: 100vh; background: var(--canvas); color: var(--ink); display: flex; }
 .app.dark {
   --ink: #f5f5f7;
   --ink-soft: #c7c7cc;
@@ -180,7 +180,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outl
 .challenge-card p, .care-card p { color: var(--muted); font-size: 12px; line-height: 1.5; margin: 0 0 14px; }
 .small-button { padding: 0 18px; color: #fff; background: #dc2626; }
 .small-button:hover { background: #c31c1c; }
-.care-card { background: linear-gradient(135deg, #fff3fa, var(--surface)); align-items: flex-start; }
+.care-card { align-items: flex-start; }
 .care-icon { width: 34px; height: 34px; border-radius: 50%; background: #ffe1ef; color: #db2777; display: grid; place-items: center; flex-shrink: 0; }
 
 .module-hero { background: var(--surface); border-radius: var(--radius-lg); min-height: 260px; color: var(--ink); display: flex; overflow: hidden; position: relative; box-shadow: var(--shadow); border-top: 4px solid var(--accent); }

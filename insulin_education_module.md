@@ -23,7 +23,9 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 9. Long-term complications of diabetes  
 10. Diabetes and your sentiments  
 11. Some suggestions for travel  
-12. Diabetes and pregnancy
+12. Diabetes and pregnancy  
+13. Types of insulin  
+14. Storage of insulin
 
 ---
 
@@ -1004,6 +1006,35 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 **Answer:** No. Even though they deliver the same molecule, insulin glargine, switching between biosimilar brands, devices or manufacturers should only be done with the treating physician's guidance, since device handling, absorption and monitoring needs can differ.
 
 **Evidence anchors:** Manufacturer product labeling (Novo Nordisk, Sanofi, Eli Lilly, Biocon, Wockhardt, Lupin, Mankind Pharma); FDA-approved US prescribing information (Admelog, Afrezza, Apidra, Fiasp, Humalog, NovoLog, Humulin, Novolin, Basaglar, Lantus, Levemir, Toujeo, Tresiba, Ryzodeg, KwikPen, Lyumjev); ADA Standards of Care 2026, insulin therapy section; CDSCO Schedule H1 prescription drug rules.
+
+---
+
+# 14. Storage of insulin
+
+**Learning focus:** Understand how to properly store unopened and in-use insulin vials, cartridges and disposable pens, protect insulin from temperature extremes and know when to discard unused insulin.
+
+### 1. How should unopened insulin vials, cartridges, and disposable pens be stored until required for use?
+**Answer:** Insulin vials, cartridges, and disposable pens should be refrigerated at 4 °C (typically between 2 °C and 8 °C in a standard refrigerator) until required for use. Always store them away from the freezer compartment or cooling element so they do not freeze.
+
+### 2. Should cold insulin be injected directly from the refrigerator?
+**Answer:** Ideally, the insulin should be allowed to warm to room temperature before it is injected. Injecting cold insulin directly from the refrigerator can cause discomfort or stinging at the injection site. Taking the vial, cartridge, or pen out a short while before injecting allows it to reach a comfortable room temperature.
+
+### 3. How long can a pen or cartridge be kept at room temperature once it is in use?
+**Answer:** Once a pen or cartridge is in use, it may be kept at room temperature for up to 30 days, following which any residual insulin should be discarded. Protect in-use pens and cartridges from direct sunlight and excessive heat.
+
+### 4. Why should residual insulin be discarded after 30 days at room temperature even if some remains in the pen or cartridge?
+**Answer:** Over time at room temperature, insulin potency gradually declines and preservative effectiveness diminishes. Discarding any residual insulin after 30 days ensures that you always receive full-strength, sterile medication for accurate and predictable blood glucose control.
+
+### 5. Can frozen insulin be thawed and used?
+**Answer:** No. Insulin that has been frozen must never be used, even after it thaws. Freezing breaks down the insulin protein structure, destroying its ability to lower blood glucose safely and predictably.
+
+### 6. Should in-use insulin pens with an attached needle be stored in the refrigerator?
+**Answer:** No. In-use pens should be kept at room temperature with the pen cap securely on and without a needle attached. Storing an in-use pen with a needle attached can allow air bubbles to enter the cartridge or insulin to leak out, which can lead to inaccurate dosing.
+
+### 7. How should insulin be transported when traveling or during hot weather?
+**Answer:** When traveling or outdoors in warm weather, carry insulin in an insulated cooling pouch or thermal bag protected from direct heat and sunlight. Never leave insulin in a parked car or checked airline luggage where temperatures can reach freezing or extreme heat.
+
+**Evidence anchors:** ADA Standards of Care 2026, insulin storage guidelines; manufacturer product labeling and instructions for use for insulin vials, cartridges and disposable pens.
 
 ---
 

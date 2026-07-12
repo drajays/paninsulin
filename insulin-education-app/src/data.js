@@ -1895,6 +1895,73 @@ export const modules = [
       "Switching brands, biosimilars, routes or concentrations without physician guidance",
       "Confusion between similarly named products (e.g., Humalog vs Huminsulin)"
     ]
+  },
+  {
+    "id": 14,
+    "title": "Storage of insulin",
+    "qas": [
+      {
+        "id": "14-1",
+        "question": "How should unopened insulin vials, cartridges, and disposable pens be stored until required for use?",
+        "answer": "Insulin vials, cartridges, and disposable pens should be refrigerated at 4 °C (typically between 2 °C and 8 °C in a standard refrigerator) until required for use. Always store them away from the freezer compartment or cooling element so they do not freeze."
+      },
+      {
+        "id": "14-2",
+        "question": "Should cold insulin be injected directly from the refrigerator?",
+        "answer": "Ideally, the insulin should be allowed to warm to room temperature before it is injected. Injecting cold insulin directly from the refrigerator can cause discomfort or stinging at the injection site. Taking the vial, cartridge, or pen out a short while before injecting allows it to reach a comfortable room temperature."
+      },
+      {
+        "id": "14-3",
+        "question": "How long can a pen or cartridge be kept at room temperature once it is in use?",
+        "answer": "Once a pen or cartridge is in use, it may be kept at room temperature for up to 30 days, following which any residual insulin should be discarded. Protect in-use pens and cartridges from direct sunlight and excessive heat."
+      },
+      {
+        "id": "14-4",
+        "question": "Why should residual insulin be discarded after 30 days at room temperature even if some remains in the pen or cartridge?",
+        "answer": "Over time at room temperature, insulin potency gradually declines and preservative effectiveness diminishes. Discarding any residual insulin after 30 days ensures that you always receive full-strength, sterile medication for accurate and predictable blood glucose control."
+      },
+      {
+        "id": "14-5",
+        "question": "Can frozen insulin be thawed and used?",
+        "answer": "No. Insulin that has been frozen must never be used, even after it thaws. Freezing breaks down the insulin protein structure, destroying its ability to lower blood glucose safely and predictably."
+      },
+      {
+        "id": "14-6",
+        "question": "Should in-use insulin pens with an attached needle be stored in the refrigerator?",
+        "answer": "No. In-use pens should be kept at room temperature with the pen cap securely on and without a needle attached. Storing an in-use pen with a needle attached can allow air bubbles to enter the cartridge or insulin to leak out, which can lead to inaccurate dosing."
+      },
+      {
+        "id": "14-7",
+        "question": "How should insulin be transported when traveling or during hot weather?",
+        "answer": "When traveling or outdoors in warm weather, carry insulin in an insulated cooling pouch or thermal bag protected from direct heat and sunlight. Never leave insulin in a parked car or checked airline luggage where temperatures can reach freezing or extreme heat."
+      }
+    ],
+    "kind": "storage",
+    "short": "Storage of insulin",
+    "tagline": "Keep insulin safe and potent",
+    "accent": "#0284c7",
+    "icon": "❄",
+    "core": true,
+    "learning": [
+      "Refrigerate unopened insulin at 4 °C",
+      "Warm insulin to room temperature before injection",
+      "Discard in-use pens or cartridges after 30 days at room temperature"
+    ],
+    "notes": [
+      "Insulin vials, cartridges, and disposable pens should be refrigerated at 4 °C until required for use. Do not freeze.",
+      "Ideally, insulin should be allowed to warm to room temperature before it is injected to prevent stinging and discomfort.",
+      "Once a pen or cartridge is in use, it may be kept at room temperature for up to 30 days, following which any residual insulin should be discarded."
+    ],
+    "practice": [
+      "Check refrigerator temperature and avoid storing near the cooling element",
+      "Mark the date opened on your in-use pen or cartridge",
+      "Carry insulated cooling pouches when traveling in warm weather"
+    ],
+    "redFlags": [
+      "Insulin exposed to freezing or direct heat/sunlight",
+      "Using in-use pens or cartridges beyond 30 days",
+      "Leaving needles attached to stored pens"
+    ]
   }
 ];
 
