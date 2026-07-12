@@ -399,6 +399,43 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
       <text x="235" y="103" fontSize="7.5" textAnchor="middle" fill="#64748b">Confirms Flow</text>
     </g>
   );
+  else if (kind === 'resuspension') art = (
+    <g>
+      {/* 1. Left: Settled Suspension (NPH/Premix Before Inversion) */}
+      <rect x="25" y="35" width="60" height="110" rx="6" fill="#ffffff" stroke="#475569" strokeWidth="2" />
+      <rect x="27" y="38" width="56" height="70" fill="#f8fafc" />
+      <rect x="27" y="108" width="56" height="35" rx="4" fill="#cbd5e1" />
+      <line x1="27" y1="108" x2="83" y2="108" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="2,2" />
+      <text x="55" y="65" fontSize="7.5" fontWeight="bold" textAnchor="middle" fill="#64748b">Clear Liquid</text>
+      <text x="55" y="125" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#334155">Settled Crystals</text>
+      <text x="55" y="160" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#dc2626">BEFORE</text>
+      <text x="55" y="172" fontSize="7" textAnchor="middle" fill="#64748b">Unmixed Suspension</text>
+
+      {/* 2. Center: Rolling & Inverting Arrows ×10 */}
+      <path d="M 105 75 C 115 50, 145 50, 155 75" fill="none" stroke={accent} strokeWidth="2.5" />
+      <path d="M 155 105 C 145 130, 115 130, 105 105" fill="none" stroke={accent} strokeWidth="2.5" />
+      <circle cx="130" cy="90" r="18" fill="#f0fdf4" stroke={accent} strokeWidth="1.5" />
+      <text x="130" y="87" fontSize="9" fontWeight="bold" textAnchor="middle" fill={accent}>×10</text>
+      <text x="130" y="97" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#15803d">ROLL / INVERT</text>
+      <text x="130" y="160" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#0f766e">GENTLE MOTION</text>
+      <text x="130" y="172" fontSize="7" textAnchor="middle" fill="#dc2626">DO NOT SHAKE</text>
+
+      {/* 3. Right: Uniformly Cloudy Resuspended Ready Dose */}
+      <rect x="175" y="35" width="60" height="110" rx="6" fill="#f1f5f9" stroke="#0f766e" strokeWidth="2.5" />
+      <circle cx="195" cy="65" r="3" fill="#ffffff" opacity="0.8" />
+      <circle cx="215" cy="85" r="4" fill="#ffffff" opacity="0.8" />
+      <circle cx="190" cy="115" r="3.5" fill="#ffffff" opacity="0.8" />
+      <text x="205" y="88" fontSize="8.5" fontWeight="bold" textAnchor="middle" fill="#0f766e">Milky White</text>
+      <text x="205" y="160" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#16a34a">RESUSPENDED</text>
+      <text x="205" y="172" fontSize="7" textAnchor="middle" fill="#64748b">Ready to Inject</text>
+
+      {/* 4. Far Right: Clear Analogue Reference */}
+      <rect x="250" y="45" width="45" height="90" rx="5" fill="#e0f2fe" stroke="#0284c7" strokeWidth="1.5" />
+      <text x="272.5" y="90" fontSize="7.5" fontWeight="bold" textAnchor="middle" fill="#0369a1">Clear</text>
+      <text x="272.5" y="160" fontSize="7.5" fontWeight="bold" textAnchor="middle" fill="#0284c7">ANALOGUE</text>
+      <text x="272.5" y="172" fontSize="6.5" textAnchor="middle" fill="#64748b">No Mix Needed</text>
+    </g>
+  );
   else if (kind === 'atlas' || kind === 'regimens') art = (
     <g>
       <rect x="40" y="30" width="240" height="130" rx="6" fill="#fffbeb" stroke="#f59e0b" strokeWidth="1.5" />

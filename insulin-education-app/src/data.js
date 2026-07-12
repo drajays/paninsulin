@@ -389,6 +389,31 @@ export const modules = [
         "id": "2-51",
         "question": "What can reduce the risk of insulin precipitating like this?",
         "answer": "Keep insulin away from the back wall of the refrigerator or the freezer compartment, where it can freeze; store it in the door or a stable mid-shelf spot instead. Never freeze insulin, protect it from heat, direct sunlight and hot vehicles, avoid dropping or vigorously shaking pens, and follow the specific product's stated room-temperature use period once opened."
+      },
+      {
+        "id": "2-52",
+        "question": "Which insulin formulations are suspensions that require resuspension before injection?",
+        "answer": "Insulins that are in suspension (cloudy insulins)—specifically isophane (NPH) and premixed insulins (including premixes containing rapid-acting insulin analogues)—must be resuspended before injection. This ensures that the correct formulation concentration is injected and maintains stability of the absorption kinetics."
+      },
+      {
+        "id": "2-53",
+        "question": "Why is proper resuspension of cloudy insulins vital before every injection?",
+        "answer": "If a suspension is not resuspended, the patient may inject either watery supernatant or concentrated crystal sediment, leading to erratic dosing, unpredictable absorption kinetics, and significant blood glucose variability."
+      },
+      {
+        "id": "2-54",
+        "question": "What clinical consequence is particularly associated with failure to resuspend isophane (NPH) insulin?",
+        "answer": "Failure to resuspend isophane insulins causes significant variability of action and particularly affects nocturnal plasma insulin concentrations, disrupting overnight glycemic control and increasing nighttime hypoglycemia risk."
+      },
+      {
+        "id": "2-55",
+        "question": "What is the correct technique for resuspending a cloudy insulin cartridge or vial?",
+        "answer": "The insulin cartridge or vial should not be shaken vigorously (which causes air bubbles and frothing that lead to dosing inaccuracies), but should be repeatedly inverted and gently rolled (typically 10 times) until the suspension is uniformly cloudy or milky white."
+      },
+      {
+        "id": "2-56",
+        "question": "Do soluble human insulins and clear rapid- or long-acting analogue insulins require resuspension or agitation?",
+        "answer": "No. Soluble and all analogue insulins (including rapid- and long-acting clear basal types) are true solutions not in suspension, so they are clear in appearance and may be administered without agitation of the pen or vial."
       }
     ],
     "kind": "insulin",

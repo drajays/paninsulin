@@ -140,9 +140,6 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 13. Can cloudy insulin be used?
 **Answer:** Some suspensions, such as NPH, are meant to look uniformly cloudy after gentle rolling. Clear insulins should remain clear. Do not use insulin with unexpected particles, clumps, frosting or discoloration; ask the pharmacist if uncertain.
 
-### 13B. How should cloudy insulin suspensions (isophane and premixed insulins) be resuspended before injection?
-**Answer:** Insulins that are in suspension (cloudy insulins), that is, isophane (NPH) and premixed insulins (including premixes containing rapid-acting insulin analogues), must be resuspended before injection. This is vital to ensure that the correct formulation is injected and to ensure stability of the absorption kinetics. Failure to resuspend isophane insulins can cause significant variability of action and particularly affects nocturnal plasma insulin concentrations. The insulin cartridge or vial should not be shaken vigorously (which causes frothing and bubbles), but should be repeatedly inverted or gently rolled (typically 10 times) until the suspension is uniformly cloudy or milky white. Soluble and all analogue insulins (including rapid- and long-acting clear basal types) are true solutions not in suspension, so they are clear in appearance and may be administered without agitation of the pen or vial.
-
 ### 14. Can two insulins be mixed in one syringe?
 **Answer:** Only if specifically prescribed and taught. Some insulins must never be mixed, including glargine or degludec with other insulins. When mixing is prescribed, use the exact sequence and monitoring plan taught by the diabetes team.
 
@@ -256,6 +253,21 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 
 ### 51. What can reduce the risk of insulin precipitating like this?
 **Answer:** Keep insulin away from the back wall of the refrigerator or the freezer compartment, where it can freeze; store it in the door or a stable mid-shelf spot instead. Never freeze insulin, protect it from heat, direct sunlight and hot vehicles, avoid dropping or vigorously shaking pens, and follow the specific product's stated room-temperature use period once opened.
+
+### 52. Which insulin formulations are suspensions that require resuspension before injection?
+**Answer:** Insulins that are in suspension (cloudy insulins)—specifically isophane (NPH) and premixed insulins (including premixes containing rapid-acting insulin analogues)—must be resuspended before injection. This ensures that the correct formulation concentration is injected and maintains stability of the absorption kinetics.
+
+### 53. Why is proper resuspension of cloudy insulins vital before every injection?
+**Answer:** If a suspension is not resuspended, the patient may inject either watery supernatant or concentrated crystal sediment, leading to erratic dosing, unpredictable absorption kinetics, and significant blood glucose variability.
+
+### 54. What clinical consequence is particularly associated with failure to resuspend isophane (NPH) insulin?
+**Answer:** Failure to resuspend isophane insulins causes significant variability of action and particularly affects nocturnal plasma insulin concentrations, disrupting overnight glycemic control and increasing nighttime hypoglycemia risk.
+
+### 55. What is the correct technique for resuspending a cloudy insulin cartridge or vial?
+**Answer:** The insulin cartridge or vial should not be shaken vigorously (which causes air bubbles and frothing that lead to dosing inaccuracies), but should be repeatedly inverted and gently rolled (typically 10 times) until the suspension is uniformly cloudy or milky white.
+
+### 56. Do soluble human insulins and clear rapid- or long-acting analogue insulins require resuspension or agitation?
+**Answer:** No. Soluble and all analogue insulins (including rapid- and long-acting clear basal types) are true solutions not in suspension, so they are clear in appearance and may be administered without agitation of the pen or vial.
 
 **Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar, Lilly KwikPen, Lyumjev, HumaPen, NovoPen; BD Insulin Syringes; FIASP/insulin aspart FDA prescribing information); Ito et al., factors causing insulin precipitation and amyloid formation, J Pharm Health Care Sci 2019.
 
