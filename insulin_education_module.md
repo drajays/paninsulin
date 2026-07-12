@@ -269,7 +269,22 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 56. Do soluble human insulins and clear rapid- or long-acting analogue insulins require resuspension or agitation?
 **Answer:** No. Soluble and all analogue insulins (including rapid- and long-acting clear basal types) are true solutions not in suspension, so they are clear in appearance and may be administered without agitation of the pen or vial.
 
-**Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar, Lilly KwikPen, Lyumjev, HumaPen, NovoPen; BD Insulin Syringes; FIASP/insulin aspart FDA prescribing information); Ito et al., factors causing insulin precipitation and amyloid formation, J Pharm Health Care Sci 2019.
+### 57. Why is the 4 mm pen needle considered the universal reference standard across all adult and pediatric BMI categories?
+**Answer:** Current evidence from FITTER and FIT India guidelines strongly supports the use of 4 mm pen needles (and 6 mm syringe needles) for almost all patients, regardless of age, BMI, or gender. Because human skin (dermal layer) thickness rarely exceeds 3 mm across individuals, a 4 mm needle reliably traverses the dermis into the vascular subcutaneous adipose space while drastically reducing the risk of accidental intramuscular (IM) injections. With 4 mm needles, adults generally do not require lifting a skin fold and can safely inject perpendicular at a standard 90-degree angle.
+
+### 58. Why do modern guidelines mandate physical inspection and palpation of injection sites for lipohypertrophy every six months?
+**Answer:** Lipohypertrophy (enlarged adipocytes presenting as rubbery or fibrous tissue swellings) is a primary driver of unexplained hypoglycemia, erratic glycemic variability, and elevated insulin requirements because injecting into these hypertrophic lesions severely blunts and delays insulin absorption. Since visual inspection alone misses deeper non-visible lipohypertrophic lesions, guidelines mandate that healthcare professionals physically inspect and palpate injection sites at least every six months.
+
+### 59. What is the structured quadrant approach for systematic abdominal site rotation?
+**Answer:** Simply instructing patients to "rotate sites" is insufficient. FITTER guidelines recommend dividing the abdomen into four quadrants (excluding a 5 cm / 2-inch zone around the navel). The patient uses one quadrant for an entire week, spacing consecutive injections at least 1 cm apart, and then rotates to the next quadrant the following week in a consistent clockwise or counter-clockwise pattern.
+
+### 60. Why do modern clinical guidelines strictly discourage pen needle reuse?
+**Answer:** While needle reuse has historically been tolerated in resource-challenged settings, guidelines now strictly discourage it. Single-use pen needle reuse is explicitly identified as an independent risk factor for lipohypertrophy, needle tip distortion/micro-burrs, painful injection trauma, subcutaneous infection, and subsequent poor glycemic control (HbA1c > 8%).
+
+### 61. How do connected smart insulin pens improve clinical decision-making and glycemic optimization?
+**Answer:** Smart insulin pens (or connected pen caps) record the exact timestamp and unit dose of every insulin injection delivered. This objective dosing log allows clinicians and patients to differentiate between true insulin resistance versus missed basal doses, insulin stacking, or dose omission, leading to safer and more precise therapy optimization.
+
+**Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); FIT India Consensus Guidelines; ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar, Lilly KwikPen, Lyumjev, HumaPen, NovoPen; BD Insulin Syringes; FIASP/insulin aspart FDA prescribing information); Ito et al., factors causing insulin precipitation and amyloid formation, J Pharm Health Care Sci 2019.
 
 ---
 
@@ -1175,6 +1190,56 @@ Visual recognition of clinical insulin profiles, delivery devices, and portable 
 **Answer:** Evaporative cooling ceases immediately once the sand, fabric, or hydrogel dries out; without continuous water replenishment, internal temperatures rapidly rise to match ambient extreme heat, accelerating insulin degradation.
 
 **Evidence anchors:** ADA Standards of Care 2026, insulin storage and travel guidance; comparative trials on low-resource insulin storage in tropical climates; manufacturer specifications for insulin pens, evaporative cooling wallets, and thermoelectric coolers.
+
+---
+
+# 16. Driving, work and everyday choices
+
+**Learning focus:** Know your disclosure obligations for driving and work, recognize how alcohol, recreational drugs and shift work affect insulin safety, and use ready-to-use glucagon and medical identification correctly.
+
+### 1. Do I need to tell my driving licence authority that I use insulin?
+**Answer:** In many countries, yes. UK law, for example, requires anyone treated with insulin to inform the DVLA (Driver and Vehicle Licensing Agency) immediately, and similar disclosure rules exist elsewhere. Rules, forms and exceptions vary by country and licence type, so confirm the exact requirement with your own licensing authority.
+
+### 2. Do I need to tell my motor insurance company about using insulin?
+**Answer:** Yes. Insurers generally require you to declare any medical condition or medication that could affect safe driving, including insulin. Failing to declare it can make a policy invalid, even for a claim unrelated to your diabetes.
+
+### 3. What blood glucose check is recommended before and during driving?
+**Answer:** Check glucose no more than 2 hours before starting a journey, and recheck roughly every 2 hours on a long drive. Avoid driving if your glucose is at or below your low threshold, if you feel any hypoglycemia symptoms, or if you have hypoglycemia unawareness that is not well controlled.
+
+### 4. What should I do if I feel low while driving?
+**Answer:** Stop the vehicle as soon as it is safe to do so, switch off the engine and remove the keys from the ignition, and treat the low. Wait until glucose has recovered and symptoms have fully resolved, generally at least 45 minutes, before continuing to drive.
+
+### 5. What should I always keep in the car if I use insulin?
+**Answer:** Keep fast-acting glucose, meter or CGM supplies, and a spare snack within reach of the driver's seat, not only in the trunk/boot. Avoid leaving insulin in a parked vehicle for long periods, since extreme heat or cold can damage it.
+
+### 6. Can recreational drugs affect diabetes and insulin safety?
+**Answer:** Yes. Alcohol, cannabis, stimulants and other recreational drugs can blunt the ability to notice hypoglycemia symptoms, disrupt eating patterns and judgment around insulin dosing, and increase the risk of a severe, unwitnessed low. Tell your care team about any substance use so your safety plan can account for it, without fear of judgment.
+
+### 7. Do I have to tell my employer that I use insulin?
+**Answer:** You are not generally required to disclose diabetes to an employer unless you want a workplace accommodation. Disclosing it allows you to request reasonable adjustments in many countries, and any medical information you share should be kept confidential by the employer.
+
+### 8. What workplace accommodations commonly help people using insulin?
+**Answer:** Common accommodations include scheduled breaks to eat, check glucose or inject; a private space to test or inject; permission to keep supplies and rescue carbohydrate at the workstation; and a modified or steady, non-rotating shift schedule where shift work makes insulin timing difficult.
+
+### 9. How can shift work complicate insulin timing?
+**Answer:** Rotating or night shifts change meal and sleep timing, which can misalign basal and mealtime insulin doses and raise the risk of highs or lows. Ask the diabetes team for an individualized shift-work plan rather than guessing at dose changes yourself.
+
+### 10. Should I wear medical identification such as a bracelet, necklace or card?
+**Answer:** Yes. Medical identification lets paramedics, coworkers or bystanders recognize that you use insulin and could be experiencing a low, even if you are unable to explain it yourself. Include that you use insulin and, if relevant, that you carry glucagon.
+
+### 11. How do I give injectable glucagon in an emergency?
+**Answer:** Older glucagon emergency kits require mixing powder and liquid before drawing up and injecting a dose, a multi-step process that is easy to get wrong under stress. Newer ready-to-use glucagon, such as a prefilled auto-injector or pen, needs only to be pressed against the outer thigh and held for a few seconds, with no mixing required.
+
+### 12. How is nasal glucagon different from an injection?
+**Answer:** Nasal glucagon (for example, Baqsimi) is a single-use device that delivers a fixed dose as a puff into one nostril; the person does not need to inhale, and no needle is involved. It works even if the person having the low is not breathing normally through the nose.
+
+### 13. Why do current guidelines prefer ready-to-use glucagon over older reconstitution kits?
+**Answer:** In studies, caregivers under stress completed a full, correct dose far more often with ready-to-use nasal or auto-injector glucagon than with an older reconstitution kit, where mixing errors are common. Ask your prescriber for a ready-to-use glucagon product and make sure people around you know how to use it before an emergency happens.
+
+### 14. What should I discuss with my care team about routine appointments and follow-up?
+**Answer:** Ask how often to expect glucose/A1C review and medication-adjustment visits, how the annual eye, foot, kidney and dental checks should be scheduled, and how to reach the team between visits for urgent questions. A clear follow-up plan reduces gaps in care caused by work, travel or shift schedules.
+
+**Evidence anchors:** UK DVLA/GOV.UK guidance on diabetes mellitus and fitness to drive; US EEOC and ADA (Americans with Disabilities Act) guidance on diabetes in the workplace; ADA (American Diabetes Association) Standards of Care 2026 on glucagon and hypoglycemia; manufacturer prescribing information for ready-to-use and nasal glucagon products.
 
 ---
 

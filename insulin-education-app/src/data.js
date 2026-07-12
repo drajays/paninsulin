@@ -414,6 +414,31 @@ export const modules = [
         "id": "2-56",
         "question": "Do soluble human insulins and clear rapid- or long-acting analogue insulins require resuspension or agitation?",
         "answer": "No. Soluble and all analogue insulins (including rapid- and long-acting clear basal types) are true solutions not in suspension, so they are clear in appearance and may be administered without agitation of the pen or vial."
+      },
+      {
+        "id": "2-57",
+        "question": "Why is the 4 mm pen needle considered the universal reference standard across all adult and pediatric BMI categories?",
+        "answer": "Current evidence from FITTER and FIT India guidelines strongly supports the use of 4 mm pen needles (and 6 mm syringe needles) for almost all patients, regardless of age, BMI, or gender. Because human skin (dermal layer) thickness rarely exceeds 3 mm across individuals, a 4 mm needle reliably traverses the dermis into the vascular subcutaneous adipose space while drastically reducing the risk of accidental intramuscular (IM) injections. With 4 mm needles, adults generally do not require lifting a skin fold and can safely inject perpendicular at a standard 90-degree angle."
+      },
+      {
+        "id": "2-58",
+        "question": "Why do modern guidelines mandate physical inspection and palpation of injection sites for lipohypertrophy every six months?",
+        "answer": "Lipohypertrophy (enlarged adipocytes presenting as rubbery or fibrous tissue swellings) is a primary driver of unexplained hypoglycemia, erratic glycemic variability, and elevated insulin requirements because injecting into these hypertrophic lesions severely blunts and delays insulin absorption. Since visual inspection alone misses deeper non-visible lipohypertrophic lesions, guidelines mandate that healthcare professionals physically inspect and palpate injection sites at least every six months."
+      },
+      {
+        "id": "2-59",
+        "question": "What is the structured quadrant approach for systematic abdominal site rotation?",
+        "answer": "Simply instructing patients to \"rotate sites\" is insufficient. FITTER guidelines recommend dividing the abdomen into four quadrants (excluding a 5 cm / 2-inch zone around the navel). The patient uses one quadrant for an entire week, spacing consecutive injections at least 1 cm apart, and then rotates to the next quadrant the following week in a consistent clockwise or counter-clockwise pattern."
+      },
+      {
+        "id": "2-60",
+        "question": "Why do modern clinical guidelines strictly discourage pen needle reuse?",
+        "answer": "While needle reuse has historically been tolerated in resource-challenged settings, guidelines now strictly discourage it. Single-use pen needle reuse is explicitly identified as an independent risk factor for lipohypertrophy, needle tip distortion/micro-burrs, painful injection trauma, subcutaneous infection, and subsequent poor glycemic control (HbA1c > 8%)."
+      },
+      {
+        "id": "2-61",
+        "question": "How do connected smart insulin pens improve clinical decision-making and glycemic optimization?",
+        "answer": "Smart insulin pens (or connected pen caps) record the exact timestamp and unit dose of every insulin injection delivered. This objective dosing log allows clinicians and patients to differentiate between true insulin resistance versus missed basal doses, insulin stacking, or dose omission, leading to safer and more precise therapy optimization."
       }
     ],
     "kind": "insulin",
@@ -2214,6 +2239,109 @@ export const modules = [
       "Using evaporative wallets in airtight plastic bags",
       "Freezing insulin in active coolers or ice bags",
       "Confusing premixed regimens with basal-bolus regimens"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Driving, work and everyday choices",
+    "qas": [
+      {
+        "id": "16-1",
+        "question": "Do I need to tell my driving licence authority that I use insulin?",
+        "answer": "In many countries, yes. UK law, for example, requires anyone treated with insulin to inform the DVLA (Driver and Vehicle Licensing Agency) immediately, and similar disclosure rules exist elsewhere. Rules, forms and exceptions vary by country and licence type, so confirm the exact requirement with your own licensing authority."
+      },
+      {
+        "id": "16-2",
+        "question": "Do I need to tell my motor insurance company about using insulin?",
+        "answer": "Yes. Insurers generally require you to declare any medical condition or medication that could affect safe driving, including insulin. Failing to declare it can make a policy invalid, even for a claim unrelated to your diabetes."
+      },
+      {
+        "id": "16-3",
+        "question": "What blood glucose check is recommended before and during driving?",
+        "answer": "Check glucose no more than 2 hours before starting a journey, and recheck roughly every 2 hours on a long drive. Avoid driving if your glucose is at or below your low threshold, if you feel any hypoglycemia symptoms, or if you have hypoglycemia unawareness that is not well controlled."
+      },
+      {
+        "id": "16-4",
+        "question": "What should I do if I feel low while driving?",
+        "answer": "Stop the vehicle as soon as it is safe to do so, switch off the engine and remove the keys from the ignition, and treat the low. Wait until glucose has recovered and symptoms have fully resolved, generally at least 45 minutes, before continuing to drive."
+      },
+      {
+        "id": "16-5",
+        "question": "What should I always keep in the car if I use insulin?",
+        "answer": "Keep fast-acting glucose, meter or CGM supplies, and a spare snack within reach of the driver's seat, not only in the trunk/boot. Avoid leaving insulin in a parked vehicle for long periods, since extreme heat or cold can damage it."
+      },
+      {
+        "id": "16-6",
+        "question": "Can recreational drugs affect diabetes and insulin safety?",
+        "answer": "Yes. Alcohol, cannabis, stimulants and other recreational drugs can blunt the ability to notice hypoglycemia symptoms, disrupt eating patterns and judgment around insulin dosing, and increase the risk of a severe, unwitnessed low. Tell your care team about any substance use so your safety plan can account for it, without fear of judgment."
+      },
+      {
+        "id": "16-7",
+        "question": "Do I have to tell my employer that I use insulin?",
+        "answer": "You are not generally required to disclose diabetes to an employer unless you want a workplace accommodation. Disclosing it allows you to request reasonable adjustments in many countries, and any medical information you share should be kept confidential by the employer."
+      },
+      {
+        "id": "16-8",
+        "question": "What workplace accommodations commonly help people using insulin?",
+        "answer": "Common accommodations include scheduled breaks to eat, check glucose or inject; a private space to test or inject; permission to keep supplies and rescue carbohydrate at the workstation; and a modified or steady, non-rotating shift schedule where shift work makes insulin timing difficult."
+      },
+      {
+        "id": "16-9",
+        "question": "How can shift work complicate insulin timing?",
+        "answer": "Rotating or night shifts change meal and sleep timing, which can misalign basal and mealtime insulin doses and raise the risk of highs or lows. Ask the diabetes team for an individualized shift-work plan rather than guessing at dose changes yourself."
+      },
+      {
+        "id": "16-10",
+        "question": "Should I wear medical identification such as a bracelet, necklace or card?",
+        "answer": "Yes. Medical identification lets paramedics, coworkers or bystanders recognize that you use insulin and could be experiencing a low, even if you are unable to explain it yourself. Include that you use insulin and, if relevant, that you carry glucagon."
+      },
+      {
+        "id": "16-11",
+        "question": "How do I give injectable glucagon in an emergency?",
+        "answer": "Older glucagon emergency kits require mixing powder and liquid before drawing up and injecting a dose, a multi-step process that is easy to get wrong under stress. Newer ready-to-use glucagon, such as a prefilled auto-injector or pen, needs only to be pressed against the outer thigh and held for a few seconds, with no mixing required."
+      },
+      {
+        "id": "16-12",
+        "question": "How is nasal glucagon different from an injection?",
+        "answer": "Nasal glucagon (for example, Baqsimi) is a single-use device that delivers a fixed dose as a puff into one nostril; the person does not need to inhale, and no needle is involved. It works even if the person having the low is not breathing normally through the nose."
+      },
+      {
+        "id": "16-13",
+        "question": "Why do current guidelines prefer ready-to-use glucagon over older reconstitution kits?",
+        "answer": "In studies, caregivers under stress completed a full, correct dose far more often with ready-to-use nasal or auto-injector glucagon than with an older reconstitution kit, where mixing errors are common. Ask your prescriber for a ready-to-use glucagon product and make sure people around you know how to use it before an emergency happens."
+      },
+      {
+        "id": "16-14",
+        "question": "What should I discuss with my care team about routine appointments and follow-up?",
+        "answer": "Ask how often to expect glucose/A1C review and medication-adjustment visits, how the annual eye, foot, kidney and dental checks should be scheduled, and how to reach the team between visits for urgent questions. A clear follow-up plan reduces gaps in care caused by work, travel or shift schedules."
+      }
+    ],
+    "kind": "driving",
+    "short": "Driving & lifestyle",
+    "tagline": "Stay safe on the road, at work and in daily life",
+    "accent": "#b45309",
+    "icon": "🚗",
+    "core": false,
+    "learning": [
+      "Know your disclosure obligations for driving and work",
+      "Recognize how alcohol, recreational drugs and shift work affect insulin safety",
+      "Use ready-to-use glucagon and medical identification correctly"
+    ],
+    "notes": [
+      "Legal driving-disclosure rules vary by country; the UK's DVLA requirement is a well-documented example, but always confirm your own jurisdiction's rule and your insurer's requirement.",
+      "You are not legally required to disclose diabetes at work unless requesting an accommodation, but disclosure unlocks protections such as breaks, private testing space and shift adjustments in several countries.",
+      "Ready-to-use glucagon (nasal or auto-injector) is preferred over older reconstitution kits because caregivers under stress complete a full, correct dose far more reliably with it."
+    ],
+    "practice": [
+      "Confirm your country's driving-disclosure requirement with your licensing authority",
+      "Ask your care team for a written shift-work or travel insulin plan",
+      "Get a ready-to-use glucagon prescription and teach a trusted person to use it",
+      "Wear or carry medical identification stating you use insulin"
+    ],
+    "redFlags": [
+      "Driving without checking glucose or after any hypoglycemia symptoms",
+      "Continuing to drive after a severe hypoglycemic episode without notifying the licensing authority",
+      "No one nearby knows how to use your glucagon"
     ]
   }
 ];

@@ -436,6 +436,50 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
       <text x="272.5" y="172" fontSize="6.5" textAnchor="middle" fill="#64748b">No Mix Needed</text>
     </g>
   );
+  else if (kind === 'fitterupdates') art = (
+    <g>
+      {/* Panel 1: 4 mm Needle & Skin Layers */}
+      <rect x="10" y="25" width="55" height="145" rx="5" fill="#f8fafc" stroke="#64748b" strokeWidth="1.5" />
+      <rect x="15" y="45" width="45" height="15" fill="#fecaca" />
+      <rect x="15" y="60" width="45" height="50" fill="#fef08a" />
+      <rect x="15" y="110" width="45" height="25" fill="#fca5a5" />
+      <line x1="37" y1="30" x2="37" y2="70" stroke="#0284c7" strokeWidth="2.5" />
+      <text x="37.5" y="150" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#0f766e">1. 4mm Needle</text>
+      <text x="37.5" y="161" fontSize="6.5" textAnchor="middle" fill="#64748b">90° No Skinfold</text>
+
+      {/* Panel 2: Lipohypertrophy Palpation */}
+      <rect x="70" y="25" width="55" height="145" rx="5" fill="#fff7ed" stroke="#ea580c" strokeWidth="1.5" />
+      <circle cx="97.5" cy="75" r="18" fill="#ffedd5" stroke="#ea580c" strokeWidth="1.5" strokeDasharray="3,3" />
+      <circle cx="97.5" cy="75" r="8" fill="#f97316" opacity="0.4" />
+      <text x="97.5" y="150" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#c2410c">2. Palpation</text>
+      <text x="97.5" y="161" fontSize="6.5" textAnchor="middle" fill="#64748b">Every 6 Months</text>
+
+      {/* Panel 3: 4-Quadrant Abdomen Rotation */}
+      <rect x="130" y="25" width="55" height="145" rx="5" fill="#f0fdf4" stroke="#16a34a" strokeWidth="1.5" />
+      <rect x="142" y="50" width="31" height="40" rx="3" fill="#dcfce7" stroke="#16a34a" strokeWidth="1" />
+      <line x1="157.5" y1="50" x2="157.5" y2="90" stroke="#16a34a" strokeWidth="1" />
+      <line x1="142" y1="70" x2="173" y2="70" stroke="#16a34a" strokeWidth="1" />
+      <circle cx="157.5" cy="70" r="4" fill="#ffffff" stroke="#16a34a" strokeWidth="1" />
+      <text x="157.5" y="150" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#15803d">3. Quadrants</text>
+      <text x="157.5" y="161" fontSize="6.5" textAnchor="middle" fill="#64748b">1 Wk/Qtr ≥1cm</text>
+
+      {/* Panel 4: Single-Use Needles vs Reuse */}
+      <rect x="190" y="25" width="55" height="145" rx="5" fill="#fef2f2" stroke="#dc2626" strokeWidth="1.5" />
+      <circle cx="217.5" cy="70" r="16" fill="#fee2e2" stroke="#dc2626" strokeWidth="1.5" />
+      <line x1="207.5" y1="60" x2="227.5" y2="80" stroke="#dc2626" strokeWidth="2" />
+      <line x1="227.5" y1="60" x2="207.5" y2="80" stroke="#dc2626" strokeWidth="2" />
+      <text x="217.5" y="150" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#b91c1c">4. Single-Use</text>
+      <text x="217.5" y="161" fontSize="6.5" textAnchor="middle" fill="#64748b">No Reuse</text>
+
+      {/* Panel 5: Connected Smart Pens */}
+      <rect x="250" y="25" width="55" height="145" rx="5" fill="#eff6ff" stroke="#2563eb" strokeWidth="1.5" />
+      <rect x="272" y="45" width="10" height="45" rx="3" fill="#3b82f6" />
+      <path d="M265 55 Q 262 60 265 65" fill="none" stroke="#2563eb" strokeWidth="1.5" />
+      <path d="M260 52 Q 255 60 260 68" fill="none" stroke="#2563eb" strokeWidth="1.5" />
+      <text x="277.5" y="150" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#1d4ed8">5. Smart Pen</text>
+      <text x="277.5" y="161" fontSize="6.5" textAnchor="middle" fill="#64748b">Timestamp Log</text>
+    </g>
+  );
   else if (kind === 'atlas' || kind === 'regimens') art = (
     <g>
       <rect x="40" y="30" width="240" height="130" rx="6" fill="#fffbeb" stroke="#f59e0b" strokeWidth="1.5" />
@@ -501,6 +545,7 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
       <text x="212" y="95" fontSize="9" fontWeight="bold" textAnchor="middle" fill="#1e293b">Active 2-8°C</text>
     </g>
   );
+  else if (kind === 'driving') art = <><rect x="86" y="96" width="148" height="44" rx="16" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M100 96 L114 64 H206 L220 96" fill="none" stroke={accent} strokeWidth="4" strokeLinejoin="round" /><rect x="140" y="76" width="40" height="18" rx="4" fill={accent} opacity=".25" /><circle cx="118" cy="140" r="16" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="202" cy="140" r="16" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="118" cy="140" r="5" fill={accent} /><circle cx="202" cy="140" r="5" fill={accent} /></>;
   else art = <><circle cx="160" cy="95" r="56" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M160 60 v70 M125 95 h70" stroke={accent} strokeWidth="7" strokeLinecap="round" /><circle cx="254" cy="70" r="20" fill={accent} opacity=".18" /></>;
   return <svg className={large ? 'topic-illustration large' : 'topic-illustration'} {...common}>{bg}{dot}{art}</svg>;
 }
