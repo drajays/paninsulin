@@ -1077,6 +1077,92 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 
 ---
 
+# 15. Clinical Picture Atlas of Insulin Regimens, Devices & Storage Systems
+
+Visual recognition of clinical insulin profiles, delivery devices, and portable storage solutions is essential for preventing medication errors, protecting insulin potency, and maintaining safe therapy during travel or hot weather. This picture-based module evaluates 13 key clinical illustrations and storage systems from physiological regimens to low-resource evaporative coolers.
+
+### 1. How does a basal-bolus regimen with a long-acting insulin analogue compare to a nondiabetic physiological insulin profile?
+**Answer:** A basal-bolus regimen utilizing a peakless long-acting insulin analogue once daily combined with rapid-acting bolus insulin before meals most closely mimics a nondiabetic physiological profile. Unlike twice-daily premixed regimens, it provides steady 24-hour background basal coverage while allowing flexible mealtime dosing matched to actual carbohydrate intake.
+
+### 2. What are the primary limitations of a twice-daily premixed (soluble and isophane) insulin regimen compared to multiple daily injections?
+**Answer:** Twice-daily premixed regimens mandate rigid meal schedules and carbohydrate quantities because the peak action of the intermediate-acting (isophane) component coincides with mid-morning and mid-afternoon hours. This fixed ratio increases vulnerability to late-morning or nocturnal hypoglycemia if meals are delayed or skipped.
+
+### 3. What features distinguish the Sanofi AllStar reusable insulin pen from disposable prefilled insulin pens?
+**Answer:** The Sanofi AllStar is a durable, reusable mechanical pen designed for replaceable 3 mL (U-100) insulin cartridges. Unlike disposable pens that are discarded when empty, the AllStar retains its mechanical housing and dosing mechanism for years, requiring only cartridge replacement and needle attachment for each injection cycle.
+
+### 4. How should a patient confirm the dialed dose on a reusable AllStar pen before inserting the needle?
+**Answer:** The patient must look directly into the clear dose window on the pen body and ensure the desired unit number aligns exactly with the dosing indicator pointer. Dialing should always be verified visually rather than by counting audible clicks alone.
+
+### 5. How does a FRIO Duo evaporative cooling wallet maintain insulin temperature without ice packs or electricity?
+**Answer:** The FRIO Duo wallet contains specialized hydrogel crystals within its inner pouch that absorb cool water during immersion. As water slowly evaporates through the breathable outer fabric over 45+ hours, it absorbs thermal energy and keeps stored insulin safely below ambient temperatures (typically 18–26 °C).
+
+### 6. What precautions should be taken when carrying an activated FRIO Duo wallet inside luggage or backpacks?
+**Answer:** An activated FRIO wallet must never be sealed inside an airtight plastic bag or waterproof container. Evaporative cooling requires continuous air circulation; restricting airflow stops evaporation and can cause the insulin inside to overheat.
+
+### 7. When is a high-capacity FRIO Large travel wallet clinically recommended over a single-pen pouch?
+**Answer:** A high-capacity FRIO Large wallet is recommended during extended travel, remote expeditions, or multi-week holidays when a patient must transport multiple reserve insulin pens, vials, or pump cartridges safely without access to reliable refrigeration.
+
+### 8. How should users reactivate hydrogel crystals in a FRIO Large wallet during multi-week travel?
+**Answer:** When the gel compartments begin to feel less firm after several days, the inner pouch should be re-immersed in cool tap water for 5 to 10 minutes until the crystals re-absorb moisture and expand, restoring full evaporative cooling capacity.
+
+### 9. Why must reusable gel ice packs inside an EVA hard case be prevented from making direct contact with insulin cartridges?
+**Answer:** Direct contact between frozen gel ice packs (0 °C or below) and insulin vials or pens can freeze the insulin protein structure. Insulated EVA cases utilize fabric sleeves or padded barriers to maintain cool temperatures (2–8 °C or cool ambient) without freezing risk.
+
+### 10. What advantage does a rigid EVA thermal case offer over soft pouches for multi-vial insulin storage?
+**Answer:** A rigid EVA (ethylene-vinyl acetate) hard case provides structural crush protection against mechanical shock during transport, preventing accidental glass cartridge or vial breakage while maintaining sealed thermal insulation around cold packs.
+
+### 11. How should a patient choose between a single-pen insulated flask (16+ hours) and a compact zipper pouch (6-8 hours)?
+**Answer:** Selection depends on daily duration away from home: a single-pen insulated flask is ideal for all-day outdoor work or long-haul travel exceeding 12 hours, whereas a compact zipper pouch is sufficient for brief daily commutes, school days, or evening outings.
+
+### 12. Why do vacuum-insulated thermal flasks achieve longer cooling durations than standard padded nylon cases?
+**Answer:** Vacuum-insulated stainless steel flasks eliminate conductive and convective heat transfer across double walls, allowing internal bi-gel cold packs to maintain stable insulin cooling temperatures for 16 to 24+ hours even in hot summer environments.
+
+### 13. Under what travel circumstances is an active USB/battery-powered electric insulin cooler (e.g., CareVego Jupiter) superior to passive ice packs?
+**Answer:** Active electric coolers are superior during multi-day road trips, international flights, or hotel stays where ambient temperatures exceed 35 °C and ice packs cannot be re-frozen, as active thermoelectric cooling maintains continuous refrigeration as long as power is supplied.
+
+### 14. How should patients manage power backup when transporting bulk insulin in an active electric travel cooler?
+**Answer:** Patients should carry a fully charged external USB power bank compatible with the electric cooler and keep the cooler plugged into vehicle 12V adapters during transit to ensure uninterrupted refrigeration during travel delays.
+
+### 15. What routine inspection is necessary before using bi-gel cold packs in a compact fabric travel cooler?
+**Answer:** Inspect cold packs for punctures, leaks, or swelling, and confirm they have been frozen flat according to manufacturer instructions so they fit smoothly into the insulated case compartments without compressing insulin pens.
+
+### 16. How long can compact insulated fabric cases typically protect in-use insulin during daily outings?
+**Answer:** Compact insulated fabric cases equipped with frozen gel packs typically protect in-use insulin from peak external heat for 6 to 8 hours, keeping pens comfortably within the safe room-temperature range (< 30 °C).
+
+### 17. What clinical benefit does an integrated external LCD digital thermometer provide during air travel?
+**Answer:** An external digital LCD thermometer allows travelers and caregivers to verify internal medication temperature at a glance without opening the case zip, preventing warm ambient air ingress and providing peace of mind during transit.
+
+### 18. What should a traveler do if the LCD display on their insulin cooler shows the internal temperature rising above 8 °C during transport?
+**Answer:** For unopened reserve insulin, temperatures up to safe room temperature (15–25 °C) remain acceptable for temporary transit, but the traveler should transfer supplies to a refrigerator upon arrival or replace cold packs if temperatures approach 30 °C.
+
+### 19. Why are hard-shell EVA cooler cases particularly suited for protecting prefilled glass insulin cartridges?
+**Answer:** Hard-shell EVA cases resist compression inside tightly packed luggage or overhead cabin bins, protecting brittle glass cartridges and delicate pen mechanisms from physical impact and cracking.
+
+### 20. How does external shock protection in a hard-shell case prevent insulin dosing inaccuracies?
+**Answer:** Physical trauma to an insulin pen can crack the internal glass cartridge invisibly or distort the mechanical plunger rod, causing insulin leakage or inaccurate unit delivery during subsequent injections.
+
+### 21. How do portable thermoelectric (Peltier) insulin refrigerators maintain a controlled 2–8 °C temperature?
+**Answer:** Thermoelectric Peltier refrigerators use solid-state electronics to actively pump heat out of the internal medication chamber, regulating precise 2–8 °C refrigeration without mechanical compressors or chemical refrigerants.
+
+### 22. What safety measures should be planned when storing insulin in a portable car or home refrigerator during power cuts?
+**Answer:** Keep the refrigerator lid securely closed during power cuts to retain cold air, monitor the digital temperature display, and have backup insulated cooler cases with pre-frozen gel packs ready if the outage exceeds battery capacity.
+
+### 23. What thermodynamic principle enables a double clay pot (Zeer pot / Matka) filled with wet sand to protect insulin in hot climates?
+**Answer:** As water evaporates from the wet sand layer between the porous outer clay pot and the sealed inner clay pot, latent heat of vaporization is drawn from the inner chamber, cooling stored insulin vials several degrees below ambient air temperature.
+
+### 24. How should patients maintain a Zeer pot clay cooler to ensure continuous cooling efficacy?
+**Answer:** Add fresh water to the sand layer twice daily to keep it continuously saturated, place the clay pot in a shaded, well-ventilated location away from direct sunlight, and store insulin vials inside a clean, dry container within the inner pot.
+
+### 25. According to comparative storage trials, how does a wet-sand double clay pot compare to water jars and commercial wallets in preventing insulin overheating?
+**Answer:** Comparative trials demonstrate that double clay pots filled with wet sand (Zeer pots) and commercial evaporative wallets consistently maintain significantly lower internal temperatures during peak heat waves compared to single water jars or dry soil jars.
+
+### 26. Why is monitoring water replenishment critical across all evaporative cooling methods (clay jars, double pots, and hydrogel wallets)?
+**Answer:** Evaporative cooling ceases immediately once the sand, fabric, or hydrogel dries out; without continuous water replenishment, internal temperatures rapidly rise to match ambient extreme heat, accelerating insulin degradation.
+
+**Evidence anchors:** ADA Standards of Care 2026, insulin storage and travel guidance; comparative trials on low-resource insulin storage in tropical climates; manufacturer specifications for insulin pens, evaporative cooling wallets, and thermoelectric coolers.
+
+---
+
 ## References and further reading
 
 1. **American Diabetes Association.** *Standards of Care in Diabetes—2026.* Diabetes Care, 49(Suppl. 1), 2026. https://diabetesjournals.org/care/issue/49/Supplement_1  

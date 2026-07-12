@@ -399,12 +399,77 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
       <text x="235" y="103" fontSize="7.5" textAnchor="middle" fill="#64748b">Confirms Flow</text>
     </g>
   );
+  else if (kind === 'atlas' || kind === 'regimens') art = (
+    <g>
+      <rect x="40" y="30" width="240" height="130" rx="6" fill="#fffbeb" stroke="#f59e0b" strokeWidth="1.5" />
+      <text x="160" y="48" fontSize="10" fontWeight="bold" textAnchor="middle" fill="#b45309">FIGURE 2.1 · INSULIN REGIMENS</text>
+      <path d="M50 140 L 90 70 L 130 140 L 170 70 L 210 140 L 250 80 L 270 140" fill="none" stroke="#0ea5e9" strokeWidth="2.5" />
+      <path d="M50 135 Q 160 125 270 135" fill="none" stroke="#16a34a" strokeWidth="2" strokeDasharray="3,3" />
+      <text x="90" y="152" fontSize="7.5" fill="#0369a1">Meal Bolus Peaks</text>
+      <text x="210" y="130" fontSize="7.5" fill="#15803d">Basal Coverage</text>
+    </g>
+  );
+  else if (kind === 'allstar') art = (
+    <g>
+      <rect x="45" y="75" width="230" height="34" rx="17" fill="#581c87" stroke="#3b0764" strokeWidth="2" />
+      <rect x="150" y="82" width="60" height="20" rx="4" fill="#ffffff" stroke="#1e293b" strokeWidth="1.5" />
+      <text x="180" y="96" fontSize="11" fontWeight="bold" textAnchor="middle" fill="#0f172a">AllStar 02</text>
+      <path d="M45 92 L 25 92" stroke="#64748b" strokeWidth="5" strokeLinecap="round" />
+      <text x="160" y="135" fontSize="9" fontWeight="bold" textAnchor="middle" fill="#581c87">Sanofi AllStar Reusable Pen</text>
+    </g>
+  );
+  else if (kind === 'frioduo' || kind === 'friolarge') art = (
+    <g>
+      <rect x="90" y="35" width="140" height="120" rx="8" fill="#1e293b" stroke="#0f172a" strokeWidth="2" />
+      <rect x="135" y="48" width="50" height="22" rx="3" fill="#ffffff" />
+      <text x="160" y="63" fontSize="10" fontWeight="bold" textAnchor="middle" fill="#0f172a">FRIO®</text>
+      <path d="M105 85 Q 160 78 215 85" fill="none" stroke="#38bdf8" strokeWidth="2" strokeDasharray="4,4" />
+      <text x="160" y="105" fontSize="8.5" textAnchor="middle" fill="#94a1b2">Evaporative Hydrogel Cooling</text>
+      <text x="160" y="145" fontSize="9" fontWeight="bold" textAnchor="middle" fill="#0284c7">45+ Hours Water-Activated</text>
+    </g>
+  );
+  else if (kind === 'evacase' || kind === 'compactpouch') art = (
+    <g>
+      <rect x="65" y="45" width="190" height="95" rx="14" fill="#1e293b" stroke="#475569" strokeWidth="2.5" />
+      <rect x="85" y="150" width="38" height="24" rx="10" fill="#2563eb" />
+      <rect x="140" y="150" width="38" height="24" rx="10" fill="#2563eb" />
+      <rect x="195" y="150" width="38" height="24" rx="10" fill="#2563eb" />
+      <text x="160" y="95" fontSize="11" fontWeight="bold" textAnchor="middle" fill="#f8fafc">CareVego EVA Case</text>
+      <text x="160" y="112" fontSize="8" textAnchor="middle" fill="#94a3b8">Thermal Barrier + 3 Gel Packs</text>
+    </g>
+  );
+  else if (kind === 'lcdcooler' || kind === 'hardshelllcd') art = (
+    <g>
+      <rect x="85" y="30" width="150" height="130" rx="20" fill="#1d4ed8" stroke="#1e3a8a" strokeWidth="3" />
+      <rect x="135" y="70" width="50" height="32" rx="4" fill="#0f172a" stroke="#475569" strokeWidth="2" />
+      <text x="160" y="92" fontSize="13" fontWeight="bold" textAnchor="middle" fill="#4ade80">5.8°C</text>
+      <text x="160" y="148" fontSize="9.5" fontWeight="bold" textAnchor="middle" fill="#1e3a8a">Digital LCD Thermometer</text>
+    </g>
+  );
+  else if (kind === 'zeerpot' || kind === 'coolingstudy') art = (
+    <g>
+      <ellipse cx="160" cy="50" rx="65" ry="16" fill="#b45309" stroke="#78350f" strokeWidth="2" />
+      <path d="M95 50 C 70 110, 90 145, 120 155 L 200 155 C 230 145, 250 110, 225 50 Z" fill="#d97706" stroke="#92400e" strokeWidth="2.5" />
+      <ellipse cx="160" cy="55" rx="45" ry="11" fill="#fef3c7" stroke="#b45309" strokeWidth="1.5" />
+      <rect x="145" y="95" width="14" height="24" rx="2" fill="#ffffff" stroke="#475569" strokeWidth="1.5" />
+      <rect x="165" y="95" width="14" height="24" rx="2" fill="#ffffff" stroke="#475569" strokeWidth="1.5" />
+      <text x="160" y="138" fontSize="8.5" fontWeight="bold" textAnchor="middle" fill="#78350f">Wet Sand Evaporative Layer</text>
+    </g>
+  );
+  else if (kind === 'comparecoolers' || kind === 'electricflask' || kind === 'activefridge') art = (
+    <g>
+      <rect x="75" y="40" width="75" height="110" rx="10" fill="#0f766e" stroke="#115e59" strokeWidth="2" />
+      <text x="112" y="95" fontSize="9" fontWeight="bold" textAnchor="middle" fill="#ffffff">Flask 16h+</text>
+      <rect x="170" y="40" width="85" height="110" rx="8" fill="#e2e8f0" stroke="#64748b" strokeWidth="2" />
+      <text x="212" y="95" fontSize="9" fontWeight="bold" textAnchor="middle" fill="#1e293b">Active 2-8°C</text>
+    </g>
+  );
   else art = <><circle cx="160" cy="95" r="56" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M160 60 v70 M125 95 h70" stroke={accent} strokeWidth="7" strokeLinecap="round" /><circle cx="254" cy="70" r="20" fill={accent} opacity=".18" /></>;
   return <svg className={large ? 'topic-illustration large' : 'topic-illustration'} {...common}>{bg}{dot}{art}</svg>;
 }
 
 function HeroIllustration() {
-  return <svg viewBox="0 0 420 300" className="hero-illustration" role="img" aria-label="A friendly illustration of a person in a clinical coat" style={{ filter: 'drop-shadow(0 24px 40px rgba(29,29,31,0.12))' }}><circle cx="210" cy="150" r="118" fill="#1d1d1f06" /><path d="M121 223 C107 169 126 114 165 102 C205 90 238 120 254 153 C268 184 295 197 307 220" fill="#fff" opacity=".92" /><circle cx="205" cy="87" r="34" fill="#ffd7bf" /><path d="M170 85 q28-61 69-15 q13 16 4 39 q-15-21-35-20 q-17 1-38-4" fill="#1f2937" /><path d="M165 124 q45 22 89 0 l19 104 h-124Z" fill="#0f766e" opacity=".92" /><path d="M180 144 l-27 67 M234 144 l30 65" stroke="#ffd7bf" strokeWidth="18" strokeLinecap="round" /><path d="M153 211 l-25 47 M263 209 l27 47" stroke="#334155" strokeWidth="17" strokeLinecap="round" /><rect x="117" y="254" width="48" height="15" rx="7" fill="#334155" /><rect x="267" y="254" width="48" height="15" rx="7" fill="#334155" /><circle cx="211" cy="143" r="8" fill="#fff" /><path d="M176 132 q28 13 54 0" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" opacity=".65" /><path d="M72 56 l7 17 18 3-13 12 3 18-15-9-16 9 4-18-14-12 18-3Z" fill="#0f766e" opacity=".3" /><path d="M337 67 l6 14 15 3-11 10 3 16-13-8-14 8 3-16-11-10 15-3Z" fill="#0f766e" opacity=".55" /><path d="M331 190 q23-32 45 0 q-22 30-45 0Z" fill="#0f766e" opacity=".18" /></svg>;
+  return <svg viewBox="0 0 420 300" className="hero-illustration" role="img" aria-label="A friendly illustration of a person in a clinical coat" style={{ filter: 'drop-shadow(0 24px 40px rgba(124,58,237,0.16))' }}><circle cx="210" cy="150" r="118" fill="#7c3aed0d" /><path d="M121 223 C107 169 126 114 165 102 C205 90 238 120 254 153 C268 184 295 197 307 220" fill="#fff" opacity=".95" /><circle cx="205" cy="87" r="34" fill="#ffd7bf" /><path d="M170 85 q28-61 69-15 q13 16 4 39 q-15-21-35-20 q-17 1-38-4" fill="#1f2937" /><path d="M165 124 q45 22 89 0 l19 104 h-124Z" fill="#7c3aed" opacity=".92" /><path d="M180 144 l-27 67 M234 144 l30 65" stroke="#ffd7bf" strokeWidth="18" strokeLinecap="round" /><path d="M153 211 l-25 47 M263 209 l27 47" stroke="#334155" strokeWidth="17" strokeLinecap="round" /><rect x="117" y="254" width="48" height="15" rx="7" fill="#334155" /><rect x="267" y="254" width="48" height="15" rx="7" fill="#334155" /><circle cx="211" cy="143" r="8" fill="#fff" /><path d="M176 132 q28 13 54 0" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" opacity=".65" /><path d="M72 56 l7 17 18 3-13 12 3 18-15-9-16 9 4-18-14-12 18-3Z" fill="#0d9488" opacity=".6" /><path d="M337 67 l6 14 15 3-11 10 3 16-13-8-14 8 3-16-11-10 15-3Z" fill="#ec4899" opacity=".55" /><path d="M331 190 q23-32 45 0 q-22 30-45 0Z" fill="#7c3aed" opacity=".3" /></svg>;
 }
 
 function Footer() {
