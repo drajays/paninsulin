@@ -87,6 +87,16 @@ The project's standing instruction is **focused content, no generic filler, only
 - Per-module Q&A/MCQ/dot counts in the UI are derived from `module.qas.length` etc. dynamically, not hardcoded — if you see a hardcoded module count creep back in, it's a bug (this was fixed once already when module 13 grew past 20 Q&As).
 - `vite.config.js` sets `base: '/paninsulin/'` — required because the app is deployed to a GitHub Pages *project* site (`https://drajays.github.io/paninsulin/`), not a user/org root site. Don't remove this.
 
+### Design system (`src/styles.css`)
+
+Apple.com/HIG-derived visual system, established by explicit request — preserve it rather than drifting back to a generic SaaS look:
+
+- **Tokens** (CSS custom properties on `:root` / `.app.dark`): `--canvas` (#f5f5f7 light / #000 dark) page background, `--surface` white/#1c1c1e cards, `--muted` #6e6e73/#8e8e93 secondary text, `--blue` #0071e3/#2997ff for universal actions, `--shadow: 0 4px 24px rgba(0,0,0,.04)` as the only card shadow (no colored/heavy shadows). System font stack only (`-apple-system, BlinkMacSystemFont...`) — no web fonts are loaded, don't add one.
+- **Color discipline is the signature**: per-module `--accent` (set inline via `style={{ '--accent': module.accent }}`) is the *only* place color carries meaning — topic icons, the module-hero top border, qa/quiz number badges. Generic/universal UI (nav active state, primary buttons, focus ring, progress bars not tied to a module) uses `--blue`, never a module accent. Don't reintroduce full-bleed colored gradient cards (the old dark indigo/teal hero and module-hero gradients were deliberately removed) — color washes over large areas contradict the restraint this system depends on.
+- **Buttons are pill-shaped** (`border-radius: 980px`), 44px minimum height — this is a hard accessibility floor, not just a look; keep it when adding new interactive elements.
+- Sidebar, topbar and the search overlay use `backdrop-filter: blur(20px) saturate(180%)` over a translucent `--nav` background — this is the "glass" signature; don't replace with a solid background.
+- The `HeroIllustration` SVG in `main.jsx` was hand-recolored for a light background (teal shirt, near-invisible tinted background circle, a CSS drop-shadow) — if the hero's background ever changes again, its inline SVG colors need to change with it, they don't come from CSS variables.
+
 ## Deployment
 
 `.github/workflows/deploy.yml` builds `insulin-education-app/` and deploys `dist/` to GitHub Pages via `actions/deploy-pages` on every push to `main` (or manual `workflow_dispatch`). Requires the repo's Settings → Pages → Source to be set to "GitHub Actions" (one-time manual setting, not something a workflow file can enable itself).
