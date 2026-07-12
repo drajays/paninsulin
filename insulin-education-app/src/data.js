@@ -234,6 +234,46 @@ export const modules = [
         "id": "2-20",
         "question": "How often should injection technique be reviewed?",
         "answer": "At diagnosis, when a device or insulin changes, when glucose becomes erratic, when skin changes occur and periodically during follow-up. Demonstrate the technique rather than only describing it; education should include site inspection, storage and sharps safety."
+      },
+      {
+        "id": "2-21",
+        "question": "What is the difference between a spring-loaded pen like NovoRapid FlexTouch and a manual pen like NovoRapid FlexPen?",
+        "answer": "FlexTouch has a smooth, contoured barrel and uses a spring-loaded, motor-assisted mechanism that delivers the dose with very low effort; its push button does not extend outward as you dial the dose. FlexPen looks more like a traditional dial pen—its push button visibly extends outward proportionally to the dialed dose and requires active thumb pressure to inject."
+      },
+      {
+        "id": "2-22",
+        "question": "Why might the maximum dose per injection differ between pen devices?",
+        "answer": "Device design limits how many units can be dialed in a single injection—for example, some spring-loaded pens allow up to 80 units per injection while some manual pens allow up to 60 units. If a prescribed dose is close to or above a device's maximum, confirm with a pharmacist or care team which pen is appropriate."
+      },
+      {
+        "id": "2-23",
+        "question": "Does it matter if my insulin pen model has been discontinued and replaced with a different one?",
+        "answer": "Yes. If a prescribed device, such as a FlexTouch-style pen, is discontinued and only a different model, such as a FlexPen-style pen, is available, ask a pharmacist or diabetes educator to re-demonstrate the injection technique, since dialing motion, push-button behavior and audible feedback can differ between devices."
+      },
+      {
+        "id": "2-24",
+        "question": "Why do some pens click while dialing and others only click at the end of the injection?",
+        "answer": "Manual pens often click as the dose is dialed and again while the dose is pushed in, while some spring-loaded pens give a single click only when the full dose has finished delivering. Learn a specific device's feedback pattern from a demonstration rather than assuming it matches a pen used before."
+      },
+      {
+        "id": "2-25",
+        "question": "What is the difference between the Lantus SoloStar pen and the Sanofi AllStar pen device?",
+        "answer": "SoloStar is a prefilled, disposable pen that comes loaded with 300 units (3 mL) of insulin glargine; once empty, the entire pen is discarded in a sharps container. AllStar is a reusable pen body loaded with separate 3 mL Lantus cartridges—only the empty cartridge is replaced and discarded, while the pen device itself can typically be kept for up to about 3 years."
+      },
+      {
+        "id": "2-26",
+        "question": "Does the maximum single dose differ between SoloStar and AllStar?",
+        "answer": "Yes. SoloStar allows up to 80 units in a single injection, while AllStar allows up to 60 units per injection; both dial in 1-unit steps. If a prescribed dose is close to a device's maximum, confirm the correct pen with a pharmacist."
+      },
+      {
+        "id": "2-27",
+        "question": "Which pen type produces less plastic waste?",
+        "answer": "A reusable pen such as AllStar is more eco-friendly because only the small glass cartridge is discarded when insulin runs out, whereas a fully disposable pen such as SoloStar means the entire pen body is thrown away once empty."
+      },
+      {
+        "id": "2-28",
+        "question": "Why might a reusable cartridge pen be a less convenient choice for travel?",
+        "answer": "A reusable pen requires carrying and correctly loading a separate insulin cartridge, and the pen mechanism itself must be cared for over time, whereas a prefilled disposable pen needs no loading and can simply be replaced with a new one—an important consideration when planning travel supplies."
       }
     ],
     "kind": "insulin",
@@ -250,12 +290,14 @@ export const modules = [
     "notes": [
       "Most routine insulin is delivered into subcutaneous tissue. The current ADA guidance supports short pen needles such as 4 mm for many people, with individualized technique review.",
       "Rotate injections systematically within approved sites. Do not inject into lumps, scars, bruises, wounds or areas of infection.",
-      "Never stop basal insulin in type 1 diabetes without urgent professional advice. Missed doses and incorrect insulin can be emergencies."
+      "Never stop basal insulin in type 1 diabetes without urgent professional advice. Missed doses and incorrect insulin can be emergencies.",
+      "Pen devices vary: spring-loaded pens (e.g., NovoRapid FlexTouch) need only a light push and their button does not extend, while manual pens (e.g., NovoRapid FlexPen) require active thumb pressure and an extending button—ask for a re-demonstration whenever your device model changes."
     ],
     "practice": [
       "Demonstrate your injection technique to an educator",
       "Mark your next injection area before each dose",
-      "Check storage and expiry dates weekly"
+      "Check storage and expiry dates weekly",
+      "Confirm your exact pen model and its maximum single dose with your pharmacist"
     ],
     "redFlags": [
       "Wrong insulin or major dose error",

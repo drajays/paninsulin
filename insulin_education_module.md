@@ -159,7 +159,31 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 20. How often should injection technique be reviewed?
 **Answer:** At diagnosis, when a device or insulin changes, when glucose becomes erratic, when skin changes occur and periodically during follow-up. Demonstrate the technique rather than only describing it; education should include site inspection, storage and sharps safety.
 
-**Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); ADA insulin-administration guidance; product labeling.
+### 21. What is the difference between a spring-loaded pen like NovoRapid FlexTouch and a manual pen like NovoRapid FlexPen?
+**Answer:** FlexTouch has a smooth, contoured barrel and uses a spring-loaded, motor-assisted mechanism that delivers the dose with very low effort; its push button does not extend outward as you dial the dose. FlexPen looks more like a traditional dial pen—its push button visibly extends outward proportionally to the dialed dose and requires active thumb pressure to inject.
+
+### 22. Why might the maximum dose per injection differ between pen devices?
+**Answer:** Device design limits how many units can be dialed in a single injection—for example, some spring-loaded pens allow up to 80 units per injection while some manual pens allow up to 60 units. If a prescribed dose is close to or above a device's maximum, confirm with a pharmacist or care team which pen is appropriate.
+
+### 23. Does it matter if my insulin pen model has been discontinued and replaced with a different one?
+**Answer:** Yes. If a prescribed device, such as a FlexTouch-style pen, is discontinued and only a different model, such as a FlexPen-style pen, is available, ask a pharmacist or diabetes educator to re-demonstrate the injection technique, since dialing motion, push-button behavior and audible feedback can differ between devices.
+
+### 24. Why do some pens click while dialing and others only click at the end of the injection?
+**Answer:** Manual pens often click as the dose is dialed and again while the dose is pushed in, while some spring-loaded pens give a single click only when the full dose has finished delivering. Learn a specific device's feedback pattern from a demonstration rather than assuming it matches a pen used before.
+
+### 25. What is the difference between the Lantus SoloStar pen and the Sanofi AllStar pen device?
+**Answer:** SoloStar is a prefilled, disposable pen that comes loaded with 300 units (3 mL) of insulin glargine; once empty, the entire pen is discarded in a sharps container. AllStar is a reusable pen body loaded with separate 3 mL Lantus cartridges—only the empty cartridge is replaced and discarded, while the pen device itself can typically be kept for up to about 3 years.
+
+### 26. Does the maximum single dose differ between SoloStar and AllStar?
+**Answer:** Yes. SoloStar allows up to 80 units in a single injection, while AllStar allows up to 60 units per injection; both dial in 1-unit steps. If a prescribed dose is close to a device's maximum, confirm the correct pen with a pharmacist.
+
+### 27. Which pen type produces less plastic waste?
+**Answer:** A reusable pen such as AllStar is more eco-friendly because only the small glass cartridge is discarded when insulin runs out, whereas a fully disposable pen such as SoloStar means the entire pen body is thrown away once empty.
+
+### 28. Why might a reusable cartridge pen be a less convenient choice for travel?
+**Answer:** A reusable pen requires carrying and correctly loading a separate insulin cartridge, and the pen mechanism itself must be cared for over time, whereas a prefilled disposable pen needs no loading and can simply be replaced with a new one—an important consideration when planning travel supplies.
+
+**Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar).
 
 ---
 
