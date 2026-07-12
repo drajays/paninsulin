@@ -324,6 +324,71 @@ export const modules = [
         "id": "2-38",
         "question": "How long can a reusable pen body typically be used before it needs replacing?",
         "answer": "This varies by exact model and is set by the manufacturer's instructions for use—for example, Novo Nordisk's NovoPen 6 and NovoPen Echo Plus smart pens are built with a roughly 5-year battery life. Regardless of the stated interval, a reusable pen should be replaced sooner if it is damaged, cracked, or not dialing and injecting correctly, and the current instructions for use should be checked for the specific model in hand."
+      },
+      {
+        "id": "2-39",
+        "question": "What are the main anatomical parts of an insulin syringe?",
+        "answer": "An insulin syringe consists of the needle (including the slanted bevel, opening/lumen and metallic shaft), the colored needle hub attaching the needle to the syringe, the clear barrel printed with a graduated dosing scale, the flange and thumb rest for finger grip, and the plunger tipped with a black rubber stopper that seals and draws up the insulin."
+      },
+      {
+        "id": "2-40",
+        "question": "Why is the bevel orientation at the needle tip important during skin entry?",
+        "answer": "The bevel is the slanted tip of the needle. Inserting the needle with the slanted bevel facing upward allows the sharpest point to pierce the subcutaneous skin smoothly with minimal resistance, tissue tearing and discomfort."
+      },
+      {
+        "id": "2-41",
+        "question": "How do you accurately read an insulin dose using the barrel scale and rubber stopper?",
+        "answer": "Read the graduated scale printed along the clear barrel by aligning the top edge of the black rubber stopper (the flat ring closest to the needle hub) directly with the line for your prescribed number of units. Always ensure you use a U-100 syringe for U-100 insulin so each line corresponds accurately to unit dosing."
+      },
+      {
+        "id": "2-42",
+        "question": "What role do the flange and thumb rest play during injection?",
+        "answer": "Resting two fingers on the flange (the wide tabs at the bottom of the barrel) while smoothly pressing the thumb rest with your thumb gives stable one-handed control, preventing sideways needle wobbling inside subcutaneous tissue."
+      },
+      {
+        "id": "2-43",
+        "question": "Why must the needle and needle hub remain sterile once the protective cap is removed?",
+        "answer": "Removing the protective cap exposes the sterile needle shaft and hub. Never touch the metallic shaft or hub with bare fingers or let it contact unsterile surfaces before injecting, as contamination can introduce subcutaneous or bloodstream infections."
+      },
+      {
+        "id": "2-44",
+        "question": "What is an “air shot” (priming or safety shot), and why is it recommended before every insulin injection?",
+        "answer": "An “air shot” is performing a priming test before injecting insulin to expel trapped air from the needle and cartridge or barrel and to confirm that insulin flows freely through the needle tip. Without an air shot, trapped air or a blocked needle can cause significant under-dosing."
+      },
+      {
+        "id": "2-45",
+        "question": "How do you perform an air shot when using an insulin pen device?",
+        "answer": "Attach a new pen needle, remove both outer and inner caps, hold the pen vertically with the needle pointing straight up, dial 2 units of insulin, and firmly depress the dose button until the dial returns to zero and a stream or bleb of insulin appears at the needle tip. If no insulin appears, repeat dialing 2 units up to several times; if still unsuccessful, replace the needle."
+      },
+      {
+        "id": "2-46",
+        "question": "How do you perform an air shot and remove trapped air when using an insulin syringe?",
+        "answer": "Draw up slightly more than the prescribed dose, hold the syringe vertically with the needle pointing uppermost, gently tap the barrel with your finger so trapped air bubbles rise to the top beneath the needle hub, and push the plunger slowly until air bubbles are expelled and a small bleb of insulin appears at the needle tip before setting your exact dose."
+      },
+      {
+        "id": "2-47",
+        "question": "Why is the risk of drawing up air bubbles greater with a syringe than with a prefilled pen?",
+        "answer": "When drawing insulin manually from a vial into a syringe, negative pressure or improper needle positioning above the liquid level can easily pull ambient air into the barrel. In contrast, prefilled pen cartridges contain minimal headspace, though air can still enter if a needle is left attached between injections."
+      },
+      {
+        "id": "2-48",
+        "question": "What happens if you inject without priming when air bubbles are trapped in the pen or syringe?",
+        "answer": "Injecting trapped air instead of liquid insulin results in receiving less insulin than prescribed, which can lead to unexplained hyperglycemia post-injection. Furthermore, air bubbles inside the cartridge or barrel compress under pressure, causing delayed dripping after the injection is completed."
+      },
+      {
+        "id": "2-49",
+        "question": "What do white flakes, clumps or \"frosting\" inside a clear insulin pen or vial mean?",
+        "answer": "This is precipitated or aggregated insulin protein, a process sometimes called fibrillation. Heat, freezing, or repeated shaking or agitation can make rapid-acting insulin unfold and clump together, appearing as visible white particles, flakes or frosting. Insulin in this state has partly lost potency and its dose becomes unpredictable."
+      },
+      {
+        "id": "2-50",
+        "question": "Is it safe to use a rapid-acting insulin once particles, flakes or cloudiness appear in it?",
+        "answer": "No. Rapid-acting analog insulins must stay clear and colorless; manufacturer prescribing information for these products specifically instructs not to use them if particulate matter or discoloration is seen. Return the pen or vial to the pharmacy for a replacement, and do not try to filter it, shake it back to normal, or keep using it."
+      },
+      {
+        "id": "2-51",
+        "question": "What can reduce the risk of insulin precipitating like this?",
+        "answer": "Keep insulin away from the back wall of the refrigerator or the freezer compartment, where it can freeze; store it in the door or a stable mid-shelf spot instead. Never freeze insulin, protect it from heat, direct sunlight and hot vehicles, avoid dropping or vigorously shaking pens, and follow the specific product's stated room-temperature use period once opened."
       }
     ],
     "kind": "insulin",

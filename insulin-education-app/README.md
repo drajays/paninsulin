@@ -1,11 +1,11 @@
 # PanInsulin — Insulin Therapy Education App
 
-A modern, responsive React/Vite patient-education app focused on **insulin therapy**, built from a 13-topic diabetes education module. Seven core modules (insulin basics, injection technique, monitoring, hypoglycemia, sick-day rules, DKA and types of insulin/brand names) are the primary learning path; six related diabetes self-management topics (nutrition, exercise, complications, emotional health, travel, pregnancy) are included for broader context.
+A modern, responsive React/Vite patient-education app focused on **insulin therapy**, built from a 14-topic diabetes education module. Eight core modules (insulin basics, injection technique, monitoring, hypoglycemia, sick-day rules, DKA, types of insulin/brand names and insulin storage) are the primary learning path; six related diabetes self-management topics (nutrition, exercise, complications, emotional health, travel, pregnancy) are included for broader context.
 
-- 13 learning modules and all **295 patient Q&As** from `insulin_education_module.md`
+- 14 learning modules and all **315 patient Q&As** from `insulin_education_module.md`
 - Detailed training notes for every module
 - Image-based visual questions with accessible inline SVG illustrations
-- 49 MCQs with instant feedback and explanations
+- 60 MCQs with instant feedback and explanations
 - Progress tracking saved in `localStorage`
 - Search across the question-and-answer library
 - Responsive desktop, tablet and mobile layouts
@@ -36,6 +36,6 @@ This is an education prototype, not a clinical decision-support system. It does 
 ## Main files
 
 - `src/main.jsx` — application shell and interactive views
-- `src/data.js` — 13 modules (tagged `core`/related), 295 Q&As including Indian and US insulin brand names, training notes and source links
+- `src/data.js` — 14 modules (tagged `core`/related), 315 Q&As including Indian and US insulin brand names, training notes and source links
 - `src/quiz.js` — MCQs and image-based visual scenarios
 - `src/styles.css` — responsive visual system

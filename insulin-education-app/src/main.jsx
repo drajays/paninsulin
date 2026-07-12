@@ -294,7 +294,7 @@ function VisualQuiz({ progress, setProgress, go }) {
     setProgress((p) => ({ ...p, visual: { ...p.visual, [scenario.moduleId]: option === scenario.answer ? 'correct' : 'review' } }));
   }
   function next() { setSelected(null); setIndex((n) => (n + 1) % visualScenarios.length); }
-  return <section className="visual-view"><div className="visual-heading"><div><p className="section-kicker">IMAGE-BASED QUESTION & ANSWER</p><h1>See the situation. Choose the safe action.</h1><p className="muted">Visual practice for patients, families and caregivers.</p></div><div className="visual-counter"><strong>{index + 1}</strong><span>/ {visualScenarios.length}</span></div></div><div className="visual-layout"><div className="visual-question-card"><div className="visual-scene"><TopicIllustration kind={module.kind} accent={module.accent} large /></div><div className="visual-question-copy"><div className="visual-module-tag" style={{ color: module.accent }}>MODULE {String(module.id).padStart(2, '0')} · {module.short}</div><h2>{scenario.prompt}</h2><div className="visual-options">{scenario.options.map((option, optionIndex) => <button key={option} className={selected === null ? 'visual-option' : optionIndex === scenario.answer ? 'visual-option correct' : optionIndex === selected ? 'visual-option incorrect' : 'visual-option muted-option'} onClick={() => choose(optionIndex)}><span>{String.fromCharCode(65 + optionIndex)}</span>{option}</button>)}</div>{selected !== null && <div className={selected === scenario.answer ? 'visual-feedback good' : 'visual-feedback needs-review'}><strong>{selected === scenario.answer ? 'That is the safer choice.' : 'Let’s review the safer choice.'}</strong><p>{scenario.explain}</p></div>}<div className="visual-footer"><button className="text-button" onClick={() => go('notes', module.id)}>Open training notes <span>↗</span></button>{selected !== null && <button className="next-button" onClick={next}>Next visual <span>→</span></button>}</div></div></div><aside className="visual-side"><div className="visual-side-card"><div className="side-icon">✦</div><p className="section-kicker">HOW TO USE THIS</p><h3>Pause before you answer.</h3><p>Ask: what is happening, what is the risk, and what is the first safe action?</p><div className="three-step"><span><b>1</b>Notice</span><span><b>2</b>Choose</span><span><b>3</b>Explain</span></div></div><div className="visual-side-card progress-side"><p className="section-kicker">VISUAL PROGRESS</p><div className="progress-track"><span style={{ width: `${Object.keys(progress.visual || {}).length / visualScenarios.length * 100}%` }} /></div><p>{Object.keys(progress.visual || {}).length} of {visualScenarios.length} visual situations attempted</p></div></aside></div></section>;
+  return <section className="visual-view"><div className="visual-heading"><div><p className="section-kicker">IMAGE-BASED QUESTION & ANSWER</p><h1>See the situation. Choose the safe action.</h1><p className="muted">Visual practice for patients, families and caregivers.</p></div><div className="visual-counter"><strong>{index + 1}</strong><span>/ {visualScenarios.length}</span></div></div><div className="visual-layout"><div className="visual-question-card"><div className="visual-scene"><TopicIllustration kind={scenario.artKind || module.kind} accent={module.accent} large /></div><div className="visual-question-copy"><div className="visual-module-tag" style={{ color: module.accent }}>MODULE {String(module.id).padStart(2, '0')} · {module.short}</div><h2>{scenario.prompt}</h2><div className="visual-options">{scenario.options.map((option, optionIndex) => <button key={option} className={selected === null ? 'visual-option' : optionIndex === scenario.answer ? 'visual-option correct' : optionIndex === selected ? 'visual-option incorrect' : 'visual-option muted-option'} onClick={() => choose(optionIndex)}><span>{String.fromCharCode(65 + optionIndex)}</span>{option}</button>)}</div>{selected !== null && <div className={selected === scenario.answer ? 'visual-feedback good' : 'visual-feedback needs-review'}><strong>{selected === scenario.answer ? 'That is the safer choice.' : 'Let’s review the safer choice.'}</strong><p>{scenario.explain}</p></div>}<div className="visual-footer"><button className="text-button" onClick={() => go('notes', module.id)}>Open training notes <span>↗</span></button>{selected !== null && <button className="next-button" onClick={next}>Next visual <span>→</span></button>}</div></div></div><aside className="visual-side"><div className="visual-side-card"><div className="side-icon">✦</div><p className="section-kicker">HOW TO USE THIS</p><h3>Pause before you answer.</h3><p>Ask: what is happening, what is the risk, and what is the first safe action?</p><div className="three-step"><span><b>1</b>Notice</span><span><b>2</b>Choose</span><span><b>3</b>Explain</span></div></div><div className="visual-side-card progress-side"><p className="section-kicker">VISUAL PROGRESS</p><div className="progress-track"><span style={{ width: `${Object.keys(progress.visual || {}).length / visualScenarios.length * 100}%` }} /></div><p>{Object.keys(progress.visual || {}).length} of {visualScenarios.length} visual situations attempted</p></div></aside></div></section>;
 }
 
 function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
@@ -314,6 +314,91 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
   else if (kind === 'travel') art = <><path d="M98 125 L219 73" stroke={accent} strokeWidth="10" strokeLinecap="round" /><path d="M156 102 L125 44 M173 94 L207 45" stroke={accent} strokeWidth="8" strokeLinecap="round" /><path d="M92 126 l-27 23 M216 74 l29-14" stroke={accent} strokeWidth="8" strokeLinecap="round" /><circle cx="160" cy="101" r="20" fill="#fff" stroke={accent} strokeWidth="3" /><path d="M72 154 h179" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".3" /><path d="M252 38 v42 M231 59 h42" stroke={accent} strokeWidth="4" strokeLinecap="round" opacity=".5" /></>;
   else if (kind === 'pregnancy') art = <><path d="M160 48 C128 48 102 72 102 105 C102 137 128 157 160 157 C192 157 218 137 218 105 C218 72 192 48 160 48Z" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="159" cy="92" r="18" fill={accent} opacity=".22" /><path d="M158 111 q-20 5-18 27 q19 9 39 0 q2-22-21-27" fill={accent} opacity=".45" /><path d="M68 76 v50 M48 101 h40" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".5" /><path d="M239 55 q19 18 0 35 q-19 17 0 35" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /></>;
   else if (kind === 'insulintypes') art = <><rect x="80" y="78" width="26" height="62" rx="7" fill="#fff" stroke={accent} strokeWidth="3" /><rect x="88" y="66" width="10" height="14" rx="2" fill={accent} /><rect x="140" y="56" width="26" height="84" rx="7" fill="#fff" stroke={accent} strokeWidth="3" /><rect x="148" y="44" width="10" height="14" rx="2" fill={accent} /><rect x="200" y="34" width="26" height="106" rx="7" fill="#fff" stroke={accent} strokeWidth="3" /><rect x="208" y="22" width="10" height="14" rx="2" fill={accent} /><path d="M236 44 h34 l14 12 -14 12 h-34 Z" fill={accent} opacity=".85" /><circle cx="262" cy="56" r="3" fill="#fff" /></>;
+  else if (kind === 'syringe') art = (
+    <g>
+      {/* Needle shaft */}
+      <line x1="220" y1="20" x2="220" y2="52" stroke="#64748b" strokeWidth="2" strokeLinecap="round" />
+      {/* Needle hub */}
+      <polygon points="214,64 226,64 222,52 218,52" fill={accent} />
+      <rect x="215" y="64" width="10" height="4" fill={accent} />
+      {/* Barrel */}
+      <rect x="208" y="68" width="24" height="74" rx="2" fill="#ffffff" stroke="#334155" strokeWidth="2.5" />
+      {/* Rubber stopper inside barrel */}
+      <rect x="210" y="70" width="20" height="7" rx="3" fill="#1e293b" />
+      <line x1="210" y1="74" x2="230" y2="74" stroke="#475569" strokeWidth="1" />
+      {/* Scale tick marks along barrel */}
+      <line x1="212" y1="83" x2="219" y2="83" stroke="#475569" strokeWidth="1.5" />
+      <line x1="212" y1="91" x2="216" y2="91" stroke="#64748b" strokeWidth="1" />
+      <line x1="212" y1="99" x2="219" y2="99" stroke="#475569" strokeWidth="1.5" />
+      <line x1="212" y1="107" x2="216" y2="107" stroke="#64748b" strokeWidth="1" />
+      <line x1="212" y1="115" x2="219" y2="115" stroke="#475569" strokeWidth="1.5" />
+      <line x1="212" y1="123" x2="216" y2="123" stroke="#64748b" strokeWidth="1" />
+      <line x1="212" y1="131" x2="219" y2="131" stroke="#475569" strokeWidth="1.5" />
+      {/* Flange */}
+      <rect x="198" y="142" width="44" height="5" rx="2.5" fill="#e2e8f0" stroke="#334155" strokeWidth="2" />
+      {/* Plunger stem */}
+      <rect x="216" y="147" width="8" height="24" fill="#f1f5f9" stroke="#334155" strokeWidth="2" />
+      {/* Thumb rest */}
+      <rect x="203" y="171" width="34" height="5" rx="2.5" fill="#e2e8f0" stroke="#334155" strokeWidth="2" />
+
+      {/* Magnified Inset Circle showing Needle Anatomy (Lumen, Bevel, Shaft) */}
+      <circle cx="115" cy="48" r="32" fill="#ffffff" stroke={accent} strokeWidth="2.5" />
+      <path d="M108 72 V 42 L116 26 L120 42 V 72 Z" fill="#cbd5e1" stroke="#334155" strokeWidth="2" />
+      <path d="M116 26 L120 42 L112 42 Z" fill={accent} opacity="0.75" />
+      <line x1="147" y1="36" x2="220" y2="22" stroke={accent} strokeWidth="1" strokeDasharray="3 3" />
+
+      {/* Disassembled components on left (Plunger, Barrel, Cap with needle, Cap) */}
+      <rect x="18" y="90" width="6" height="65" fill="#f1f5f9" stroke="#64748b" strokeWidth="1.5" />
+      <rect x="15" y="85" width="12" height="5" rx="2" fill="#334155" />
+      <rect x="12" y="155" width="18" height="4" rx="2" fill="#cbd5e1" stroke="#64748b" strokeWidth="1.5" />
+      <rect x="42" y="85" width="16" height="70" rx="2" fill="#ffffff" stroke="#64748b" strokeWidth="1.5" />
+      <rect x="47" y="79" width="6" height="6" fill="#cbd5e1" stroke="#64748b" strokeWidth="1" />
+      <rect x="36" y="155" width="28" height="4" rx="2" fill="#cbd5e1" stroke="#64748b" strokeWidth="1.5" />
+      <rect x="74" y="95" width="12" height="60" rx="6" fill="#f8fafc" stroke="#64748b" strokeWidth="1.5" />
+      <polygon points="77,143 83,143 81,135 79,135" fill={accent} />
+      <line x1="80" y1="135" x2="80" y2="108" stroke="#64748b" strokeWidth="1.5" />
+
+      {/* Clean labels */}
+      <text x="115" y="88" fontSize="8" fontWeight="bold" textAnchor="middle" fill={accent}>Bevel / Lumen</text>
+      <text x="268" y="73" fontSize="8" fontWeight="600" fill="#334155">Rubber stopper</text>
+      <text x="268" y="105" fontSize="8" fontWeight="600" fill="#334155">Barrel &amp; Scale</text>
+      <text x="268" y="145" fontSize="8" fontWeight="600" fill="#334155">Flange</text>
+      <text x="268" y="174" fontSize="8" fontWeight="600" fill="#334155">Thumb rest</text>
+    </g>
+  );
+  else if (kind === 'airshot') art = (
+    <g>
+      {/* Upright Pen / Syringe Assembly pointing straight up */}
+      <line x1="160" y1="36" x2="160" y2="12" stroke="#64748b" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M160 3 C 156 8, 156 12, 160 14 C 164 12, 164 8, 160 3 Z" fill="#0ea5e9" stroke="#0284c7" strokeWidth="1" />
+      <circle cx="159" cy="9" r="1.5" fill="#ffffff" opacity="0.8" />
+
+      <polygon points="152,48 168,48 163,36 157,36" fill={accent} />
+      <rect x="153" y="48" width="14" height="5" rx="1" fill={accent} />
+
+      <rect x="144" y="53" width="32" height="95" rx="6" fill="#ffffff" stroke="#334155" strokeWidth="2.5" />
+      <rect x="150" y="62" width="20" height="60" rx="3" fill="#e0f2fe" stroke="#94a3b8" strokeWidth="1.5" />
+
+      <path d="M150 72 Q 160 76 170 72" fill="none" stroke="#0284c7" strokeWidth="1.5" />
+      <circle cx="156" cy="79" r="3.5" fill="#ffffff" stroke="#0284c7" strokeWidth="1.5" />
+      <circle cx="163" cy="88" r="2.5" fill="#ffffff" stroke="#0284c7" strokeWidth="1.2" />
+      <circle cx="158" cy="98" r="1.8" fill="#ffffff" stroke="#0284c7" strokeWidth="1" />
+
+      <rect x="148" y="148" width="24" height="15" rx="3" fill="#cbd5e1" stroke="#334155" strokeWidth="2" />
+      <text x="160" y="159" fontSize="9" fontWeight="bold" textAnchor="middle" fill="#1e293b">2u</text>
+      <rect x="153" y="163" width="14" height="10" rx="2" fill={accent} />
+
+      <polygon points="105,40 100,50 110,50" fill={accent} />
+      <line x1="105" y1="85" x2="105" y2="48" stroke={accent} strokeWidth="2.5" />
+      <text x="105" y="100" fontSize="8" fontWeight="bold" textAnchor="middle" fill={accent}>Hold Upright</text>
+      <text x="105" y="111" fontSize="7.5" textAnchor="middle" fill="#64748b">Needle Uppermost</text>
+
+      <circle cx="235" cy="55" r="24" fill="#ffffff" stroke={accent} strokeWidth="2" />
+      <path d="M235 41 C 229 48, 229 55, 235 59 C 241 55, 241 48, 235 41 Z" fill="#0ea5e9" stroke="#0284c7" strokeWidth="1.5" />
+      <text x="235" y="92" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#0f766e">Insulin Bleb</text>
+      <text x="235" y="103" fontSize="7.5" textAnchor="middle" fill="#64748b">Confirms Flow</text>
+    </g>
+  );
   else art = <><circle cx="160" cy="95" r="56" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M160 60 v70 M125 95 h70" stroke={accent} strokeWidth="7" strokeLinecap="round" /><circle cx="254" cy="70" r="20" fill={accent} opacity=".18" /></>;
   return <svg className={large ? 'topic-illustration large' : 'topic-illustration'} {...common}>{bg}{dot}{art}</svg>;
 }
