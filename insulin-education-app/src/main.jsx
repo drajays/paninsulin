@@ -1,0 +1,328 @@
+import React, { useEffect, useMemo, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { modules, appSources } from './data';
+import { mcqs, visualScenarios } from './quiz';
+import './styles.css';
+
+const STORAGE_KEY = 'paninsulin-progress-v1';
+const navItems = [
+  { id: 'home', label: 'Overview', icon: '⌂' },
+  { id: 'learn', label: 'Learn modules', icon: '▤' },
+  { id: 'visuals', label: 'Visual quiz', icon: '◉' },
+  { id: 'quiz', label: 'MCQ practice', icon: '✓' },
+  { id: 'notes', label: 'Training notes', icon: '✎' }
+];
+
+function blankProgress() {
+  return { completed: [], viewed: {}, quiz: {}, visual: {} };
+}
+
+function loadProgress() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? { ...blankProgress(), ...JSON.parse(raw) } : blankProgress();
+  } catch {
+    return blankProgress();
+  }
+}
+
+function App() {
+  const [view, setView] = useState('home');
+  const [selectedId, setSelectedId] = useState(1);
+  const [progress, setProgress] = useState(loadProgress);
+  const [search, setSearch] = useState('');
+  const [dark, setDark] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  }, [progress]);
+
+  const selected = modules.find((m) => m.id === selectedId) || modules[0];
+  const qasViewed = Object.values(progress.viewed || {}).reduce((sum, arr) => sum + arr.length, 0);
+  const mcqAnswered = Object.values(progress.quiz || {}).reduce((sum, score) => sum + (score?.answered || 0), 0);
+  const completion = Math.round((progress.completed.length / modules.length) * 100);
+
+  function go(nextView, moduleId = selectedId) {
+    setView(nextView);
+    setSelectedId(moduleId);
+    setMobileMenu(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function markViewed(moduleId, qaId) {
+    setProgress((p) => {
+      const old = p.viewed[moduleId] || [];
+      return old.includes(qaId) ? p : { ...p, viewed: { ...p.viewed, [moduleId]: [...old, qaId] } };
+    });
+  }
+
+  function markComplete(moduleId) {
+    setProgress((p) => p.completed.includes(moduleId) ? p : { ...p, completed: [...p.completed, moduleId] });
+  }
+
+  function updateQuiz(moduleId, update) {
+    setProgress((p) => ({ ...p, quiz: { ...p.quiz, [moduleId]: { ...(p.quiz[moduleId] || {}), ...update } } }));
+  }
+
+  const searchResults = useMemo(() => {
+    const term = search.trim().toLowerCase();
+    if (!term) return [];
+    const results = [];
+    modules.forEach((module) => {
+      module.qas.forEach((qa) => {
+        if (`${qa.question} ${qa.answer}`.toLowerCase().includes(term)) {
+          results.push({ moduleId: module.id, moduleTitle: module.title, ...qa });
+        }
+      });
+    });
+    return results.slice(0, 8);
+  }, [search]);
+
+  return (
+    <div className={dark ? 'app dark' : 'app'}>
+      <Sidebar view={view} go={go} selectedId={selectedId} setSelectedId={setSelectedId} progress={progress} completion={completion} mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
+      <div className="shell">
+        <Topbar search={search} setSearch={setSearch} dark={dark} setDark={setDark} setMobileMenu={setMobileMenu} />
+        {search && searchResults.length > 0 && (
+          <div className="search-results">
+            <div className="search-title">Search results <span>{searchResults.length}</span></div>
+            {searchResults.map((result) => (
+              <button key={result.id} className="search-result" onClick={() => { go('learn', result.moduleId); setSearch(''); }}>
+                <span className="result-dot">{result.moduleId}</span>
+                <span><strong>{result.question}</strong><small>{result.moduleTitle}</small></span>
+                <span className="arrow">→</span>
+              </button>
+            ))}
+          </div>
+        )}
+        <main className="main">
+          {view === 'home' && <Home modules={modules} progress={progress} completion={completion} qasViewed={qasViewed} mcqAnswered={mcqAnswered} go={go} selected={selected} />}
+          {view === 'learn' && <ModuleView module={selected} allModules={modules} progress={progress} markViewed={markViewed} markComplete={markComplete} go={go} />}
+          {view === 'notes' && <NotesView module={selected} allModules={modules} markComplete={markComplete} go={go} />}
+          {view === 'quiz' && <QuizView module={selected} allModules={modules} progress={progress} updateQuiz={updateQuiz} go={go} />}
+          {view === 'visuals' && <VisualQuiz progress={progress} setProgress={setProgress} go={go} />}
+        </main>
+        <Footer />
+      </div>
+    </div>
+  );
+}
+
+function Sidebar({ view, go, selectedId, setSelectedId, progress, completion, mobileMenu, setMobileMenu }) {
+  const coreModules = modules.filter((m) => m.core);
+  const relatedModules = modules.filter((m) => !m.core);
+  return (
+    <aside className={mobileMenu ? 'sidebar mobile-open' : 'sidebar'}>
+      <div className="brand" onClick={() => go('home')} role="button" tabIndex="0">
+        <div className="brand-mark"><span>P</span><i /></div>
+        <div><strong>PanInsulin</strong><small>inject • monitor • thrive</small></div>
+      </div>
+      <div className="sidebar-scroll">
+        <div className="side-label">Your learning space</div>
+        <nav className="nav-list">
+          {navItems.map((item) => (
+            <button className={view === item.id ? 'nav-item active' : 'nav-item'} key={item.id} onClick={() => go(item.id)}>
+              <span className="nav-icon">{item.icon}</span><span>{item.label}</span>
+              {item.id === 'quiz' && <em>12×3</em>}
+            </button>
+          ))}
+        </nav>
+        <div className="side-label module-label">Core insulin modules</div>
+        <div className="module-nav">
+          {coreModules.map((module) => {
+            const done = progress.completed.includes(module.id);
+            return <button key={module.id} className={selectedId === module.id && (view === 'learn' || view === 'notes' || view === 'quiz') ? 'module-nav-item active' : 'module-nav-item'} onClick={() => go('learn', module.id)}>
+              <span className="module-number" style={{ '--accent': module.accent }}>{done ? '✓' : String(module.id).padStart(2, '0')}</span>
+              <span className="module-nav-text"><strong>{module.short}</strong><small>{module.title}</small></span>
+              {done && <span className="done-dot" />}
+            </button>;
+          })}
+        </div>
+        <div className="side-label module-label">Related diabetes topics</div>
+        <div className="module-nav">
+          {relatedModules.map((module) => {
+            const done = progress.completed.includes(module.id);
+            return <button key={module.id} className={selectedId === module.id && (view === 'learn' || view === 'notes' || view === 'quiz') ? 'module-nav-item active' : 'module-nav-item'} onClick={() => go('learn', module.id)}>
+              <span className="module-number" style={{ '--accent': module.accent }}>{done ? '✓' : String(module.id).padStart(2, '0')}</span>
+              <span className="module-nav-text"><strong>{module.short}</strong><small>{module.title}</small></span>
+              {done && <span className="done-dot" />}
+            </button>;
+          })}
+        </div>
+      </div>
+      <div className="sidebar-bottom">
+        <div className="progress-label"><span>Overall progress</span><strong>{completion}%</strong></div>
+        <div className="progress-track"><span style={{ width: `${completion}%` }} /></div>
+        <div className="safety-mini"><span>♥</span><p>Education supports care. It never replaces your clinical team.</p></div>
+      </div>
+    </aside>
+  );
+}
+
+function Topbar({ search, setSearch, dark, setDark, setMobileMenu }) {
+  return <header className="topbar">
+    <button className="mobile-menu" onClick={() => setMobileMenu(true)} aria-label="Open menu">☰</button>
+    <div className="breadcrumb"><span>Patient education</span><b>/</b><strong>Insulin therapy</strong></div>
+    <div className="top-actions">
+      <label className="search-box"><span>⌕</span><input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search questions, topics…" aria-label="Search questions" />{search && <button onClick={() => setSearch('')} aria-label="Clear search">×</button>}</label>
+      <button className="icon-button" onClick={() => setDark(!dark)} aria-label="Toggle theme">{dark ? '☀' : '◐'}</button>
+      <div className="avatar">PI</div>
+    </div>
+  </header>;
+}
+
+function Home({ modules, progress, completion, qasViewed, mcqAnswered, go, selected }) {
+  const coreModules = modules.filter((m) => m.core);
+  const relatedModules = modules.filter((m) => !m.core);
+  const nextId = coreModules.find((m) => !progress.completed.includes(m.id))?.id
+    || modules.find((m) => !progress.completed.includes(m.id))?.id
+    || 2;
+  const nextModule = modules.find((m) => m.id === nextId);
+  return <>
+    <section className="hero-card">
+      <div className="hero-copy">
+        <div className="eyebrow"><span className="pulse-dot" /> PERSONALIZED INSULIN LEARNING PATH</div>
+        <h1>Confidence with<br /><span>every insulin dose.</span></h1>
+        <p>A calm, visual guide to insulin therapy—injection technique, dosing safety, hypoglycemia and sick-day rules—built for patients, families and caregivers.</p>
+        <div className="hero-buttons"><button className="primary-button" onClick={() => go('learn', nextId)}>Continue learning <span>→</span></button><button className="ghost-button" onClick={() => go('visuals')}>Try a visual quiz</button></div>
+        <div className="hero-trust"><span>✓ Evidence-informed</span><span>✓ Patient-friendly</span><span>✓ 6 core insulin modules</span></div>
+      </div>
+      <div className="hero-art"><HeroIllustration /></div>
+    </section>
+
+    <section className="welcome-row"><div><p className="section-kicker">YOUR DASHBOARD</p><h2>Welcome back, learner</h2><p className="muted">Choose a path that feels useful today.</p></div><div className="date-chip">July 2026 <span>⌄</span></div></section>
+    <section className="stats-grid">
+      <StatCard icon="◒" label="Learning progress" value={`${completion}%`} detail={`${progress.completed.length} of 12 modules complete`} color="indigo" />
+      <StatCard icon="?" label="Questions explored" value={qasViewed} detail="from 240 patient Q&As" color="teal" />
+      <StatCard icon="✓" label="MCQ practice" value={mcqAnswered} detail="answers completed" color="orange" />
+      <StatCard icon="↗" label="Next focus" value={String(nextId).padStart(2, '0')} detail={nextModule?.short || 'Review'} color="pink" />
+    </section>
+
+    <section className="section-head"><div><p className="section-kicker">CORE INSULIN THERAPY</p><h2>Master the essentials of insulin use</h2></div><button className="text-button" onClick={() => go('learn', 2)}>View all <span>→</span></button></section>
+    <section className="module-grid">
+      {coreModules.map((module) => <ModuleCard key={module.id} module={module} done={progress.completed.includes(module.id)} onClick={() => go('learn', module.id)} />)}
+    </section>
+    <section className="lower-grid">
+      <div className="challenge-card"><div className="challenge-visual"><TopicIllustration kind="hypo" accent="#dc2626" /></div><div><p className="section-kicker">TODAY’S SAFETY CHECK</p><h3>What is the first step for a conscious low?</h3><p>Practice the 15 g / 15 minute approach in the visual quiz.</p><button className="small-button" onClick={() => go('visuals')}>Practice now <span>→</span></button></div></div>
+      <div className="care-card"><div className="care-icon">♥</div><div><p className="section-kicker">A GENTLE REMINDER</p><h3>You do not have to do this perfectly.</h3><p>Bring patterns, questions and barriers to your care team. Progress is built together.</p></div></div>
+    </section>
+
+    <section className="section-head"><div><p className="section-kicker">BROADER CONTEXT</p><h2>Related diabetes self-management topics</h2></div></section>
+    <section className="module-grid">
+      {relatedModules.map((module) => <ModuleCard key={module.id} module={module} done={progress.completed.includes(module.id)} onClick={() => go('learn', module.id)} />)}
+    </section>
+  </>;
+}
+
+function StatCard({ icon, label, value, detail, color }) {
+  return <div className={`stat-card ${color}`}><div className="stat-top"><span className="stat-icon">{icon}</span><span className="stat-label">{label}</span></div><strong>{value}</strong><small>{detail}</small></div>;
+}
+
+function ModuleCard({ module, done, onClick }) {
+  return <button className="module-card" onClick={onClick} style={{ '--accent': module.accent }}>
+    <div className="card-top"><span className="topic-icon">{module.icon}</span><span className={done ? 'status done' : 'status'}>{done ? 'Completed' : 'Start module'}</span></div>
+    <div className="card-illustration"><TopicIllustration kind={module.kind} accent={module.accent} /></div>
+    <div className="module-card-copy"><span>MODULE {String(module.id).padStart(2, '0')}</span><h3>{module.short}</h3><p>{module.tagline}</p></div>
+    <div className="card-footer"><span>{module.qas.length} Q&As</span><span className="circle-arrow">→</span></div>
+  </button>;
+}
+
+function ModuleView({ module, allModules, progress, markViewed, markComplete, go }) {
+  const [qaIndex, setQaIndex] = useState(0);
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [tab, setTab] = useState('qa');
+  const qa = module.qas[qaIndex];
+  const viewed = progress.viewed[module.id]?.length || 0;
+  useEffect(() => { setQaIndex(0); setShowAnswer(false); }, [module.id]);
+  function openAnswer() {
+    setShowAnswer(true);
+    markViewed(module.id, qa.id);
+  }
+  function nextQuestion() {
+    setShowAnswer(false);
+    setQaIndex((n) => (n + 1) % module.qas.length);
+  }
+  return <>
+    <ModuleHero module={module} viewed={viewed} onComplete={() => markComplete(module.id)} onVisual={() => go('visuals')} />
+    <div className="module-tabs">
+      <button className={tab === 'qa' ? 'active' : ''} onClick={() => setTab('qa')}>Q&A <span>20</span></button>
+      <button className={tab === 'notes' ? 'active' : ''} onClick={() => setTab('notes')}>Training notes</button>
+      <button className={tab === 'mcq' ? 'active' : ''} onClick={() => go('quiz', module.id)}>MCQ practice</button>
+    </div>
+    {tab === 'qa' && <section className="qa-layout"><div className="qa-main"><div className="qa-header"><div><p className="section-kicker">PATIENT QUESTION {String(qaIndex + 1).padStart(2, '0')} / 20</p><h2>Learn through everyday questions</h2></div><span className="qa-count">{viewed} viewed</span></div><div className="qa-card"><div className="qa-number" style={{ '--accent': module.accent }}>{String(qaIndex + 1).padStart(2, '0')}</div><h3>{qa.question}</h3>{!showAnswer ? <button className="reveal-button" onClick={openAnswer}>Reveal patient-friendly answer <span>→</span></button> : <div className="answer-box"><div className="answer-label">ANSWER</div><p>{qa.answer}</p><button className="next-button" onClick={nextQuestion}>Next question <span>→</span></button></div>}</div><div className="qa-nav"><button onClick={() => { setShowAnswer(false); setQaIndex((n) => (n - 1 + module.qas.length) % module.qas.length); }}>← Previous</button><div className="question-dots">{module.qas.slice(0, 10).map((item, index) => <button key={item.id} aria-label={`Question ${index + 1}`} className={index === qaIndex ? 'active' : (progress.viewed[module.id]?.includes(item.id) ? 'viewed' : '')} onClick={() => { setQaIndex(index); setShowAnswer(false); }} />)}<span>+10</span></div><button onClick={nextQuestion}>Next →</button></div></div><aside className="qa-aside"><div className="aside-art"><TopicIllustration kind={module.kind} accent={module.accent} /></div><p className="section-kicker">VISUAL MEMORY</p><h3>See it, then say it back.</h3><p>Use the visual quiz to practice recognising safe actions, warning signs and everyday choices.</p><button className="outline-button" onClick={() => go('visuals')}>Open visual quiz <span>↗</span></button><div className="teach-back"><span>✦</span><div><strong>Teach-back prompt</strong><p>“Can you show me how you would explain this to a family member?”</p></div></div></aside></section>}
+    {tab === 'notes' && <NotesView module={module} allModules={allModules} markComplete={markComplete} go={go} />}
+  </>;
+}
+
+function ModuleHero({ module, viewed, onComplete, onVisual }) {
+  return <section className="module-hero" style={{ '--accent': module.accent }}><div className="module-hero-copy"><div className="eyebrow"><span className="module-chip">MODULE {String(module.id).padStart(2, '0')}</span><span>{module.short}</span></div><h1>{module.title}</h1><p>{module.tagline}. Build knowledge you can use in real life, one question at a time.</p><div className="module-hero-actions"><button className="primary-button" onClick={onVisual}>Practice visual quiz <span>→</span></button><button className="hero-link" onClick={onComplete}>Mark module complete <span>✓</span></button></div></div><div className="module-hero-art"><TopicIllustration kind={module.kind} accent={module.accent} /><div className="hero-progress"><strong>{viewed}/20</strong><span>Q&As viewed</span></div></div></section>;
+}
+
+function NotesView({ module, allModules, markComplete, go }) {
+  return <section className="notes-view"><div className="notes-heading"><div><p className="section-kicker">DETAILED TRAINING NOTES</p><h2>{module.short}: make it usable</h2><p className="muted">Use these notes for patient education, family teaching and teach-back conversations.</p></div><button className="primary-button" onClick={() => markComplete(module.id)}>Mark complete <span>✓</span></button></div><div className="notes-grid"><div className="notes-main"><div className="learning-objectives"><div className="note-icon">◎</div><div><p className="section-kicker">BY THE END OF THIS MODULE</p><ul>{module.learning.map((item) => <li key={item}>{item}</li>)}</ul></div></div><div className="note-panel"><div className="panel-title"><span className="numbered">01</span><div><p className="section-kicker">CORE EXPLANATION</p><h3>What patients need to remember</h3></div></div>{module.notes.map((note, index) => <div className="note-row" key={note}><span>{String(index + 1).padStart(2, '0')}</span><p>{note}</p></div>)}</div><div className="note-panel practice-panel"><div className="panel-title"><span className="numbered green">02</span><div><p className="section-kicker">PRACTICE & TEACH-BACK</p><h3>Turn information into a skill</h3></div></div>{module.practice.map((item) => <label className="check-row" key={item}><input type="checkbox" /><span className="checkmark">✓</span><span>{item}</span></label>)}<div className="teach-back-large"><strong>Ask the patient:</strong><p>“What will you do first when this situation happens at home?”</p></div></div></div><aside className="notes-aside"><div className="note-visual"><TopicIllustration kind={module.kind} accent={module.accent} /></div><div className="redflag-box"><div className="redflag-title"><span>!</span><strong>When to seek help</strong></div><ul>{module.redFlags.map((flag) => <li key={flag}>{flag}</li>)}</ul></div><div className="next-module"><p className="section-kicker">KEEP GOING</p><h3>Next: {allModules[module.id % allModules.length].short}</h3><button className="outline-button" onClick={() => go('learn', allModules[module.id % allModules.length].id)}>Open next module <span>→</span></button></div></aside></div></section>;
+}
+
+function QuizView({ module, allModules, progress, updateQuiz, go }) {
+  const questions = mcqs.filter((q) => q.moduleId === module.id);
+  const [index, setIndex] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const [finished, setFinished] = useState(false);
+  const record = progress.quiz[module.id] || { answered: 0, correct: 0 };
+  const current = questions[index];
+  useEffect(() => { setIndex(0); setSelected(null); setFinished(false); }, [module.id]);
+  function choose(option) {
+    if (selected !== null) return;
+    setSelected(option);
+    updateQuiz(module.id, { answered: record.answered + 1, correct: record.correct + (option === current.answer ? 1 : 0) });
+  }
+  function next() {
+    if (index === questions.length - 1) setFinished(true);
+    else { setIndex(index + 1); setSelected(null); }
+  }
+  return <section className="quiz-view"><div className="quiz-top"><div><p className="section-kicker">MCQ PRACTICE · {module.short.toUpperCase()}</p><h1>Check your understanding</h1><p className="muted">Low-pressure practice. Learn from every answer.</p></div><button className="text-button" onClick={() => go('learn', module.id)}>← Back to module</button></div>{finished ? <div className="score-card"><div className="score-orb">{record.correct}/{questions.length}</div><p className="section-kicker">PRACTICE COMPLETE</p><h2>{record.correct >= Math.ceil(questions.length * .7) ? 'Nice work — keep building.' : 'Good start — review and try again.'}</h2><p>You answered {record.correct} correctly in this practice set. Use the training notes to reinforce the concepts.</p><div className="score-actions"><button className="primary-button" onClick={() => { setFinished(false); setIndex(0); setSelected(null); }}>Try again <span>↻</span></button><button className="outline-button" onClick={() => go('notes', module.id)}>Review notes</button></div></div> : <div className="quiz-layout"><div className="quiz-card"><div className="quiz-progress"><span>Question {index + 1} of {questions.length}</span><div><i style={{ width: `${((index + 1) / questions.length) * 100}%` }} /></div></div><div className="quiz-question"><span className="quiz-badge">MCQ</span><h2>{current.q}</h2></div><div className="options">{current.options.map((option, optionIndex) => <button key={option} className={selected === null ? 'option' : optionIndex === current.answer ? 'option correct' : optionIndex === selected ? 'option incorrect' : 'option muted-option'} onClick={() => choose(optionIndex)}><span className="option-letter">{String.fromCharCode(65 + optionIndex)}</span><span>{option}</span>{selected !== null && optionIndex === current.answer && <b>✓</b>}{selected !== null && optionIndex === selected && optionIndex !== current.answer && <b>×</b>}</button>)}</div>{selected !== null && <div className={selected === current.answer ? 'feedback good' : 'feedback needs-review'}><strong>{selected === current.answer ? 'Correct.' : 'Review this one.'}</strong><p>{current.why}</p></div>}<div className="quiz-footer"><span>{record.correct} correct so far</span>{selected !== null && <button className="next-button" onClick={next}>{index === questions.length - 1 ? 'See result' : 'Next question'} <span>→</span></button>}</div></div><aside className="quiz-aside"><div className="quiz-aside-art"><TopicIllustration kind={module.kind} accent={module.accent} /></div><p className="section-kicker">PATIENT EDUCATION TIP</p><h3>Explain the “why,” not just the rule.</h3><p>Good teaching helps a person choose a safer action when the situation changes at home.</p><button className="outline-button" onClick={() => go('notes', module.id)}>Read training notes <span>↗</span></button></aside></div>}</section>;
+}
+
+function VisualQuiz({ progress, setProgress, go }) {
+  const [index, setIndex] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const scenario = visualScenarios[index];
+  const module = modules.find((m) => m.id === scenario.moduleId);
+  function choose(option) {
+    if (selected !== null) return;
+    setSelected(option);
+    setProgress((p) => ({ ...p, visual: { ...p.visual, [scenario.moduleId]: option === scenario.answer ? 'correct' : 'review' } }));
+  }
+  function next() { setSelected(null); setIndex((n) => (n + 1) % visualScenarios.length); }
+  return <section className="visual-view"><div className="visual-heading"><div><p className="section-kicker">IMAGE-BASED QUESTION & ANSWER</p><h1>See the situation. Choose the safe action.</h1><p className="muted">Visual practice for patients, families and caregivers.</p></div><div className="visual-counter"><strong>{index + 1}</strong><span>/ {visualScenarios.length}</span></div></div><div className="visual-layout"><div className="visual-question-card"><div className="visual-scene"><TopicIllustration kind={module.kind} accent={module.accent} large /></div><div className="visual-question-copy"><div className="visual-module-tag" style={{ color: module.accent }}>MODULE {String(module.id).padStart(2, '0')} · {module.short}</div><h2>{scenario.prompt}</h2><div className="visual-options">{scenario.options.map((option, optionIndex) => <button key={option} className={selected === null ? 'visual-option' : optionIndex === scenario.answer ? 'visual-option correct' : optionIndex === selected ? 'visual-option incorrect' : 'visual-option muted-option'} onClick={() => choose(optionIndex)}><span>{String.fromCharCode(65 + optionIndex)}</span>{option}</button>)}</div>{selected !== null && <div className={selected === scenario.answer ? 'visual-feedback good' : 'visual-feedback needs-review'}><strong>{selected === scenario.answer ? 'That is the safer choice.' : 'Let’s review the safer choice.'}</strong><p>{scenario.explain}</p></div>}<div className="visual-footer"><button className="text-button" onClick={() => go('notes', module.id)}>Open training notes <span>↗</span></button>{selected !== null && <button className="next-button" onClick={next}>Next visual <span>→</span></button>}</div></div></div><aside className="visual-side"><div className="visual-side-card"><div className="side-icon">✦</div><p className="section-kicker">HOW TO USE THIS</p><h3>Pause before you answer.</h3><p>Ask: what is happening, what is the risk, and what is the first safe action?</p><div className="three-step"><span><b>1</b>Notice</span><span><b>2</b>Choose</span><span><b>3</b>Explain</span></div></div><div className="visual-side-card progress-side"><p className="section-kicker">VISUAL PROGRESS</p><div className="progress-track"><span style={{ width: `${Object.keys(progress.visual || {}).length / visualScenarios.length * 100}%` }} /></div><p>{Object.keys(progress.visual || {}).length} of {visualScenarios.length} visual situations attempted</p></div></aside></div></section>;
+}
+
+function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
+  const common = { viewBox: '0 0 320 190', role: 'img', 'aria-label': `${kind} education illustration` };
+  const bg = <rect x="0" y="0" width="320" height="190" rx="28" fill={`${accent}14`} />;
+  const dot = <><circle cx="30" cy="30" r="4" fill={accent} opacity=".35" /><circle cx="288" cy="38" r="6" fill={accent} opacity=".18" /><circle cx="268" cy="158" r="4" fill={accent} opacity=".35" /></>;
+  let art;
+  if (kind === 'insulin') art = <><rect x="118" y="42" width="104" height="28" rx="8" fill="#fff" stroke={accent} strokeWidth="3" transform="rotate(12 170 56)" /><rect x="214" y="47" width="50" height="18" rx="6" fill={accent} transform="rotate(12 214 47)" /><line x1="110" y1="76" x2="258" y2="109" stroke={accent} strokeWidth="5" strokeLinecap="round" /><path d="M72 126 C96 88 129 88 149 126 C168 160 215 159 244 124" fill="none" stroke={accent} strokeWidth="8" strokeLinecap="round" opacity=".75" /><circle cx="76" cy="126" r="12" fill="#fff" stroke={accent} strokeWidth="3" /></>;
+  else if (kind === 'nutrition') art = <><circle cx="160" cy="100" r="57" fill="#fff" stroke={accent} strokeWidth="3" /><path d="M160 100 L160 43 A57 57 0 0 1 207 131 Z" fill="#84cc16" /><path d="M160 100 L207 131 A57 57 0 0 1 112 132 Z" fill="#fb923c" /><path d="M160 100 L112 132 A57 57 0 0 1 160 43 Z" fill="#38bdf8" /><path d="M160 43 L160 18" stroke={accent} strokeWidth="5" strokeLinecap="round" /><path d="M160 18 C170 10 181 13 184 22 C173 29 165 27 160 18Z" fill={accent} /></>;
+  else if (kind === 'hypo') art = <><path d="M160 31 L205 117 C209 125 203 135 194 135 H126 C117 135 111 125 115 117 Z" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M160 59 V99" stroke={accent} strokeWidth="8" strokeLinecap="round" /><circle cx="160" cy="119" r="5" fill={accent} /><rect x="66" y="144" width="188" height="12" rx="6" fill={accent} opacity=".22" /><rect x="83" y="139" width="48" height="22" rx="8" fill="#fff" stroke={accent} strokeWidth="3" /><rect x="139" y="139" width="48" height="22" rx="8" fill="#fff" stroke={accent} strokeWidth="3" /><rect x="195" y="139" width="35" height="22" rx="8" fill="#fff" stroke={accent} strokeWidth="3" /></>;
+  else if (kind === 'monitor') art = <><rect x="93" y="33" width="134" height="94" rx="16" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M112 88 C124 74 136 103 147 79 S171 80 179 63 S204 79 214 51" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" /><circle cx="118" cy="107" r="5" fill="#22c55e" /><rect x="132" y="102" width="40" height="10" rx="5" fill={accent} opacity=".25" /><path d="M160 127 v18" stroke={accent} strokeWidth="4" /><path d="M124 147 h72" stroke={accent} strokeWidth="5" strokeLinecap="round" /><circle cx="239" cy="55" r="20" fill={accent} opacity=".2" /><path d="M232 55 l6 6 11-13" stroke={accent} strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" /></>;
+  else if (kind === 'exercise') art = <><circle cx="160" cy="40" r="14" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M158 57 L148 99 L111 126 M149 78 L193 84 L227 62 M148 98 L180 136 M148 99 L119 155" stroke={accent} strokeWidth="8" fill="none" strokeLinecap="round" strokeLinejoin="round" /><path d="M78 157 h172" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".3" /><path d="M88 42 C68 55 61 76 63 94" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /><path d="M56 86 l7 10 10-8" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /></>;
+  else if (kind === 'illness') art = <><path d="M144 51 h32 v35 h35 v32 h-35 v35 h-32 v-35 h-35 V86 h35 Z" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="83" cy="118" r="24" fill={accent} opacity=".17" /><path d="M75 120 q8-20 16 0 q8 20 16 0" fill="none" stroke={accent} strokeWidth="4" /><path d="M230 40 q20 15 0 30 q-20 15 0 30 q20 15 0 30" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".7" /></>;
+  else if (kind === 'dka') art = <><path d="M160 28 L220 150 H100 Z" fill="#fff" stroke={accent} strokeWidth="5" strokeLinejoin="round" /><path d="M160 65 V104" stroke={accent} strokeWidth="9" strokeLinecap="round" /><circle cx="160" cy="125" r="6" fill={accent} /><path d="M64 155 C80 138 94 138 109 155 M211 155 C226 138 240 138 256 155" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" /><path d="M75 67 h30 M215 67 h30" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".35" /></>;
+  else if (kind === 'complications') art = <><path d="M160 143 C92 107 93 47 132 47 C151 47 160 62 160 62 C160 62 169 47 188 47 C227 47 228 107 160 143Z" fill="#fff" stroke={accent} strokeWidth="5" /><path d="M132 91 l18 18 37-40" fill="none" stroke={accent} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" /><circle cx="70" cy="70" r="19" fill="#fff" stroke={accent} strokeWidth="3" /><path d="M60 70 q10-14 20 0 q-10 14-20 0" fill="none" stroke={accent} strokeWidth="3" /><path d="M250 68 q-22 10-28 30 q13 2 24-7" fill="#fff" stroke={accent} strokeWidth="3" /></>;
+  else if (kind === 'feelings') art = <><circle cx="160" cy="91" r="58" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="140" cy="80" r="6" fill={accent} /><circle cx="180" cy="80" r="6" fill={accent} /><path d="M128 108 Q160 132 192 108" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" /><path d="M73 59 q20-25 42-10" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /><path d="M206 49 q23-15 42 10" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /><path d="M76 142 l18-18 18 18" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /><path d="M226 142 l18-18 18 18" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /></>;
+  else if (kind === 'travel') art = <><path d="M98 125 L219 73" stroke={accent} strokeWidth="10" strokeLinecap="round" /><path d="M156 102 L125 44 M173 94 L207 45" stroke={accent} strokeWidth="8" strokeLinecap="round" /><path d="M92 126 l-27 23 M216 74 l29-14" stroke={accent} strokeWidth="8" strokeLinecap="round" /><circle cx="160" cy="101" r="20" fill="#fff" stroke={accent} strokeWidth="3" /><path d="M72 154 h179" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".3" /><path d="M252 38 v42 M231 59 h42" stroke={accent} strokeWidth="4" strokeLinecap="round" opacity=".5" /></>;
+  else if (kind === 'pregnancy') art = <><path d="M160 48 C128 48 102 72 102 105 C102 137 128 157 160 157 C192 157 218 137 218 105 C218 72 192 48 160 48Z" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="159" cy="92" r="18" fill={accent} opacity=".22" /><path d="M158 111 q-20 5-18 27 q19 9 39 0 q2-22-21-27" fill={accent} opacity=".45" /><path d="M68 76 v50 M48 101 h40" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".5" /><path d="M239 55 q19 18 0 35 q-19 17 0 35" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /></>;
+  else art = <><circle cx="160" cy="95" r="56" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M160 60 v70 M125 95 h70" stroke={accent} strokeWidth="7" strokeLinecap="round" /><circle cx="254" cy="70" r="20" fill={accent} opacity=".18" /></>;
+  return <svg className={large ? 'topic-illustration large' : 'topic-illustration'} {...common}>{bg}{dot}{art}</svg>;
+}
+
+function HeroIllustration() {
+  return <svg viewBox="0 0 420 300" className="hero-illustration" role="img" aria-label="A friendly diabetes education illustration"><circle cx="210" cy="150" r="118" fill="#ffffff14" /><path d="M121 223 C107 169 126 114 165 102 C205 90 238 120 254 153 C268 184 295 197 307 220" fill="#fff" opacity=".92" /><circle cx="205" cy="87" r="34" fill="#ffd7bf" /><path d="M170 85 q28-61 69-15 q13 16 4 39 q-15-21-35-20 q-17 1-38-4" fill="#1f2937" /><path d="M165 124 q45 22 89 0 l19 104 h-124Z" fill="#4f46e5" opacity=".88" /><path d="M180 144 l-27 67 M234 144 l30 65" stroke="#ffd7bf" strokeWidth="18" strokeLinecap="round" /><path d="M153 211 l-25 47 M263 209 l27 47" stroke="#334155" strokeWidth="17" strokeLinecap="round" /><rect x="117" y="254" width="48" height="15" rx="7" fill="#334155" /><rect x="267" y="254" width="48" height="15" rx="7" fill="#334155" /><circle cx="211" cy="143" r="8" fill="#fff" /><path d="M176 132 q28 13 54 0" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" opacity=".65" /><path d="M72 56 l7 17 18 3-13 12 3 18-15-9-16 9 4-18-14-12 18-3Z" fill="#fbbf24" /><path d="M337 67 l6 14 15 3-11 10 3 16-13-8-14 8 3-16-11-10 15-3Z" fill="#2dd4bf" /><path d="M331 190 q23-32 45 0 q-22 30-45 0Z" fill="#fb7185" opacity=".8" /></svg>;
+}
+
+function Footer() {
+  return <footer className="footer"><span>PanInsulin · patient education prototype</span><span>Always confirm decisions with your diabetes care team.</span></footer>;
+}
+
+createRoot(document.getElementById('root')).render(<App />);

@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Vite
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor/OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Generated artifacts (source of truth is insulin_education_module.md)
+insulin_education_module.docx
+part1.md
+part2.md
+part3.md
+part4.md
+insulin-education-app/glucoguide_preview.html
