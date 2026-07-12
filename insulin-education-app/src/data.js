@@ -274,6 +274,26 @@ export const modules = [
         "id": "2-28",
         "question": "Why might a reusable cartridge pen be a less convenient choice for travel?",
         "answer": "A reusable pen requires carrying and correctly loading a separate insulin cartridge, and the pen mechanism itself must be cared for over time, whereas a prefilled disposable pen needs no loading and can simply be replaced with a new one—an important consideration when planning travel supplies."
+      },
+      {
+        "id": "2-29",
+        "question": "What is a Lilly KwikPen, and how does it compare with FlexPen, FlexTouch or SoloStar?",
+        "answer": "KwikPen is Eli Lilly's line of prefilled, disposable insulin pens (for example Humalog, Humulin and Lyumjev)—similar in purpose to Novo Nordisk's FlexPen/FlexTouch and Sanofi's SoloStar. Each manufacturer's pen family has its own hardware and is not interchangeable between insulins, even though most dial in 1-unit steps."
+      },
+      {
+        "id": "2-30",
+        "question": "Why is confusing a Humalog KwikPen U-100 with a U-200 pen dangerous?",
+        "answer": "U-200 is twice as concentrated as U-100 (200 units per mL versus 100 units per mL). Both pens still dial in units, but the U-200 pen delivers the same number of units in half the liquid volume. Using the wrong strength pen, or drawing U-200 insulin into a U-100 syringe, can cause a serious dosing error."
+      },
+      {
+        "id": "2-31",
+        "question": "Why does the Humalog Junior KwikPen use half-unit dose increments?",
+        "answer": "It is designed for children and others who need very precise, small doses. Dialing in half-unit steps, up to a maximum of 30 units per injection, reduces the risk of accidental overdose in dose-sensitive patients."
+      },
+      {
+        "id": "2-32",
+        "question": "What is Lyumjev, and how is it different from standard Humalog?",
+        "answer": "Lyumjev is an ultra-rapid-acting formulation of insulin lispro-aabc designed to start working faster than standard Humalog (insulin lispro)—similar in concept to how Fiasp is a faster formulation compared with standard NovoRapid."
       }
     ],
     "kind": "insulin",
@@ -302,7 +322,8 @@ export const modules = [
     "redFlags": [
       "Wrong insulin or major dose error",
       "Repeated unexplained highs or lows",
-      "Hard, lumpy or infected injection sites"
+      "Hard, lumpy or infected injection sites",
+      "Confusing a concentrated pen (e.g., U-200) with a standard U-100 pen"
     ]
   },
   {
@@ -1778,6 +1799,21 @@ export const modules = [
         "id": "13-30",
         "question": "With so many brand names across countries, what is the single safest habit when handling insulin?",
         "answer": "Always identify your insulin by its molecule name (for example, lispro, glargine, degludec or NPH) in addition to the brand name, and compare both against your prescription before every injection—regardless of which country's brand you are using."
+      },
+      {
+        "id": "13-31",
+        "question": "Which Eli Lilly KwikPen products provide fast-acting or mealtime insulin?",
+        "answer": "Humalog KwikPen (available as U-100 and U-200, insulin lispro), Humalog Junior KwikPen (half-unit dosing) and Lyumjev KwikPen (insulin lispro-aabc, ultra-rapid-acting) are Eli Lilly's fast-acting, mealtime KwikPen options."
+      },
+      {
+        "id": "13-32",
+        "question": "Which Eli Lilly KwikPen products provide intermediate, short-acting or premixed insulin?",
+        "answer": "Humulin N KwikPen (NPH, intermediate-acting) and Humulin R KwikPen (regular, short-acting) provide background or mealtime human insulin, while Humalog Mix75/25 KwikPen and Humalog Mix50/50 KwikPen are premixed lispro/lispro-protamine blends—together completing Eli Lilly's KwikPen insulin range."
+      },
+      {
+        "id": "13-33",
+        "question": "Are all Lilly KwikPen-style pens insulin?",
+        "answer": "No. The same KwikPen device design is also used by Lilly for non-insulin medicines, including GLP-1/GIP receptor agonists used for type 2 diabetes and weight management, which are a different drug class dosed and monitored differently from insulin. Always check whether a pen contains insulin or a non-insulin medicine before use, and ask your pharmacist or care team if you are unsure."
       }
     ],
     "kind": "insulintypes",
