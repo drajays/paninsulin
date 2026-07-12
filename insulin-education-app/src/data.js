@@ -1686,6 +1686,56 @@ export const modules = [
         "id": "13-20",
         "question": "Who decides which insulin molecule, brand and dose I should use?",
         "answer": "Insulin is a Schedule H/H1 prescription medicine in India. The specific molecule, brand, strength and dose must always be chosen by your treating physician based on your individual glucose pattern, lifestyle, cost and access—not chosen independently or copied from another patient's regimen."
+      },
+      {
+        "id": "13-21",
+        "question": "What rapid-acting insulin brands are used in the US market?",
+        "answer": "US rapid-acting brands include Admelog and Humalog/Humalog Pen/KwikPen (insulin lispro), Apidra/Apidra SoloStar (insulin glulisine), Fiasp/Fiasp FlexTouch (insulin aspart) and NovoLog (insulin aspart). These are the same rapid-acting molecules used in India, sold under different brand names."
+      },
+      {
+        "id": "13-22",
+        "question": "What is Afrezza, and how is it different from other rapid-acting insulins?",
+        "answer": "Afrezza is an inhaled powder form of regular human insulin, breathed in at the start of a meal instead of injected. It is not appropriate for everyone—people with chronic lung disease such as asthma or COPD should not use it, and lung function is checked before and during treatment."
+      },
+      {
+        "id": "13-23",
+        "question": "Which US brands provide short-acting (regular) human insulin?",
+        "answer": "Humulin R (including Humulin R Pen) and Novolin R are regular human insulin products used in the US, matching the same short-acting molecule as India's Actrapid, Huminsulin R and similar brands."
+      },
+      {
+        "id": "13-24",
+        "question": "Which US brands provide intermediate-acting NPH insulin?",
+        "answer": "Humulin N and Novolin N are NPH (human insulin isophane suspension) products used in the US—the same intermediate-acting molecule as India's Insulatard, Huminsulin N and Insugen-N."
+      },
+      {
+        "id": "13-25",
+        "question": "Which US brands provide long-acting basal insulin?",
+        "answer": "US long-acting basal brands include Basaglar KwikPen, Lantus/Lantus SoloStar and Toujeo/Toujeo Max (insulin glargine), Levemir (insulin detemir), and Tresiba FlexTouch (insulin degludec)—the same basal molecules marketed in India as Lantus, Basalog, Glaritus, Levemir and Tresiba."
+      },
+      {
+        "id": "13-26",
+        "question": "Which US brands are premixed analog insulins?",
+        "answer": "Humalog Mix 75/25 and Humalog Mix 50/50 combine insulin lispro protamine suspension with insulin lispro injection; NovoLog Mix 70/30 combines insulin aspart protamine suspension with insulin aspart injection. These match India's Humalog Mix 25/50 and NovoMix 30."
+      },
+      {
+        "id": "13-27",
+        "question": "What is Ryzodeg 70/30 and is it available under the same name in different countries?",
+        "answer": "Ryzodeg 70/30 (FlexTouch) combines 70% insulin degludec (long-acting) with 30% insulin aspart (rapid-acting) in one pen. It is marketed under the same brand name, Ryzodeg, in both the US and India, though availability can vary by country and pharmacy."
+      },
+      {
+        "id": "13-28",
+        "question": "Which US brands are premixed human insulins?",
+        "answer": "Humulin 70/30 (including Humulin 70/30 KwikPen) and Novolin 70/30 combine 70% NPH human insulin with 30% regular human insulin—matching India's Human Mixtard 30, Huminsulin 30/70, Insuman Comb 30 and similar products."
+      },
+      {
+        "id": "13-29",
+        "question": "Why do the same insulin molecules have different brand names in different countries?",
+        "answer": "Manufacturers license and market the same molecule under different trade names in different regions—for example, insulin glargine is sold as Lantus in both the US and India, but also as Basaglar in the US and Basalog or Glaritus in India. The molecule name, not the brand, tells you what the insulin actually is."
+      },
+      {
+        "id": "13-30",
+        "question": "With so many brand names across countries, what is the single safest habit when handling insulin?",
+        "answer": "Always identify your insulin by its molecule name (for example, lispro, glargine, degludec or NPH) in addition to the brand name, and compare both against your prescription before every injection—regardless of which country's brand you are using."
       }
     ],
     "kind": "insulintypes",
@@ -1696,13 +1746,14 @@ export const modules = [
     "core": true,
     "learning": [
       "Identify the five action-profile categories of insulin",
-      "Match common Indian brand names to their molecule and category",
+      "Match common Indian and US brand names to their molecule and category",
       "Understand why molecule, brand and concentration all matter for safety"
     ],
     "notes": [
       "Insulins fall into five broad categories by action profile: rapid-acting, short-acting/regular, intermediate-acting (NPH), long/ultra-long-acting basal, and premixed products that blend two profiles.",
+      "The same molecule is often sold under different brand names in different countries—for example insulin glargine is Lantus in both India and the US, but also Basaglar in the US and Basalog or Glaritus in India—so the molecule name matters more than the brand.",
       "Brand names can look or sound alike despite very different action profiles—for example Humalog (rapid-acting analog) versus Huminsulin (regular/NPH human insulin)—so always confirm both the molecule and the brand on the label.",
-      "Biosimilar and generic versions (such as Basalog, Glaritus or Eglucent) are not automatically interchangeable with the original product; switching brands or concentrations (like U100 vs U300) must be directed by the treating physician."
+      "Biosimilar and generic versions (such as Basalog, Glaritus, Eglucent or Admelog) are not automatically interchangeable with the original product; switching brands, routes (like inhaled Afrezza) or concentrations (like U100 vs U300) must be directed by the treating physician."
     ],
     "practice": [
       "Write down the exact molecule and brand name of every insulin you use",
@@ -1711,7 +1762,7 @@ export const modules = [
     ],
     "redFlags": [
       "Insulin brand or molecule mismatch from what was prescribed",
-      "Switching brands, biosimilars or concentrations without physician guidance",
+      "Switching brands, biosimilars, routes or concentrations without physician guidance",
       "Confusion between similarly named products (e.g., Humalog vs Huminsulin)"
     ]
   }

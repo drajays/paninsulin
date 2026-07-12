@@ -898,7 +898,37 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 20. Who decides which insulin molecule, brand and dose I should use?
 **Answer:** Insulin is a Schedule H/H1 prescription medicine in India. The specific molecule, brand, strength and dose must always be chosen by your treating physician based on your individual glucose pattern, lifestyle, cost and access—not chosen independently or copied from another patient's regimen.
 
-**Evidence anchors:** Manufacturer product labeling (Novo Nordisk, Sanofi, Eli Lilly, Biocon, Wockhardt, Lupin); ADA Standards of Care 2026, insulin therapy section; CDSCO Schedule H1 prescription drug rules.
+### 21. What rapid-acting insulin brands are used in the US market?
+**Answer:** US rapid-acting brands include Admelog and Humalog/Humalog Pen/KwikPen (insulin lispro), Apidra/Apidra SoloStar (insulin glulisine), Fiasp/Fiasp FlexTouch (insulin aspart) and NovoLog (insulin aspart). These are the same rapid-acting molecules used in India, sold under different brand names.
+
+### 22. What is Afrezza, and how is it different from other rapid-acting insulins?
+**Answer:** Afrezza is an inhaled powder form of regular human insulin, breathed in at the start of a meal instead of injected. It is not appropriate for everyone—people with chronic lung disease such as asthma or COPD should not use it, and lung function is checked before and during treatment.
+
+### 23. Which US brands provide short-acting (regular) human insulin?
+**Answer:** Humulin R (including Humulin R Pen) and Novolin R are regular human insulin products used in the US, matching the same short-acting molecule as India's Actrapid, Huminsulin R and similar brands.
+
+### 24. Which US brands provide intermediate-acting NPH insulin?
+**Answer:** Humulin N and Novolin N are NPH (human insulin isophane suspension) products used in the US—the same intermediate-acting molecule as India's Insulatard, Huminsulin N and Insugen-N.
+
+### 25. Which US brands provide long-acting basal insulin?
+**Answer:** US long-acting basal brands include Basaglar KwikPen, Lantus/Lantus SoloStar and Toujeo/Toujeo Max (insulin glargine), Levemir (insulin detemir), and Tresiba FlexTouch (insulin degludec)—the same basal molecules marketed in India as Lantus, Basalog, Glaritus, Levemir and Tresiba.
+
+### 26. Which US brands are premixed analog insulins?
+**Answer:** Humalog Mix 75/25 and Humalog Mix 50/50 combine insulin lispro protamine suspension with insulin lispro injection; NovoLog Mix 70/30 combines insulin aspart protamine suspension with insulin aspart injection. These match India's Humalog Mix 25/50 and NovoMix 30.
+
+### 27. What is Ryzodeg 70/30 and is it available under the same name in different countries?
+**Answer:** Ryzodeg 70/30 (FlexTouch) combines 70% insulin degludec (long-acting) with 30% insulin aspart (rapid-acting) in one pen. It is marketed under the same brand name, Ryzodeg, in both the US and India, though availability can vary by country and pharmacy.
+
+### 28. Which US brands are premixed human insulins?
+**Answer:** Humulin 70/30 (including Humulin 70/30 KwikPen) and Novolin 70/30 combine 70% NPH human insulin with 30% regular human insulin—matching India's Human Mixtard 30, Huminsulin 30/70, Insuman Comb 30 and similar products.
+
+### 29. Why do the same insulin molecules have different brand names in different countries?
+**Answer:** Manufacturers license and market the same molecule under different trade names in different regions—for example, insulin glargine is sold as Lantus in both the US and India, but also as Basaglar in the US and Basalog or Glaritus in India. The molecule name, not the brand, tells you what the insulin actually is.
+
+### 30. With so many brand names across countries, what is the single safest habit when handling insulin?
+**Answer:** Always identify your insulin by its molecule name (for example, lispro, glargine, degludec or NPH) in addition to the brand name, and compare both against your prescription before every injection—regardless of which country's brand you are using.
+
+**Evidence anchors:** Manufacturer product labeling (Novo Nordisk, Sanofi, Eli Lilly, Biocon, Wockhardt, Lupin); FDA-approved US prescribing information (Admelog, Afrezza, Apidra, Fiasp, Humalog, NovoLog, Humulin, Novolin, Basaglar, Lantus, Levemir, Toujeo, Tresiba, Ryzodeg); ADA Standards of Care 2026, insulin therapy section; CDSCO Schedule H1 prescription drug rules.
 
 ---
 
