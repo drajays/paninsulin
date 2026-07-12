@@ -258,12 +258,12 @@ export const modules = [
       {
         "id": "2-25",
         "question": "What is the difference between the Lantus SoloStar pen and the Sanofi AllStar pen device?",
-        "answer": "SoloStar is a prefilled, disposable pen that comes loaded with 300 units (3 mL) of insulin glargine; once empty, the entire pen is discarded in a sharps container. AllStar is a reusable pen body loaded with separate 3 mL Lantus cartridges—only the empty cartridge is replaced and discarded, while the pen device itself can typically be kept for up to about 3 years."
+        "answer": "SoloStar is a prefilled, disposable pen that comes loaded with 300 units (3 mL) of insulin glargine; once empty, the entire pen is discarded in a sharps container. AllStar is a reusable pen body loaded with separate 3 mL Lantus cartridges—only the empty cartridge is replaced and discarded, while the pen device itself is kept and reloaded until the manufacturer's instructions for use say it should be replaced."
       },
       {
         "id": "2-26",
         "question": "Does the maximum single dose differ between SoloStar and AllStar?",
-        "answer": "Yes. SoloStar allows up to 80 units in a single injection, while AllStar allows up to 60 units per injection; both dial in 1-unit steps. If a prescribed dose is close to a device's maximum, confirm the correct pen with a pharmacist."
+        "answer": "No—both allow up to 80 units in a single injection, dialed in 1-unit steps. If a dose greater than 80 units is prescribed, it must be given as two or more separate injections; confirm the correct approach with a pharmacist or the care team."
       },
       {
         "id": "2-27",
@@ -323,7 +323,7 @@ export const modules = [
       {
         "id": "2-38",
         "question": "How long can a reusable pen body typically be used before it needs replacing?",
-        "answer": "Manufacturer guidance varies by device—commonly cited ranges are up to about 6 years for HumaPen, 5 years for NovoPen and 3 years for AllStar—but a pen should be inspected regularly and replaced sooner if it is damaged, cracked or not dialing and injecting correctly."
+        "answer": "This varies by exact model and is set by the manufacturer's instructions for use—for example, Novo Nordisk's NovoPen 6 and NovoPen Echo Plus smart pens are built with a roughly 5-year battery life. Regardless of the stated interval, a reusable pen should be replaced sooner if it is damaged, cracked, or not dialing and injecting correctly, and the current instructions for use should be checked for the specific model in hand."
       }
     ],
     "kind": "insulin",
@@ -341,7 +341,8 @@ export const modules = [
       "Most routine insulin is delivered into subcutaneous tissue. The current ADA guidance supports short pen needles such as 4 mm for many people, with individualized technique review.",
       "Rotate injections systematically within approved sites. Do not inject into lumps, scars, bruises, wounds or areas of infection.",
       "Never stop basal insulin in type 1 diabetes without urgent professional advice. Missed doses and incorrect insulin can be emergencies.",
-      "Pen devices vary: spring-loaded pens (e.g., NovoRapid FlexTouch) need only a light push and their button does not extend, while manual pens (e.g., NovoRapid FlexPen) require active thumb pressure and an extending button—ask for a re-demonstration whenever your device model changes."
+      "Pen devices vary: spring-loaded pens (e.g., NovoRapid FlexTouch) need only a light push and their button does not extend, while manual pens (e.g., NovoRapid FlexPen) require active thumb pressure and an extending button—ask for a re-demonstration whenever your device model changes.",
+      "Pen hardware details (maximum single dose, dosing increments, battery/replacement guidance) can change when a manufacturer updates or discontinues a model, as already happened with NovoRapid FlexTouch. Treat the specific numbers in this module as a general guide and confirm the current figure on the pack insert or instructions for use for the exact pen in hand."
     ],
     "practice": [
       "Demonstrate your injection technique to an educator",
@@ -1853,7 +1854,7 @@ export const modules = [
       {
         "id": "13-35",
         "question": "How do the maximum single doses of these Indian glargine pens compare?",
-        "answer": "Basalog One dials up to 80 units in a single injection, while Basugine, Glaritus DispoPen-2 and Nobeglar Uno each dial up to 60 units; all four use 1-unit dosing steps. If a prescribed dose is close to a device's maximum, confirm the right pen with a pharmacist."
+        "answer": "Basalog One's device, developed with Becton Dickinson, dials up to 80 units in a single injection. Basugine, Glaritus DispoPen-2 and Nobeglar Uno are commonly listed by pharmacies as 60-unit devices; all use 1-unit dosing steps. Because exact device specifications can be updated by the manufacturer, confirm the current maximum dose printed on the pack insert or with a pharmacist before relying on any specific number."
       },
       {
         "id": "13-36",
@@ -1881,7 +1882,8 @@ export const modules = [
       "Insulins fall into five broad categories by action profile: rapid-acting, short-acting/regular, intermediate-acting (NPH), long/ultra-long-acting basal, and premixed products that blend two profiles.",
       "The same molecule is often sold under different brand names in different countries—for example insulin glargine is Lantus in both India and the US, but also Basaglar in the US and Basalog or Glaritus in India—so the molecule name matters more than the brand.",
       "Brand names can look or sound alike despite very different action profiles—for example Humalog (rapid-acting analog) versus Huminsulin (regular/NPH human insulin)—so always confirm both the molecule and the brand on the label.",
-      "Biosimilar and generic versions (such as Basalog, Glaritus, Eglucent or Admelog) are not automatically interchangeable with the original product; switching brands, routes (like inhaled Afrezza) or concentrations (like U100 vs U300) must be directed by the treating physician."
+      "Biosimilar and generic versions (such as Basalog, Glaritus, Eglucent or Admelog) are not automatically interchangeable with the original product; switching brands, routes (like inhaled Afrezza) or concentrations (like U100 vs U300) must be directed by the treating physician.",
+      "Brand availability, pen hardware specifications and even brand names themselves change over time and by country. Where this module cites a specific device figure (maximum dose, dosing increments) for a regional or lesser-known brand, treat it as a general guide and confirm the current, country-specific prescribing information or pack insert before relying on it."
     ],
     "practice": [
       "Write down the exact molecule and brand name of every insulin you use",

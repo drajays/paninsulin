@@ -172,10 +172,10 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 **Answer:** Manual pens often click as the dose is dialed and again while the dose is pushed in, while some spring-loaded pens give a single click only when the full dose has finished delivering. Learn a specific device's feedback pattern from a demonstration rather than assuming it matches a pen used before.
 
 ### 25. What is the difference between the Lantus SoloStar pen and the Sanofi AllStar pen device?
-**Answer:** SoloStar is a prefilled, disposable pen that comes loaded with 300 units (3 mL) of insulin glargine; once empty, the entire pen is discarded in a sharps container. AllStar is a reusable pen body loaded with separate 3 mL Lantus cartridges—only the empty cartridge is replaced and discarded, while the pen device itself can typically be kept for up to about 3 years.
+**Answer:** SoloStar is a prefilled, disposable pen that comes loaded with 300 units (3 mL) of insulin glargine; once empty, the entire pen is discarded in a sharps container. AllStar is a reusable pen body loaded with separate 3 mL Lantus cartridges—only the empty cartridge is replaced and discarded, while the pen device itself is kept and reloaded until the manufacturer's instructions for use say it should be replaced.
 
 ### 26. Does the maximum single dose differ between SoloStar and AllStar?
-**Answer:** Yes. SoloStar allows up to 80 units in a single injection, while AllStar allows up to 60 units per injection; both dial in 1-unit steps. If a prescribed dose is close to a device's maximum, confirm the correct pen with a pharmacist.
+**Answer:** No—both allow up to 80 units in a single injection, dialed in 1-unit steps. If a dose greater than 80 units is prescribed, it must be given as two or more separate injections; confirm the correct approach with a pharmacist or the care team.
 
 ### 27. Which pen type produces less plastic waste?
 **Answer:** A reusable pen such as AllStar is more eco-friendly because only the small glass cartridge is discarded when insulin runs out, whereas a fully disposable pen such as SoloStar means the entire pen body is thrown away once empty.
@@ -211,7 +211,7 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 **Answer:** Sanofi AllStar has an over-dial lock that prevents dialing more units than remain in the cartridge, plus penalty-free reverse dialing to correct a wrong dose selection before injecting. Newer NovoPen "smart pen" models (such as NovoPen 6 and NovoPen Echo Plus) use NFC connectivity to record the time and size of the last dose and sync it to a smartphone app, which can help with dose tracking.
 
 ### 38. How long can a reusable pen body typically be used before it needs replacing?
-**Answer:** Manufacturer guidance varies by device—commonly cited ranges are up to about 6 years for HumaPen, 5 years for NovoPen and 3 years for AllStar—but a pen should be inspected regularly and replaced sooner if it is damaged, cracked or not dialing and injecting correctly.
+**Answer:** This varies by exact model and is set by the manufacturer's instructions for use—for example, Novo Nordisk's NovoPen 6 and NovoPen Echo Plus smart pens are built with a roughly 5-year battery life. Regardless of the stated interval, a reusable pen should be replaced sooner if it is damaged, cracked, or not dialing and injecting correctly, and the current instructions for use should be checked for the specific model in hand.
 
 **Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar, Lilly KwikPen, Lyumjev, HumaPen, NovoPen).
 
@@ -995,7 +995,7 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 **Answer:** These are Indian prefilled disposable pens for insulin glargine biosimilars: Basalog One (Biocon Biologics, built via a design partnership with Becton Dickinson/BD), Basugine Disposable Pen (Lupin), Glaritus DispoPen-2 (Wockhardt) and Nobeglar Uno Prefilled Pen (Mankind Pharma).
 
 ### 35. How do the maximum single doses of these Indian glargine pens compare?
-**Answer:** Basalog One dials up to 80 units in a single injection, while Basugine, Glaritus DispoPen-2 and Nobeglar Uno each dial up to 60 units; all four use 1-unit dosing steps. If a prescribed dose is close to a device's maximum, confirm the right pen with a pharmacist.
+**Answer:** Basalog One's device, developed with Becton Dickinson, dials up to 80 units in a single injection. Basugine, Glaritus DispoPen-2 and Nobeglar Uno are commonly listed by pharmacies as 60-unit devices; all use 1-unit dosing steps. Because exact device specifications can be updated by the manufacturer, confirm the current maximum dose printed on the pack insert or with a pharmacist before relying on any specific number.
 
 ### 36. What is distinctive about the Glaritus DispoPen-2?
 **Answer:** It uses a proprietary "DispoPen" mechanical housing designed for smooth plunging force, which can reduce the manual hand effort needed to complete an injection compared with some other disposable pens.
