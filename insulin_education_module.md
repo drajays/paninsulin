@@ -140,6 +140,9 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 13. Can cloudy insulin be used?
 **Answer:** Some suspensions, such as NPH, are meant to look uniformly cloudy after gentle rolling. Clear insulins should remain clear. Do not use insulin with unexpected particles, clumps, frosting or discoloration; ask the pharmacist if uncertain.
 
+### 13B. How should cloudy insulin suspensions (isophane and premixed insulins) be resuspended before injection?
+**Answer:** Insulins that are in suspension (cloudy insulins), that is, isophane (NPH) and premixed insulins (including premixes containing rapid-acting insulin analogues), must be resuspended before injection. This is vital to ensure that the correct formulation is injected and to ensure stability of the absorption kinetics. Failure to resuspend isophane insulins can cause significant variability of action and particularly affects nocturnal plasma insulin concentrations. The insulin cartridge or vial should not be shaken vigorously (which causes frothing and bubbles), but should be repeatedly inverted or gently rolled (typically 10 times) until the suspension is uniformly cloudy or milky white. Soluble and all analogue insulins (including rapid- and long-acting clear basal types) are true solutions not in suspension, so they are clear in appearance and may be administered without agitation of the pen or vial.
+
 ### 14. Can two insulins be mixed in one syringe?
 **Answer:** Only if specifically prescribed and taught. Some insulins must never be mixed, including glargine or degludec with other insulins. When mixing is prescribed, use the exact sequence and monitoring plan taught by the diabetes team.
 

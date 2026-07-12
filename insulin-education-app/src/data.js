@@ -2177,7 +2177,8 @@ export const modules = [
     "notes": [
       "Visual familiarity with insulin regimens, delivery pens, travel wallets, and evaporative cooling systems helps prevent medication errors and loss of potency.",
       "Devices range from reusable mechanical pens (e.g., Sanofi AllStar) to specialized travel coolers (FRIO evaporative wallets, CareVego insulated cases, active Peltier fridges, and clay pot Zeer coolers).",
-      "Always match your insulin storage method to ambient conditions and transport duration."
+      "Always match your insulin storage method to ambient conditions and transport duration.",
+      "Product lineups and stated cooling durations change as manufacturers update or discontinue models; treat the specific hours/temperatures in this module as a general guide and confirm the current specification on the product's own packaging or website before relying on it."
     ],
     "practice": [
       "Review each visual diagram against your own equipment",
