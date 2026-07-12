@@ -4,7 +4,7 @@ Patient education content and app for insulin therapy and diabetes self-manageme
 
 ## Structure
 
-- `insulin_education_module.md` — source of truth: 16 topics, 370 patient Q&As (including Indian and US insulin brand names), evidence-reviewed July 2026.
+- `insulin_education_module.md` — source of truth: 16 topics, 375 patient Q&As (including Indian and US insulin brand names), evidence-reviewed July 2026.
 - `generate_app_data.py` — parses the module markdown into `insulin-education-app/src/data.js` (module metadata, learning objectives, training notes, red flags).
 - `build_module.py` — renders the module markdown into a formatted `.docx` handout (generated locally; not committed — see `.gitignore`).
 - `insulin-education-app/` — the React/Vite patient-education app. See its [README](insulin-education-app/README.md) for setup and run instructions.

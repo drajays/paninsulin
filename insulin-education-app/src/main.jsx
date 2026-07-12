@@ -83,7 +83,7 @@ function App() {
     <div className={dark ? 'app dark' : 'app'}>
       <Sidebar view={view} go={go} selectedId={selectedId} setSelectedId={setSelectedId} progress={progress} completion={completion} mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
       <div className="shell">
-        <Topbar search={search} setSearch={setSearch} dark={dark} setDark={setDark} setMobileMenu={setMobileMenu} />
+        <Topbar search={search} setSearch={setSearch} dark={dark} setDark={setDark} setMobileMenu={setMobileMenu} go={go} />
         {search && searchResults.length > 0 && (
           <div className="search-results">
             <div className="search-title">Search results <span>{searchResults.length}</span></div>
@@ -110,46 +110,51 @@ function App() {
 }
 
 function Sidebar({ view, go, selectedId, setSelectedId, progress, completion, mobileMenu, setMobileMenu }) {
-  const coreModules = modules.filter((m) => m.core);
-  const relatedModules = modules.filter((m) => !m.core);
+  const [filter, setFilter] = useState('');
+  const term = filter.trim().toLowerCase();
+  const matches = (module) => !term || module.short.toLowerCase().includes(term) || module.title.toLowerCase().includes(term);
+  const coreModules = modules.filter((m) => m.core && matches(m));
+  const relatedModules = modules.filter((m) => !m.core && matches(m));
+  const noMatches = term && coreModules.length === 0 && relatedModules.length === 0;
+
+  function renderModuleList(list) {
+    return list.map((module) => {
+      const done = progress.completed.includes(module.id);
+      return <button key={module.id} className={selectedId === module.id && (view === 'learn' || view === 'notes' || view === 'quiz') ? 'module-nav-item active' : 'module-nav-item'} onClick={() => go('learn', module.id)}>
+        <span className="module-number" style={{ '--accent': module.accent }}>{done ? '✓' : String(module.id).padStart(2, '0')}</span>
+        <span className="module-nav-text"><strong>{module.short}</strong><small>{module.title}</small></span>
+        {done && <span className="done-dot" />}
+      </button>;
+    });
+  }
+
   return (
     <aside className={mobileMenu ? 'sidebar mobile-open' : 'sidebar'}>
       <div className="brand" onClick={() => go('home')} role="button" tabIndex="0">
         <div className="brand-mark"><span>P</span><i /></div>
         <div><strong>PanInsulin</strong><small>inject • monitor • thrive</small></div>
       </div>
-      <div className="sidebar-scroll">
+      <div className="sidebar-top">
         <div className="side-label">Your learning space</div>
         <nav className="nav-list">
           {navItems.map((item) => (
             <button className={view === item.id ? 'nav-item active' : 'nav-item'} key={item.id} onClick={() => go(item.id)}>
               <span className="nav-icon">{item.icon}</span><span>{item.label}</span>
-              {item.id === 'quiz' && <em>13×3</em>}
+              {item.id === 'quiz' && <em>{mcqs.length}</em>}
             </button>
           ))}
         </nav>
-        <div className="side-label module-label">Core insulin modules</div>
-        <div className="module-nav">
-          {coreModules.map((module) => {
-            const done = progress.completed.includes(module.id);
-            return <button key={module.id} className={selectedId === module.id && (view === 'learn' || view === 'notes' || view === 'quiz') ? 'module-nav-item active' : 'module-nav-item'} onClick={() => go('learn', module.id)}>
-              <span className="module-number" style={{ '--accent': module.accent }}>{done ? '✓' : String(module.id).padStart(2, '0')}</span>
-              <span className="module-nav-text"><strong>{module.short}</strong><small>{module.title}</small></span>
-              {done && <span className="done-dot" />}
-            </button>;
-          })}
+      </div>
+      <div className="sidebar-scroll">
+        <div className="module-filter">
+          <span>⌕</span>
+          <input value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Jump to a module…" aria-label="Filter modules" />
         </div>
-        <div className="side-label module-label">Related diabetes topics</div>
-        <div className="module-nav">
-          {relatedModules.map((module) => {
-            const done = progress.completed.includes(module.id);
-            return <button key={module.id} className={selectedId === module.id && (view === 'learn' || view === 'notes' || view === 'quiz') ? 'module-nav-item active' : 'module-nav-item'} onClick={() => go('learn', module.id)}>
-              <span className="module-number" style={{ '--accent': module.accent }}>{done ? '✓' : String(module.id).padStart(2, '0')}</span>
-              <span className="module-nav-text"><strong>{module.short}</strong><small>{module.title}</small></span>
-              {done && <span className="done-dot" />}
-            </button>;
-          })}
-        </div>
+        {noMatches && <div className="module-nav-empty">No modules match “{filter}”.</div>}
+        {coreModules.length > 0 && <div className="side-label module-label">Core insulin modules</div>}
+        <div className="module-nav">{renderModuleList(coreModules)}</div>
+        {relatedModules.length > 0 && <div className="side-label module-label">Related diabetes topics</div>}
+        <div className="module-nav">{renderModuleList(relatedModules)}</div>
       </div>
       <div className="sidebar-bottom">
         <div className="progress-label"><span>Overall progress</span><strong>{completion}%</strong></div>
@@ -160,10 +165,10 @@ function Sidebar({ view, go, selectedId, setSelectedId, progress, completion, mo
   );
 }
 
-function Topbar({ search, setSearch, dark, setDark, setMobileMenu }) {
+function Topbar({ search, setSearch, dark, setDark, setMobileMenu, go }) {
   return <header className="topbar">
     <button className="mobile-menu" onClick={() => setMobileMenu(true)} aria-label="Open menu">☰</button>
-    <div className="breadcrumb"><span>Patient education</span><b>/</b><strong>Insulin therapy</strong></div>
+    <div className="breadcrumb"><button className="breadcrumb-link" onClick={() => go('home')}>Patient education</button><b>/</b><strong>Insulin therapy</strong></div>
     <div className="top-actions">
       <label className="search-box"><span>⌕</span><input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search questions, topics…" aria-label="Search questions" />{search && <button onClick={() => setSearch('')} aria-label="Clear search">×</button>}</label>
       <button className="icon-button" onClick={() => setDark(!dark)} aria-label="Toggle theme">{dark ? '☀' : '◐'}</button>
@@ -250,9 +255,26 @@ function ModuleView({ module, allModules, progress, markViewed, markComplete, go
       <button className={tab === 'notes' ? 'active' : ''} onClick={() => setTab('notes')}>Training notes</button>
       <button className={tab === 'mcq' ? 'active' : ''} onClick={() => go('quiz', module.id)}>MCQ practice</button>
     </div>
+    <ModuleQuickNav module={module} allModules={allModules} go={go} />
     {tab === 'qa' && <section className="qa-layout"><div className="qa-main"><div className="qa-header"><div><p className="section-kicker">PATIENT QUESTION {String(qaIndex + 1).padStart(2, '0')} / {module.qas.length}</p><h2>Learn through everyday questions</h2></div><span className="qa-count">{viewed} viewed</span></div><div className="qa-card"><div className="qa-number" style={{ '--accent': module.accent }}>{String(qaIndex + 1).padStart(2, '0')}</div><h3>{qa.question}</h3>{!showAnswer ? <button className="reveal-button" onClick={openAnswer}>Reveal patient-friendly answer <span>→</span></button> : <div className="answer-box"><div className="answer-label">ANSWER</div><p>{qa.answer}</p><button className="next-button" onClick={nextQuestion}>Next question <span>→</span></button></div>}</div><div className="qa-nav"><button onClick={() => { setShowAnswer(false); setQaIndex((n) => (n - 1 + module.qas.length) % module.qas.length); }}>← Previous</button><div className="question-dots">{module.qas.slice(0, 10).map((item, index) => <button key={item.id} aria-label={`Question ${index + 1}`} className={index === qaIndex ? 'active' : (progress.viewed[module.id]?.includes(item.id) ? 'viewed' : '')} onClick={() => { setQaIndex(index); setShowAnswer(false); }} />)}{module.qas.length > 10 && <span>+{module.qas.length - 10}</span>}</div><button onClick={nextQuestion}>Next →</button></div></div><aside className="qa-aside"><div className="aside-art"><TopicIllustration kind={module.kind} accent={module.accent} /></div><p className="section-kicker">VISUAL MEMORY</p><h3>See it, then say it back.</h3><p>Use the visual quiz to practice recognising safe actions, warning signs and everyday choices.</p><button className="outline-button" onClick={() => go('visuals')}>Open visual quiz <span>↗</span></button><div className="teach-back"><span>✦</span><div><strong>Teach-back prompt</strong><p>“Can you show me how you would explain this to a family member?”</p></div></div></aside></section>}
     {tab === 'notes' && <NotesView module={module} allModules={allModules} markComplete={markComplete} go={go} />}
   </>;
+}
+
+function ModuleQuickNav({ module, allModules, go }) {
+  const index = allModules.findIndex((m) => m.id === module.id);
+  const prev = allModules[(index - 1 + allModules.length) % allModules.length];
+  const next = allModules[(index + 1) % allModules.length];
+  return <div className="module-quicknav">
+    <button className="quicknav-prev" onClick={() => go('learn', prev.id)}>
+      <span className="quicknav-arrow">←</span>
+      <span><span className="quicknav-label">Previous module</span><span className="quicknav-title">{prev.short}</span></span>
+    </button>
+    <button className="quicknav-next" onClick={() => go('learn', next.id)}>
+      <span><span className="quicknav-label">Next module</span><span className="quicknav-title">{next.short}</span></span>
+      <span className="quicknav-arrow">→</span>
+    </button>
+  </div>;
 }
 
 function ModuleHero({ module, viewed, onComplete, onVisual }) {
@@ -517,6 +539,47 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
       <text x="272.5" y="140" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#1e40af">4. Prevention</text>
       <text x="272.5" y="152" fontSize="6.5" textAnchor="middle" fill="#64748b">Minimizes Bruising</text>
       <text x="272.5" y="162" fontSize="6" textAnchor="middle" fill="#2563eb">Smooth Tissue Entry</text>
+    </g>
+  );
+  else if (kind === 'stingingafterinjection') art = (
+    <g>
+      {/* Panel 1: pH Level (Acidic Glargine ~pH 4 into Fat ~pH 7.4) */}
+      <rect x="10" y="25" width="56" height="145" rx="5" fill="#fffbeb" stroke="#f59e0b" strokeWidth="1.5" />
+      <circle cx="38" cy="55" r="14" fill="#fef3c7" stroke="#d97706" strokeWidth="1.5" />
+      <text x="38" y="59" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#b45309">pH 4.0</text>
+      <text x="38" y="138" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#b45309">1. Acidic pH Shift</text>
+      <text x="38" y="150" fontSize="6" textAnchor="middle" fill="#64748b">Micro-Crystals Form</text>
+      <text x="38" y="160" fontSize="6" textAnchor="middle" fill="#d97706">Normal & Harmless</text>
+
+      {/* Panel 2: Cold vs Room Temp */}
+      <rect x="71" y="25" width="56" height="145" rx="5" fill="#eff6ff" stroke="#3b82f6" strokeWidth="1.5" />
+      <rect x="85" y="45" width="28" height="25" rx="4" fill="#dbeafe" stroke="#2563eb" strokeWidth="1.5" />
+      <text x="99" y="61" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#1d4ed8">4°C</text>
+      <text x="99" y="138" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#1d4ed8">2. Cold Shock</text>
+      <text x="99" y="150" fontSize="6" textAnchor="middle" fill="#64748b">Keep Active Pen at</text>
+      <text x="99" y="160" fontSize="6" fontWeight="bold" textAnchor="middle" fill="#2563eb">Room Temp (25°C)</text>
+
+      {/* Panel 3: Wet Alcohol Swab */}
+      <rect x="132" y="25" width="56" height="145" rx="5" fill="#f0fdf4" stroke="#16a34a" strokeWidth="1.5" />
+      <rect x="146" y="48" width="28" height="18" rx="4" fill="#ffffff" stroke="#16a34a" strokeWidth="1.5" />
+      <text x="160" y="60" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#15803d">10-15s</text>
+      <text x="160" y="138" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#15803d">3. Air-Dry Swab</text>
+      <text x="160" y="150" fontSize="6" textAnchor="middle" fill="#64748b">Wait Until Completely</text>
+      <text x="160" y="160" fontSize="6" fontWeight="bold" textAnchor="middle" fill="#16a34a">Dry Before Injection</text>
+
+      {/* Panel 4: Needle Reuse / Burrs */}
+      <rect x="193" y="25" width="56" height="145" rx="5" fill="#fef2f2" stroke="#dc2626" strokeWidth="1.5" />
+      <path d="M198 65 L 244 45" stroke="#ef4444" strokeWidth="2" />
+      <text x="221" y="138" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#b91c1c">4. Fresh Needle</text>
+      <text x="221" y="150" fontSize="6" textAnchor="middle" fill="#64748b">Reused Tip Burrs</text>
+      <text x="221" y="160" fontSize="6" fontWeight="bold" textAnchor="middle" fill="#dc2626">Tear Tissue & Sting</text>
+
+      {/* Panel 5: Muscle vs Fat */}
+      <rect x="254" y="25" width="56" height="145" rx="5" fill="#faf5ff" stroke="#9333ea" strokeWidth="1.5" />
+      <text x="282" y="55" fontSize="8" fontWeight="bold" textAnchor="middle" fill="#7e22ce">4 mm</text>
+      <text x="282" y="138" fontSize="6.5" fontWeight="bold" textAnchor="middle" fill="#7e22ce">5. Fat vs Muscle</text>
+      <text x="282" y="150" fontSize="6" textAnchor="middle" fill="#64748b">Gentle 90° Contact</text>
+      <text x="282" y="160" fontSize="6" fontWeight="bold" textAnchor="middle" fill="#9333ea">Avoid Deep Muscle</text>
     </g>
   );
   else if (kind === 'atlas' || kind === 'regimens') art = (

@@ -299,6 +299,21 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 66. What five clinical practices minimize the frequency of bleeding and bruising after insulin injection?
 **Answer:** (1) Use a fresh single-use needle every time (reused needles develop dull, bent, jagged micro-burrs that tear tissue and capillaries); (2) Use a shorter 4 mm pen needle to stay safely within subcutaneous fat and avoid deeper vessels; (3) Pull the needle straight out at the exact same 90-degree angle of entry (wiggling or twisting slices adjacent capillaries); (4) Rotate injection sites systematically (1–2 finger-widths away from previous sites); and (5) Inspect the skin prior to injection to avoid visible surface veins, bruises, lumpy tissue, or stretch marks.
 
+### 67. Why do certain long-acting basal insulins (such as insulin glargine) cause a brief stinging or burning sensation upon injection?
+**Answer:** Certain long-acting basal insulins—specifically insulin glargine (brand names Lantus, Toujeo, Basaglar, Basalog, Glaritus)—are formulated at a slightly acidic pH (pH ~4.0) to keep the insulin molecule soluble and stable in the vial or cartridge. When this acidic fluid enters the neutral pH (~7.4) of subcutaneous fat tissue, it shifts pH and precipitates into microscopic microprecipitate crystals that slowly dissolve over 24 hours. That initial pH transition is detected by local chemical nociceptors as a brief stinging sensation. This chemical sting is normal and harmless, and injecting the dose slowly can reduce its intensity.
+
+### 68. Why does injecting refrigerated cold insulin cause a sharp burning sensation, and how is it prevented?
+**Answer:** The human body's internal tissue temperature is around 37 °C. Injecting liquid insulin straight from the refrigerator (~4 °C) thermally shocks local subcutaneous nerve endings, causing a sharp burning feeling. To prevent this thermal sting, store only unopened backup insulin in the refrigerator; keep the pen or vial currently in use at room temperature (below 30 °C, safe for up to 28–30 days depending on the brand).
+
+### 69. Why must alcohol-swabbed skin air-dry completely before inserting an insulin needle?
+**Answer:** If alcohol swabs are used to clean the skin, waiting 10 to 15 seconds for complete air-drying is essential. If the needle penetrates while the skin is still wet, it tracks liquid alcohol directly along the puncture wound into subcutaneous tissue, irritating nerve endings and causing a sharp, immediate sting. Never blow on the skin to dry it faster, as breath introduces oral bacteria to the injection site.
+
+### 70. How does pen needle reuse contribute to burning sensations and injection trauma?
+**Answer:** Pen needles are coated with a microscopic silicone lubricant and honed to an ultra-fine point for painless single use. Even after one injection, the fine needle tip bends into micro-burrs and the silicone lubricant is wiped off. A reused needle tears through subcutaneous tissue rather than slicing cleanly, causing friction, tissue tearing, pain, and lingering post-injection burning. Always use a fresh sterile needle for every injection.
+
+### 71. How does accidental intramuscular injection cause painful stinging, and how can patients prevent it?
+**Answer:** Skeletal muscle tissue contains a far higher density of sensory nerve endings and blood vessels than subcutaneous adipose fat. If a needle is too long (> 6 mm) or if a patient presses the plastic pen base too forcefully into lean skin, the needle penetrates muscle, causing sharp pain and erratic rapid insulin absorption. To prevent intramuscular entry, use a 4 mm pen needle, insert straight at a 90-degree angle, and make gentle skin contact without pressing the pen base deeply.
+
 **Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); FIT India Consensus Guidelines; ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar, Lilly KwikPen, Lyumjev, HumaPen, NovoPen; BD Insulin Syringes; FIASP/insulin aspart FDA prescribing information); Ito et al., factors causing insulin precipitation and amyloid formation, J Pharm Health Care Sci 2019.
 
 ---
