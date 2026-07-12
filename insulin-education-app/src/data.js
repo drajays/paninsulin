@@ -288,12 +288,42 @@ export const modules = [
       {
         "id": "2-31",
         "question": "Why does the Humalog Junior KwikPen use half-unit dose increments?",
-        "answer": "It is designed for children and others who need very precise, small doses. Dialing in half-unit steps, up to a maximum of 30 units per injection, reduces the risk of accidental overdose in dose-sensitive patients."
+        "answer": "It is designed for children, very small children and highly insulin-sensitive adults who need very precise, small doses of the same insulin lispro (U-100) as the standard pen. Dialing in half-unit steps, up to a lower maximum of 30 units per injection (versus 60 units on the standard pen), reduces the risk of accidental overdose in dose-sensitive patients, even though both pens hold the same 3 mL (300-unit) volume."
       },
       {
         "id": "2-32",
+        "question": "How can caregivers tell a Humalog Junior KwikPen apart from a standard KwikPen at a glance?",
+        "answer": "The Junior KwikPen has a distinct blue body with an orange label accent, which helps caregivers and patients quickly tell their precise-dosing mealtime pen apart from other insulin pens, including basal (background) insulin pens, before drawing up a dose."
+      },
+      {
+        "id": "2-33",
         "question": "What is Lyumjev, and how is it different from standard Humalog?",
         "answer": "Lyumjev is an ultra-rapid-acting formulation of insulin lispro-aabc designed to start working faster than standard Humalog (insulin lispro)—similar in concept to how Fiasp is a faster formulation compared with standard NovoRapid."
+      },
+      {
+        "id": "2-34",
+        "question": "What are HumaPen, NovoPen and AllStar, and how are they different from KwikPen, FlexPen or SoloStar?",
+        "answer": "HumaPen (Eli Lilly), NovoPen (Novo Nordisk) and AllStar (Sanofi) are reusable, durable pen bodies designed to hold 3 mL insulin cartridges, unlike prefilled disposable pens such as KwikPen, FlexPen or SoloStar. Each manufacturer's reusable pen only accepts cartridges made for that specific pen family—they are not interchangeable."
+      },
+      {
+        "id": "2-35",
+        "question": "Which insulin brands are compatible with each reusable pen family?",
+        "answer": "HumaPen works with Lilly cartridges such as Humalog, Humulin and Lyumjev; NovoPen works with Novo Nordisk cartridges such as NovoLog/NovoRapid, Fiasp and Actrapid; AllStar works with Sanofi cartridges such as Lantus, Apidra, Admelog and Insuman."
+      },
+      {
+        "id": "2-36",
+        "question": "How do the maximum single dose and dosing increments compare across HumaPen, NovoPen and AllStar?",
+        "answer": "Standard HumaPen and NovoPen models deliver up to 60 units per injection in 1-unit steps, with pediatric variants such as HumaPen Luxura HD and NovoPen Echo offering half-unit steps up to a 30-unit maximum, while AllStar delivers up to 80 units per injection in 1-unit steps—useful for patients who need a larger single background dose."
+      },
+      {
+        "id": "2-37",
+        "question": "What safety and convenience features do these reusable pens offer?",
+        "answer": "Sanofi AllStar has an over-dial lock that prevents dialing more units than remain in the cartridge, plus penalty-free reverse dialing to correct a wrong dose selection before injecting. Newer NovoPen \"smart pen\" models (such as NovoPen 6 and NovoPen Echo Plus) use NFC connectivity to record the time and size of the last dose and sync it to a smartphone app, which can help with dose tracking."
+      },
+      {
+        "id": "2-38",
+        "question": "How long can a reusable pen body typically be used before it needs replacing?",
+        "answer": "Manufacturer guidance varies by device—commonly cited ranges are up to about 6 years for HumaPen, 5 years for NovoPen and 3 years for AllStar—but a pen should be inspected regularly and replaced sooner if it is damaged, cracked or not dialing and injecting correctly."
       }
     ],
     "kind": "insulin",
@@ -1814,6 +1844,26 @@ export const modules = [
         "id": "13-33",
         "question": "Are all Lilly KwikPen-style pens insulin?",
         "answer": "No. The same KwikPen device design is also used by Lilly for non-insulin medicines, including GLP-1/GIP receptor agonists used for type 2 diabetes and weight management, which are a different drug class dosed and monitored differently from insulin. Always check whether a pen contains insulin or a non-insulin medicine before use, and ask your pharmacist or care team if you are unsure."
+      },
+      {
+        "id": "13-34",
+        "question": "What are Basalog One, Basugine, Glaritus DispoPen-2 and Nobeglar Uno?",
+        "answer": "These are Indian prefilled disposable pens for insulin glargine biosimilars: Basalog One (Biocon Biologics, built via a design partnership with Becton Dickinson/BD), Basugine Disposable Pen (Lupin), Glaritus DispoPen-2 (Wockhardt) and Nobeglar Uno Prefilled Pen (Mankind Pharma)."
+      },
+      {
+        "id": "13-35",
+        "question": "How do the maximum single doses of these Indian glargine pens compare?",
+        "answer": "Basalog One dials up to 80 units in a single injection, while Basugine, Glaritus DispoPen-2 and Nobeglar Uno each dial up to 60 units; all four use 1-unit dosing steps. If a prescribed dose is close to a device's maximum, confirm the right pen with a pharmacist."
+      },
+      {
+        "id": "13-36",
+        "question": "What is distinctive about the Glaritus DispoPen-2?",
+        "answer": "It uses a proprietary \"DispoPen\" mechanical housing designed for smooth plunging force, which can reduce the manual hand effort needed to complete an injection compared with some other disposable pens."
+      },
+      {
+        "id": "13-37",
+        "question": "Since Basalog One, Basugine, Glaritus DispoPen-2 and Nobeglar Uno are all glargine biosimilars, can they be swapped for one another?",
+        "answer": "No. Even though they deliver the same molecule, insulin glargine, switching between biosimilar brands, devices or manufacturers should only be done with the treating physician's guidance, since device handling, absorption and monitoring needs can differ."
       }
     ],
     "kind": "insulintypes",

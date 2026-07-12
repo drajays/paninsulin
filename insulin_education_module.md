@@ -190,12 +190,30 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 **Answer:** U-200 is twice as concentrated as U-100 (200 units per mL versus 100 units per mL). Both pens still dial in units, but the U-200 pen delivers the same number of units in half the liquid volume. Using the wrong strength pen, or drawing U-200 insulin into a U-100 syringe, can cause a serious dosing error.
 
 ### 31. Why does the Humalog Junior KwikPen use half-unit dose increments?
-**Answer:** It is designed for children and others who need very precise, small doses. Dialing in half-unit steps, up to a maximum of 30 units per injection, reduces the risk of accidental overdose in dose-sensitive patients.
+**Answer:** It is designed for children, very small children and highly insulin-sensitive adults who need very precise, small doses of the same insulin lispro (U-100) as the standard pen. Dialing in half-unit steps, up to a lower maximum of 30 units per injection (versus 60 units on the standard pen), reduces the risk of accidental overdose in dose-sensitive patients, even though both pens hold the same 3 mL (300-unit) volume.
 
-### 32. What is Lyumjev, and how is it different from standard Humalog?
+### 32. How can caregivers tell a Humalog Junior KwikPen apart from a standard KwikPen at a glance?
+**Answer:** The Junior KwikPen has a distinct blue body with an orange label accent, which helps caregivers and patients quickly tell their precise-dosing mealtime pen apart from other insulin pens, including basal (background) insulin pens, before drawing up a dose.
+
+### 33. What is Lyumjev, and how is it different from standard Humalog?
 **Answer:** Lyumjev is an ultra-rapid-acting formulation of insulin lispro-aabc designed to start working faster than standard Humalog (insulin lispro)—similar in concept to how Fiasp is a faster formulation compared with standard NovoRapid.
 
-**Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar, Lilly KwikPen, Lyumjev).
+### 34. What are HumaPen, NovoPen and AllStar, and how are they different from KwikPen, FlexPen or SoloStar?
+**Answer:** HumaPen (Eli Lilly), NovoPen (Novo Nordisk) and AllStar (Sanofi) are reusable, durable pen bodies designed to hold 3 mL insulin cartridges, unlike prefilled disposable pens such as KwikPen, FlexPen or SoloStar. Each manufacturer's reusable pen only accepts cartridges made for that specific pen family—they are not interchangeable.
+
+### 35. Which insulin brands are compatible with each reusable pen family?
+**Answer:** HumaPen works with Lilly cartridges such as Humalog, Humulin and Lyumjev; NovoPen works with Novo Nordisk cartridges such as NovoLog/NovoRapid, Fiasp and Actrapid; AllStar works with Sanofi cartridges such as Lantus, Apidra, Admelog and Insuman.
+
+### 36. How do the maximum single dose and dosing increments compare across HumaPen, NovoPen and AllStar?
+**Answer:** Standard HumaPen and NovoPen models deliver up to 60 units per injection in 1-unit steps, with pediatric variants such as HumaPen Luxura HD and NovoPen Echo offering half-unit steps up to a 30-unit maximum, while AllStar delivers up to 80 units per injection in 1-unit steps—useful for patients who need a larger single background dose.
+
+### 37. What safety and convenience features do these reusable pens offer?
+**Answer:** Sanofi AllStar has an over-dial lock that prevents dialing more units than remain in the cartridge, plus penalty-free reverse dialing to correct a wrong dose selection before injecting. Newer NovoPen "smart pen" models (such as NovoPen 6 and NovoPen Echo Plus) use NFC connectivity to record the time and size of the last dose and sync it to a smartphone app, which can help with dose tracking.
+
+### 38. How long can a reusable pen body typically be used before it needs replacing?
+**Answer:** Manufacturer guidance varies by device—commonly cited ranges are up to about 6 years for HumaPen, 5 years for NovoPen and 3 years for AllStar—but a pen should be inspected regularly and replaced sooner if it is damaged, cracked or not dialing and injecting correctly.
+
+**Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar, Lilly KwikPen, Lyumjev, HumaPen, NovoPen).
 
 ---
 
@@ -973,7 +991,19 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 33. Are all Lilly KwikPen-style pens insulin?
 **Answer:** No. The same KwikPen device design is also used by Lilly for non-insulin medicines, including GLP-1/GIP receptor agonists used for type 2 diabetes and weight management, which are a different drug class dosed and monitored differently from insulin. Always check whether a pen contains insulin or a non-insulin medicine before use, and ask your pharmacist or care team if you are unsure.
 
-**Evidence anchors:** Manufacturer product labeling (Novo Nordisk, Sanofi, Eli Lilly, Biocon, Wockhardt, Lupin); FDA-approved US prescribing information (Admelog, Afrezza, Apidra, Fiasp, Humalog, NovoLog, Humulin, Novolin, Basaglar, Lantus, Levemir, Toujeo, Tresiba, Ryzodeg, KwikPen, Lyumjev); ADA Standards of Care 2026, insulin therapy section; CDSCO Schedule H1 prescription drug rules.
+### 34. What are Basalog One, Basugine, Glaritus DispoPen-2 and Nobeglar Uno?
+**Answer:** These are Indian prefilled disposable pens for insulin glargine biosimilars: Basalog One (Biocon Biologics, built via a design partnership with Becton Dickinson/BD), Basugine Disposable Pen (Lupin), Glaritus DispoPen-2 (Wockhardt) and Nobeglar Uno Prefilled Pen (Mankind Pharma).
+
+### 35. How do the maximum single doses of these Indian glargine pens compare?
+**Answer:** Basalog One dials up to 80 units in a single injection, while Basugine, Glaritus DispoPen-2 and Nobeglar Uno each dial up to 60 units; all four use 1-unit dosing steps. If a prescribed dose is close to a device's maximum, confirm the right pen with a pharmacist.
+
+### 36. What is distinctive about the Glaritus DispoPen-2?
+**Answer:** It uses a proprietary "DispoPen" mechanical housing designed for smooth plunging force, which can reduce the manual hand effort needed to complete an injection compared with some other disposable pens.
+
+### 37. Since Basalog One, Basugine, Glaritus DispoPen-2 and Nobeglar Uno are all glargine biosimilars, can they be swapped for one another?
+**Answer:** No. Even though they deliver the same molecule, insulin glargine, switching between biosimilar brands, devices or manufacturers should only be done with the treating physician's guidance, since device handling, absorption and monitoring needs can differ.
+
+**Evidence anchors:** Manufacturer product labeling (Novo Nordisk, Sanofi, Eli Lilly, Biocon, Wockhardt, Lupin, Mankind Pharma); FDA-approved US prescribing information (Admelog, Afrezza, Apidra, Fiasp, Humalog, NovoLog, Humulin, Novolin, Basaglar, Lantus, Levemir, Toujeo, Tresiba, Ryzodeg, KwikPen, Lyumjev); ADA Standards of Care 2026, insulin therapy section; CDSCO Schedule H1 prescription drug rules.
 
 ---
 
