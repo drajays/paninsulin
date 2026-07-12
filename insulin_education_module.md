@@ -834,6 +834,74 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 
 ---
 
+# 13. Types of insulin
+
+**Learning focus:** Recognize the five action-profile categories of insulin, match common Indian brand names to their molecule and category, and understand why molecule, brand and concentration all matter for safety.
+
+### 1. What are the main categories of insulin based on how they act in the body?
+**Answer:** Insulins are generally grouped by onset, peak and duration: rapid-acting, short-acting (regular/human), intermediate-acting (NPH/isophane), long- and ultra-long-acting (basal), and premixed insulins that combine two action profiles in one product.
+
+### 2. What is rapid-acting insulin and when is it used?
+**Answer:** Rapid-acting insulin analogs (insulin aspart, lispro, glulisine) start working in about 15 minutes, peak around 1–1.5 hours and last 3–4 hours. They are usually given just before or with a meal to cover the after-meal glucose rise.
+
+### 3. Which brand names are commonly used for rapid-acting insulin in India?
+**Answer:** Insulin aspart is sold as NovoRapid and the ultra-rapid Fiasp (Novo Nordisk); insulin lispro as Humalog (Eli Lilly) and Eglucent (Lupin); insulin glulisine as Apidra (Sanofi). Always confirm the exact molecule and brand printed on your prescription, not just the box color or pen shape.
+
+### 4. What is short-acting (regular/human) insulin?
+**Answer:** Regular human insulin is unmodified human insulin usually injected about 30 minutes before a meal. It starts working in roughly 30 minutes, peaks at 2–3 hours and lasts 6–8 hours—slower to start and longer-acting than rapid-acting analogs.
+
+### 5. Which Indian brands are regular human insulin?
+**Answer:** Examples include Actrapid (Novo Nordisk), Huminsulin R (Eli Lilly), Insuman Rapid (Sanofi), Insugen-R (Biocon) and Wosulin R (Wockhardt). The "R" in these brand names commonly signals regular/rapid human insulin.
+
+### 6. What is intermediate-acting (NPH) insulin?
+**Answer:** NPH, or isophane insulin, is a cloudy suspension used for baseline (background) glucose control. It starts working in about 1.5–2 hours, peaks at 6–8 hours and lasts 12–16 hours, so it is often given once or twice daily.
+
+### 7. Which Indian brands contain NPH insulin?
+**Answer:** Examples include Insulatard (Novo Nordisk), Huminsulin N (Eli Lilly), Insuman Basal (Sanofi), Insugen-N (Biocon) and Wosulin N (Wockhardt). NPH must be gently rolled or tipped before use because it looks uniformly cloudy, unlike clear insulins.
+
+### 8. What are long-acting and ultra-long-acting basal insulins?
+**Answer:** These provide a steady, largely flat background insulin level for 18–24 hours or longer, without a strong peak, which lowers the risk of unpredictable lows compared with NPH. They include insulin glargine, detemir and degludec.
+
+### 9. Which Indian brands are insulin glargine?
+**Answer:** Lantus (Sanofi, U100 concentration), Toujeo (Sanofi, U300—a more concentrated, longer-lasting formulation), Basaglar (Eli Lilly/Boehringer Ingelheim), Basalog (Biocon) and Glaritus (Wockhardt) are glargine-based products.
+
+### 10. What about insulin detemir and insulin degludec?
+**Answer:** Insulin detemir is marketed as Levemir (Novo Nordisk). Insulin degludec, an ultra-long-acting insulin that can last up to about 42 hours, is marketed as Tresiba (Novo Nordisk).
+
+### 11. Why does the concentration of insulin, such as U100 versus U300, matter?
+**Answer:** Toujeo (U300) contains three times the insulin per mL compared with a standard U100 product. Units are still dosed as units, but absorption and duration differ, so products are not automatically interchangeable unit-for-unit—dose changes must be individualized by the care team.
+
+### 12. What are premixed human insulins?
+**Answer:** These combine regular and NPH insulin in a fixed ratio, commonly 30% regular/70% NPH, in one injection to cover both background and mealtime needs. Examples include Human Mixtard 30, Huminsulin 30/70, Insuman Comb 30, Insugen 30/70 and Wosulin 30/70; 50/50 ratios also exist.
+
+### 13. What are premixed analog insulins?
+**Answer:** These combine a rapid-acting analog with a protamine-crystallized, intermediate-acting form of the same analog. Examples include NovoMix 30 (30% aspart/70% protaminated aspart) and Humalog Mix 25 or Mix 50 (lispro/protamine-lispro blends).
+
+### 14. What is Ryzodeg and how is it different from other premixes?
+**Answer:** Ryzodeg combines 70% insulin degludec (ultra-long-acting) with 30% insulin aspart (rapid-acting) in one pen—pairing a peakless basal component with a mealtime component, unlike human premixes that use NPH as the intermediate component.
+
+### 15. What is a "biosimilar" insulin, and does it matter which one I use?
+**Answer:** A biosimilar is an insulin product developed to be highly similar to an already-approved insulin—for example, Basalog, Glaritus and Eglucent are biosimilar or generic versions of glargine- or lispro-type molecules. Never switch between brands or biosimilars on your own; your clinician decides if and how to change products safely.
+
+### 16. Why do premixed insulins offer less flexibility than a basal-bolus plan?
+**Answer:** A fixed premix locks the ratio between background and mealtime insulin into every dose, which is simpler to inject but cannot be adjusted separately for an unusual meal, exercise or illness. A basal-bolus plan uses separate long-acting and rapid-acting insulins, so each can be adjusted independently.
+
+### 17. Can rapid-acting insulin be used alone as a full-day basal replacement?
+**Answer:** No. Rapid-acting insulin acts for only 3–4 hours, so using it alone would leave gaps with no insulin cover, risking high glucose and ketone formation between doses. A separate long-acting or intermediate insulin is needed for background coverage.
+
+### 18. Why do brand names sometimes cause confusion or dosing errors?
+**Answer:** Many brand names look or sound alike—for example, Humalog (a rapid-acting analog) versus Huminsulin (a regular/NPH human insulin) are easy to confuse despite very different action profiles. Always check both the brand name and the molecule or type printed on the label before injecting.
+
+### 19. What should I do if I am unsure which insulin type is in my pen or vial?
+**Answer:** Do not guess or assume. Check the label for the molecule name (for example, aspart, glargine or NPH) and brand, compare it with your prescription, and ask your pharmacist or care team to confirm before using it.
+
+### 20. Who decides which insulin molecule, brand and dose I should use?
+**Answer:** Insulin is a Schedule H/H1 prescription medicine in India. The specific molecule, brand, strength and dose must always be chosen by your treating physician based on your individual glucose pattern, lifestyle, cost and access—not chosen independently or copied from another patient's regimen.
+
+**Evidence anchors:** Manufacturer product labeling (Novo Nordisk, Sanofi, Eli Lilly, Biocon, Wockhardt, Lupin); ADA Standards of Care 2026, insulin therapy section; CDSCO Schedule H1 prescription drug rules.
+
+---
+
 ## References and further reading
 
 1. **American Diabetes Association.** *Standards of Care in Diabetes—2026.* Diabetes Care, 49(Suppl. 1), 2026. https://diabetesjournals.org/care/issue/49/Supplement_1  

@@ -124,7 +124,7 @@ function Sidebar({ view, go, selectedId, setSelectedId, progress, completion, mo
           {navItems.map((item) => (
             <button className={view === item.id ? 'nav-item active' : 'nav-item'} key={item.id} onClick={() => go(item.id)}>
               <span className="nav-icon">{item.icon}</span><span>{item.label}</span>
-              {item.id === 'quiz' && <em>12×3</em>}
+              {item.id === 'quiz' && <em>13×3</em>}
             </button>
           ))}
         </nav>
@@ -186,15 +186,15 @@ function Home({ modules, progress, completion, qasViewed, mcqAnswered, go, selec
         <h1>Confidence with<br /><span>every insulin dose.</span></h1>
         <p>A calm, visual guide to insulin therapy—injection technique, dosing safety, hypoglycemia and sick-day rules—built for patients, families and caregivers.</p>
         <div className="hero-buttons"><button className="primary-button" onClick={() => go('learn', nextId)}>Continue learning <span>→</span></button><button className="ghost-button" onClick={() => go('visuals')}>Try a visual quiz</button></div>
-        <div className="hero-trust"><span>✓ Evidence-informed</span><span>✓ Patient-friendly</span><span>✓ 6 core insulin modules</span></div>
+        <div className="hero-trust"><span>✓ Evidence-informed</span><span>✓ Patient-friendly</span><span>✓ {coreModules.length} core insulin modules</span></div>
       </div>
       <div className="hero-art"><HeroIllustration /></div>
     </section>
 
     <section className="welcome-row"><div><p className="section-kicker">YOUR DASHBOARD</p><h2>Welcome back, learner</h2><p className="muted">Choose a path that feels useful today.</p></div><div className="date-chip">July 2026 <span>⌄</span></div></section>
     <section className="stats-grid">
-      <StatCard icon="◒" label="Learning progress" value={`${completion}%`} detail={`${progress.completed.length} of 12 modules complete`} color="indigo" />
-      <StatCard icon="?" label="Questions explored" value={qasViewed} detail="from 240 patient Q&As" color="teal" />
+      <StatCard icon="◒" label="Learning progress" value={`${completion}%`} detail={`${progress.completed.length} of ${modules.length} modules complete`} color="indigo" />
+      <StatCard icon="?" label="Questions explored" value={qasViewed} detail={`from ${modules.reduce((sum, m) => sum + m.qas.length, 0)} patient Q&As`} color="teal" />
       <StatCard icon="✓" label="MCQ practice" value={mcqAnswered} detail="answers completed" color="orange" />
       <StatCard icon="↗" label="Next focus" value={String(nextId).padStart(2, '0')} detail={nextModule?.short || 'Review'} color="pink" />
     </section>
@@ -313,6 +313,7 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
   else if (kind === 'feelings') art = <><circle cx="160" cy="91" r="58" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="140" cy="80" r="6" fill={accent} /><circle cx="180" cy="80" r="6" fill={accent} /><path d="M128 108 Q160 132 192 108" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" /><path d="M73 59 q20-25 42-10" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /><path d="M206 49 q23-15 42 10" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /><path d="M76 142 l18-18 18 18" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /><path d="M226 142 l18-18 18 18" fill="none" stroke={accent} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /></>;
   else if (kind === 'travel') art = <><path d="M98 125 L219 73" stroke={accent} strokeWidth="10" strokeLinecap="round" /><path d="M156 102 L125 44 M173 94 L207 45" stroke={accent} strokeWidth="8" strokeLinecap="round" /><path d="M92 126 l-27 23 M216 74 l29-14" stroke={accent} strokeWidth="8" strokeLinecap="round" /><circle cx="160" cy="101" r="20" fill="#fff" stroke={accent} strokeWidth="3" /><path d="M72 154 h179" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".3" /><path d="M252 38 v42 M231 59 h42" stroke={accent} strokeWidth="4" strokeLinecap="round" opacity=".5" /></>;
   else if (kind === 'pregnancy') art = <><path d="M160 48 C128 48 102 72 102 105 C102 137 128 157 160 157 C192 157 218 137 218 105 C218 72 192 48 160 48Z" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="159" cy="92" r="18" fill={accent} opacity=".22" /><path d="M158 111 q-20 5-18 27 q19 9 39 0 q2-22-21-27" fill={accent} opacity=".45" /><path d="M68 76 v50 M48 101 h40" stroke={accent} strokeWidth="5" strokeLinecap="round" opacity=".5" /><path d="M239 55 q19 18 0 35 q-19 17 0 35" fill="none" stroke={accent} strokeWidth="4" strokeLinecap="round" /></>;
+  else if (kind === 'insulintypes') art = <><rect x="80" y="78" width="26" height="62" rx="7" fill="#fff" stroke={accent} strokeWidth="3" /><rect x="88" y="66" width="10" height="14" rx="2" fill={accent} /><rect x="140" y="56" width="26" height="84" rx="7" fill="#fff" stroke={accent} strokeWidth="3" /><rect x="148" y="44" width="10" height="14" rx="2" fill={accent} /><rect x="200" y="34" width="26" height="106" rx="7" fill="#fff" stroke={accent} strokeWidth="3" /><rect x="208" y="22" width="10" height="14" rx="2" fill={accent} /><path d="M236 44 h34 l14 12 -14 12 h-34 Z" fill={accent} opacity=".85" /><circle cx="262" cy="56" r="3" fill="#fff" /></>;
   else art = <><circle cx="160" cy="95" r="56" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M160 60 v70 M125 95 h70" stroke={accent} strokeWidth="7" strokeLinecap="round" /><circle cx="254" cy="70" r="20" fill={accent} opacity=".18" /></>;
   return <svg className={large ? 'topic-illustration large' : 'topic-illustration'} {...common}>{bg}{dot}{art}</svg>;
 }
