@@ -68,7 +68,16 @@ Modules are tagged `core: true/false` in the `meta` list. Core = directly about 
 
 ### Content scope boundary
 
-This app is insulin-specific. When brand/device content is added (patients frequently paste manufacturer comparison tables), only include **insulin** products. Non-insulin medicines that share a device platform (e.g., GLP-1/GIP receptor agonists sold in a similar pen, like Mounjaro/Zepbound) should be explicitly noted as out-of-scope with a one-line safety caveat ("not all pens are insulin — confirm before use"), not given their own Q&A content. Device-spec content (max dose, dosing increments, pen lifespan) sourced from manufacturer marketing/comparison material changes as product lines are updated/discontinued — treat exact numbers as illustrative, not guaranteed current.
+This app is insulin-specific. When brand/device content is added (patients frequently paste manufacturer comparison tables), only include **insulin** products. Non-insulin medicines that share a device platform (e.g., GLP-1/GIP receptor agonists sold in a similar pen, like Mounjaro/Zepbound) should be explicitly noted as out-of-scope with a one-line safety caveat ("not all pens are insulin — confirm before use"), not given their own Q&A content.
+
+### Accuracy bar: verify, don't just transcribe
+
+The project's standing instruction is **focused content, no generic filler, only authentic/official information — verify before publishing, don't take pasted content on faith.** Patients frequently paste comparison tables from marketing or retail sites; these have already contained at least one real factual error (a device's max dose was wrong and briefly contradicted itself elsewhere in the same module — see git history "Fact-check and correct device-spec content"). Before adding pasted device-spec content (max dose, dosing increments, concentration, replacement/lifespan guidance):
+
+1. **Cross-check numeric/factual claims against an official source** (FDA label/DailyMed, manufacturer prescribing information or instructions-for-use, ADA) using WebSearch before writing the Q&A — don't transcribe a pasted table verbatim.
+2. If a claim can't be verified against a primary source (common for regional/niche brands, found only on retail/pharmacy listing pages), don't state it as flat fact — hedge it ("commonly listed as...") and prompt the reader to confirm against the current pack insert.
+3. Check new numbers against everything already written elsewhere in the same module for internal consistency (grep for the old value) — the AllStar error above existed as a contradiction between two Q&As for one commit before being caught.
+4. Device hardware specs change as models are updated/discontinued (already happened with NovoRapid FlexTouch mid-session) — each module with device-spec content (currently modules 2 and 13) carries a `notes` entry in `generate_app_data.py`'s `meta` saying so; keep that caveat if you add more device content, don't remove it.
 
 ## App structure (`insulin-education-app/`)
 

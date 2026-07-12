@@ -14,10 +14,19 @@ This repo's content lives in `insulin_education_module.md` and is compiled into 
 - **A genuinely new topic** not covered by any existing module → new module, appended at the end (next sequential ID).
 - **Non-insulin content** (e.g. GLP-1/GIP agonists like Mounjaro/Zepbound, even if sold in a similar pen platform) → do NOT add as full content. At most, add one safety-caveat Q&A noting the device platform is shared but the drug class differs and is out of scope. Tell the user you're excluding it and why.
 
+## Verify before writing (do this first, not last)
+
+The project standard is **focused, authentic, official-source content — not a transcription of whatever was pasted.** Patient-pasted comparison tables (marketing pages, retail listings) have already introduced at least one real error into this repo (a pen's max dose was wrong and contradicted a correct figure elsewhere in the same module). Before turning pasted content into Q&As:
+
+1. For every checkable numeric/factual claim (max dose, dosing increments, concentration, contraindications, mechanism), run a WebSearch against an authoritative source: FDA label/DailyMed, manufacturer prescribing information or instructions-for-use, ADA. Prefer `.gov`, the manufacturer's own site, or DailyMed/FDA over retail/blog/marketing pages.
+2. If a claim can't be traced to a primary source (common for regional/niche brands, which often exist only on pharmacy listing pages), don't present it as flat fact in the Q&A — hedge it ("commonly listed as...") and prompt the reader to confirm against the current pack insert, rather than silently omitting it or silently asserting it.
+3. **Grep the markdown for the old value** of any number you're about to add or change (e.g. `grep -n "80 units\|60 units"`) to catch contradictions with content already written elsewhere in the module before you commit — this is how the AllStar error was found.
+4. Never add non-insulin content as full Q&As (see scope rule above) even if it was part of the same pasted table.
+
 ## Procedure
 
 1. **Read the target module's current end** in `insulin_education_module.md` (its last `### N.` / `**Answer:**` pair and its `**Evidence anchors:**` line).
-2. **Insert new `### N. Question` / `**Answer:** ...` pairs** immediately before that module's `**Evidence anchors:**` line, continuing the numbering from the module's current max. Keep answers patient-friendly (plain language, one short paragraph), and factually anchor them to what the user actually pasted — don't invent clinical claims. Add non-insulin/scope caveats inline when relevant (see above).
+2. **Insert new `### N. Question` / `**Answer:** ...` pairs** immediately before that module's `**Evidence anchors:**` line, continuing the numbering from the module's current max. Keep answers patient-friendly (plain language, one short paragraph), verified per the section above, and don't invent clinical claims. Add non-insulin/scope caveats inline when relevant (see above).
    - If this is a **new module**: append a full new `# <N>. <Title>` section (learning focus line, Q&As starting at 1, evidence anchors, `---` separator) before `## References and further reading` instead.
 3. **Update `**Evidence anchors:**`** for the module if new manufacturer/source names were introduced.
 4. **If a new module**: add its `meta` entry to the `meta` list in `generate_app_data.py` (same `id`, plus `kind`, `short`, `tagline`, `accent`, `icon`, `core`, `learning`, `notes`, `practice`, `redFlags`). Decide `core` per the scope note in `CLAUDE.md`.
