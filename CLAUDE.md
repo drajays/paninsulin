@@ -97,6 +97,15 @@ The app has been through two full design passes; the current one (Figma-marketin
 - Sidebar, topbar and the search overlay use `backdrop-filter: blur(20px) saturate(180%)` over a translucent `--nav` background — carried over from the previous pass, still the "glass" signature; don't replace with a solid background.
 - The `HeroIllustration` SVG in `main.jsx` is hand-colored to match the current palette (violet coat, teal/pink/violet sparkles, a violet-tinted drop-shadow) — its colors are hardcoded hex values, not CSS variables, so if the brand palette changes again this SVG needs manual updates too.
 - `.app { color: var(--ink); }` is load-bearing, not decorative — without it, any element that doesn't explicitly declare its own `color` (e.g. `.brand strong`, `.stat-card > strong`) silently inherits the light-mode ink color even under `.app.dark`, because `color` inheritance freezes at the ancestor that last declared it, not at whichever element last redefined the `--ink` custom property. This exact bug was found and fixed via visual QA once already — don't remove this declaration when touching `.app`.
+- **No real product/manufacturer photos, ever** — confirmed directly with the user after they asked to embed manufacturer/retailer pen photos they'd shared in chat. The app only uses generic inline SVG (`TopicIllustration`, `HeroIllustration`), specifically to avoid trademark/copyright exposure from embedding real product photography on a public GitHub Pages site. If a future request asks to add "the image I just showed you," check whether it's a manufacturer/retail marketing photo before adding it — it almost certainly is one.
+
+### Navigation (as of module 16 / 16 total modules)
+
+The sidebar module list has grown long enough that scrolling it used to carry the primary nav (Overview/Learn/Quiz/Notes) out of view with it. Fixed with a two-region sidebar: `.sidebar-top` (primary nav, non-scrolling) is a sibling of `.sidebar-scroll` (module lists only, its own scroll container) — don't merge them back into one scrolling region as new modules are added. `.side-label.module-label` (the "Core"/"Related" headers) are `position: sticky` within that scroll region so the current group stays labeled while scrolling.
+
+`Sidebar` also has a live module filter (local `useState`, matches against `module.short`/`module.title`, case-insensitive) — the "Jump to a module…" input above the lists. Keep this working as new modules are added; it's the fastest way to reach a specific module once the list no longer fits on one screen.
+
+`ModuleQuickNav` (rendered in `ModuleView`, below `.module-tabs`) computes prev/next purely from `allModules` array order (`findIndex` + wraparound), so it stays correct automatically as modules are added/reordered — don't hardcode module IDs there.
 
 ## Deployment
 
