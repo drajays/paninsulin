@@ -312,7 +312,7 @@ function VisualQuiz({ progress, setProgress, go }) {
 
   const categories = [
     { id: 'all', label: 'All Visuals (63)' },
-    { id: 'everyday', label: 'Everyday Safety (14)' },
+    { id: 'everyday', label: 'Everyday Safety (15)' },
     { id: 'table73sickday', label: 'Table 7.3 Sick-Day Rules (5)' },
     { id: 'syringe', label: 'Syringe Anatomy (5)' },
     { id: 'airshot', label: 'Air Shots & Priming (5)' },
@@ -327,7 +327,7 @@ function VisualQuiz({ progress, setProgress, go }) {
 
   const filteredScenarios = visualScenarios.filter((s) => {
     if (filter === 'all') return true;
-    if (filter === 'everyday') return !s.artKind || s.artKind === 'driving';
+    if (filter === 'everyday') return !s.artKind || s.artKind === 'driving' || s.artKind === 'drivingpen';
     if (filter === 'atlas') return atlasKinds.includes(s.artKind);
     return s.artKind === filter;
   });
