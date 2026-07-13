@@ -306,17 +306,150 @@ function QuizView({ module, allModules, progress, updateQuiz, go }) {
 }
 
 function VisualQuiz({ progress, setProgress, go }) {
+  const [filter, setFilter] = useState('all');
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState(null);
-  const scenario = visualScenarios[index];
-  const module = modules.find((m) => m.id === scenario.moduleId);
+
+  const categories = [
+    { id: 'all', label: 'All Visuals (57)' },
+    { id: 'everyday', label: 'Everyday Safety (14)' },
+    { id: 'syringe', label: 'Syringe Anatomy (5)' },
+    { id: 'airshot', label: 'Air Shots & Priming (5)' },
+    { id: 'resuspension', label: 'Cloudy Resuspension (5)' },
+    { id: 'fitterupdates', label: 'FITTER Updates (5)' },
+    { id: 'bleedingafterinjection', label: 'Bleeding & Bruising (5)' },
+    { id: 'stingingafterinjection', label: 'Burning or Stinging (5)' },
+    { id: 'atlas', label: 'Storage Atlas (13)' }
+  ];
+
+  const atlasKinds = ['regimens', 'allstar', 'frioduo', 'friolarge', 'evacase', 'comparecoolers', 'electricflask', 'compactpouch', 'lcdcooler', 'hardshelllcd', 'activefridge', 'zeerpot', 'coolingstudy'];
+
+  const filteredScenarios = visualScenarios.filter((s) => {
+    if (filter === 'all') return true;
+    if (filter === 'everyday') return !s.artKind || s.artKind === 'driving';
+    if (filter === 'atlas') return atlasKinds.includes(s.artKind);
+    return s.artKind === filter;
+  });
+
+  const activeIndex = index % filteredScenarios.length;
+  const scenario = filteredScenarios[activeIndex] || visualScenarios[0];
+  const module = modules.find((m) => m.id === scenario.moduleId) || modules[0];
+
   function choose(option) {
     if (selected !== null) return;
     setSelected(option);
-    setProgress((p) => ({ ...p, visual: { ...p.visual, [scenario.moduleId]: option === scenario.answer ? 'correct' : 'review' } }));
+    const key = scenario.prompt || scenario.moduleId;
+    setProgress((p) => ({ ...p, visual: { ...p.visual, [key]: option === scenario.answer ? 'correct' : 'review' } }));
   }
-  function next() { setSelected(null); setIndex((n) => (n + 1) % visualScenarios.length); }
-  return <section className="visual-view"><div className="visual-heading"><div><p className="section-kicker">IMAGE-BASED QUESTION & ANSWER</p><h1>See the situation. Choose the safe action.</h1><p className="muted">Visual practice for patients, families and caregivers.</p></div><div className="visual-counter"><strong>{index + 1}</strong><span>/ {visualScenarios.length}</span></div></div><div className="visual-layout"><div className="visual-question-card"><div className="visual-scene"><TopicIllustration kind={scenario.artKind || module.kind} accent={module.accent} large /></div><div className="visual-question-copy"><div className="visual-module-tag" style={{ color: module.accent }}>MODULE {String(module.id).padStart(2, '0')} · {module.short}</div><h2>{scenario.prompt}</h2><div className="visual-options">{scenario.options.map((option, optionIndex) => <button key={option} className={selected === null ? 'visual-option' : optionIndex === scenario.answer ? 'visual-option correct' : optionIndex === selected ? 'visual-option incorrect' : 'visual-option muted-option'} onClick={() => choose(optionIndex)}><span>{String.fromCharCode(65 + optionIndex)}</span>{option}</button>)}</div>{selected !== null && <div className={selected === scenario.answer ? 'visual-feedback good' : 'visual-feedback needs-review'}><strong>{selected === scenario.answer ? 'That is the safer choice.' : 'Let’s review the safer choice.'}</strong><p>{scenario.explain}</p></div>}<div className="visual-footer"><button className="text-button" onClick={() => go('notes', module.id)}>Open training notes <span>↗</span></button>{selected !== null && <button className="next-button" onClick={next}>Next visual <span>→</span></button>}</div></div></div><aside className="visual-side"><div className="visual-side-card"><div className="side-icon">✦</div><p className="section-kicker">HOW TO USE THIS</p><h3>Pause before you answer.</h3><p>Ask: what is happening, what is the risk, and what is the first safe action?</p><div className="three-step"><span><b>1</b>Notice</span><span><b>2</b>Choose</span><span><b>3</b>Explain</span></div></div><div className="visual-side-card progress-side"><p className="section-kicker">VISUAL PROGRESS</p><div className="progress-track"><span style={{ width: `${Object.keys(progress.visual || {}).length / visualScenarios.length * 100}%` }} /></div><p>{Object.keys(progress.visual || {}).length} of {visualScenarios.length} visual situations attempted</p></div></aside></div></section>;
+
+  function next() {
+    setSelected(null);
+    setIndex((n) => (n + 1) % filteredScenarios.length);
+  }
+
+  function changeFilter(id) {
+    setFilter(id);
+    setIndex(0);
+    setSelected(null);
+  }
+
+  return (
+    <section className="visual-view">
+      <div className="visual-heading">
+        <div>
+          <p className="section-kicker">IMAGE-BASED QUESTION & ANSWER ({visualScenarios.length} TOTAL)</p>
+          <h1>See the situation. Choose the safe action.</h1>
+          <p className="muted">Interactive visual picture quizzes and diagrams for patients, families and caregivers.</p>
+        </div>
+        <div className="visual-counter">
+          <strong>{activeIndex + 1}</strong>
+          <span>/ {filteredScenarios.length}</span>
+        </div>
+      </div>
+
+      <div className="module-tabs" style={{ marginBottom: '20px', flexWrap: 'wrap' }}>
+        {categories.map((cat) => (
+          <button
+            key={cat.id}
+            className={filter === cat.id ? 'active' : ''}
+            onClick={() => changeFilter(cat.id)}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="visual-layout">
+        <div className="visual-question-card">
+          <div className="visual-scene">
+            <TopicIllustration kind={scenario.artKind || module.kind} accent={module.accent} large />
+          </div>
+          <div className="visual-question-copy">
+            <div className="visual-module-tag" style={{ color: module.accent }}>
+              MODULE {String(module.id).padStart(2, '0')} · {module.short}
+            </div>
+            <h2>{scenario.prompt}</h2>
+            <div className="visual-options">
+              {scenario.options.map((option, optionIndex) => (
+                <button
+                  key={option}
+                  className={
+                    selected === null
+                      ? 'visual-option'
+                      : optionIndex === scenario.answer
+                        ? 'visual-option correct'
+                        : optionIndex === selected
+                          ? 'visual-option incorrect'
+                          : 'visual-option muted-option'
+                  }
+                  onClick={() => choose(optionIndex)}
+                >
+                  <span>{String.fromCharCode(65 + optionIndex)}</span>
+                  {option}
+                </button>
+              ))}
+            </div>
+            {selected !== null && (
+              <div className={selected === scenario.answer ? 'visual-feedback good' : 'visual-feedback needs-review'}>
+                <strong>{selected === scenario.answer ? 'That is the safer choice.' : 'Let’s review the safer choice.'}</strong>
+                <p>{scenario.explain}</p>
+              </div>
+            )}
+            <div className="visual-footer">
+              <button className="text-button" onClick={() => go('notes', module.id)}>
+                Open training notes <span>↗</span>
+              </button>
+              {selected !== null && (
+                <button className="next-button" onClick={next}>
+                  Next visual <span>→</span>
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+        <aside className="visual-side">
+          <div className="visual-side-card">
+            <div className="side-icon">✦</div>
+            <p className="section-kicker">HOW TO USE THIS</p>
+            <h3>Pause before you answer.</h3>
+            <p>Ask: what is happening, what is the risk, and what is the first safe action?</p>
+            <div className="three-step">
+              <span><b>1</b>Notice</span>
+              <span><b>2</b>Choose</span>
+              <span><b>3</b>Explain</span>
+            </div>
+          </div>
+          <div className="visual-side-card progress-side">
+            <p className="section-kicker">VISUAL PROGRESS</p>
+            <div className="progress-track">
+              <span style={{ width: `${(Object.keys(progress.visual || {}).length / visualScenarios.length) * 100}%` }} />
+            </div>
+            <p>{Object.keys(progress.visual || {}).length} of {visualScenarios.length} visual situations attempted</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
 }
 
 function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
