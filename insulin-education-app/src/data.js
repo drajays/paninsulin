@@ -1153,6 +1153,31 @@ export const modules = [
         "id": "7-20",
         "question": "What should every person with diabetes have in writing?",
         "answer": "Target glucose range, testing frequency, ketone thresholds, insulin and medicine instructions, carbohydrate/fluid plan, correction steps, emergency signs, contacts, sick-leave advice and restart instructions. Review the plan at least annually and after treatment changes."
+      },
+      {
+        "id": "7-21",
+        "question": "How often should capillary blood glucose be estimated during illness according to Table 7.3?",
+        "answer": "According to Table 7.3 Sick-day rules for people with type 1 diabetes, capillary blood glucose should be estimated at least every 2 hours throughout the illness, day and night, to track rising trends and detect hypoglycemia early."
+      },
+      {
+        "id": "7-22",
+        "question": "At what capillary blood glucose threshold does Table 7.3 instruct checking urine or blood for ketones?",
+        "answer": "If capillary blood glucose is >12 mmol/L (>216 mg/dL), you must check urine or blood for ketones immediately to screen for developing diabetic ketoacidosis (DKA)."
+      },
+      {
+        "id": "7-23",
+        "question": "How should hydration and carbohydrate intake be managed according to Table 7.3 sick-day rules?",
+        "answer": "Plenty of clear fluids should be drunk to avoid dehydration. If normal solid food cannot be consumed, glucose-containing fluids (such as fruit juice, non-diet sodas, or sugar-sweetened tea) should be ingested as an alternative to supply necessary energy and prevent starvation ketosis."
+      },
+      {
+        "id": "7-24",
+        "question": "Should insulin administration ever be stopped during a sick day, and how do doses typically change?",
+        "answer": "Insulin administration should not be stopped, even if you are not eating solid food. Usually, during acute illness and stress, insulin doses need to be INCREASED by 25–50% to overcome stress-hormone insulin resistance."
+      },
+      {
+        "id": "7-25",
+        "question": "When does Table 7.3 advise contacting a doctor or diabetes team immediately?",
+        "answer": "Contact your doctor or diabetes emergency team immediately if vomiting, hyperketonemia (elevated blood ketones), or ketonuria (ketones in urine) is persistent, or if you cannot keep fluids down."
       }
     ],
     "kind": "illness",
@@ -1163,23 +1188,25 @@ export const modules = [
     "core": true,
     "learning": [
       "Monitor glucose and ketones when sick",
-      "Prevent dehydration and DKA",
-      "Know when to call"
+      "Apply Table 7.3 sick-day rules for type 1 diabetes",
+      "Know when to contact the diabetes team"
     ],
     "notes": [
-      "Illness hormones can raise glucose even when appetite is low. A written plan should cover monitoring, fluids, food, ketones, insulin, medicines and escalation.",
-      "Basal insulin is usually continued in type 1 diabetes. Other medicines may need temporary changes during vomiting, fasting, dehydration, kidney injury or surgery—follow clinician instructions.",
-      "Persistent vomiting, moderate/high ketones, deep breathing, confusion or inability to drink require urgent assessment."
+      "Table 7.3 Sick-day rules for people with type 1 diabetes: Capillary blood glucose should be estimated at least every 2 hours throughout the illness.",
+      "If capillary blood glucose is >12 mmol/L (>216 mg/dL), check urine or blood for ketones immediately.",
+      "Plenty of clear fluids should be drunk to avoid dehydration; if solid food cannot be consumed, glucose-containing fluids should be ingested as an alternative.",
+      "Insulin administration should NOT be stopped. Usually, during acute illness and stress, insulin doses need to be INCREASED by 25–50%.",
+      "Contact your doctor or diabetes team immediately if vomiting, hyperketonemia, or ketonuria is persistent, or if you cannot keep fluids down."
     ],
     "practice": [
-      "Pack a sick-day kit",
-      "Write your 24-hour contact route",
-      "Check ketone strips and glucagon expiry dates"
+      "Pack a sick-day kit with ketone strips and clear/glucose-containing fluids",
+      "Write down your 24-hour care team contact numbers",
+      "Set a 2-hour alarm to check capillary blood glucose during illness"
     ],
     "redFlags": [
-      "Trouble breathing or deep/rapid breathing",
-      "Moderate/high or rising ketones",
-      "Cannot keep fluids down"
+      "Persistent vomiting or inability to keep fluids down",
+      "Capillary blood glucose >12 mmol/L with persistent hyperketonemia or ketonuria",
+      "Deep/rapid breathing, confusion, or severe dehydration"
     ]
   },
   {

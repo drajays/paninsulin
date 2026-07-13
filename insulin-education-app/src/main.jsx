@@ -311,8 +311,9 @@ function VisualQuiz({ progress, setProgress, go }) {
   const [selected, setSelected] = useState(null);
 
   const categories = [
-    { id: 'all', label: 'All Visuals (57)' },
+    { id: 'all', label: 'All Visuals (63)' },
     { id: 'everyday', label: 'Everyday Safety (14)' },
+    { id: 'table73sickday', label: 'Table 7.3 Sick-Day Rules (5)' },
     { id: 'syringe', label: 'Syringe Anatomy (5)' },
     { id: 'airshot', label: 'Air Shots & Priming (5)' },
     { id: 'resuspension', label: 'Cloudy Resuspension (5)' },
@@ -781,6 +782,41 @@ function TopicIllustration({ kind, accent = '#4f46e5', large = false }) {
     </g>
   );
   else if (kind === 'driving') art = <><rect x="86" y="96" width="148" height="44" rx="16" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M100 96 L114 64 H206 L220 96" fill="none" stroke={accent} strokeWidth="4" strokeLinejoin="round" /><rect x="140" y="76" width="40" height="18" rx="4" fill={accent} opacity=".25" /><circle cx="118" cy="140" r="16" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="202" cy="140" r="16" fill="#fff" stroke={accent} strokeWidth="4" /><circle cx="118" cy="140" r="5" fill={accent} /><circle cx="202" cy="140" r="5" fill={accent} /></>;
+  else if (kind === 'table73sickday') art = (
+    <g>
+      {/* Panel 1: Check Capillary Glucose Every 2 Hours */}
+      <rect x="20" y="38" width="85" height="110" rx="8" fill="#ffffff" stroke="#7c3aed" strokeWidth="2.5" />
+      <circle cx="62" cy="74" r="18" fill="#f5f3ff" stroke="#7c3aed" strokeWidth="2" />
+      <path d="M62 74 L62 62 M62 74 L72 74" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" />
+      <text x="62" y="108" fontSize="8.5" fontWeight="bold" textAnchor="middle" fill="#7c3aed">CHECK EVERY 2H</text>
+      <text x="62" y="122" fontSize="7" textAnchor="middle" fill="#64748b">Capillary Glucose</text>
+      <text x="62" y="136" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#be123c">&gt;12 mmol/L = Ketones</text>
+
+      {/* Panel 2: Never Stop Insulin & +25-50% Dose */}
+      <rect x="117" y="38" width="85" height="110" rx="8" fill="#ffffff" stroke="#0f766e" strokeWidth="2.5" />
+      <rect x="145" y="55" width="30" height="30" rx="6" fill="#f0fdf4" stroke="#0f766e" strokeWidth="2" />
+      <text x="160" y="74" fontSize="11" fontWeight="bold" textAnchor="middle" fill="#0f766e">+50%</text>
+      <text x="160" y="105" fontSize="8.5" fontWeight="bold" textAnchor="middle" fill="#0f766e">NEVER STOP</text>
+      <text x="160" y="118" fontSize="7.5" fontWeight="bold" textAnchor="middle" fill="#15803d">Insulin Continued</text>
+      <text x="160" y="134" fontSize="7" textAnchor="middle" fill="#64748b">+25% to +50% Dose</text>
+
+      {/* Panel 3: Fluids & Alternative Carbohydrates */}
+      <rect x="214" y="38" width="85" height="110" rx="8" fill="#ffffff" stroke="#0284c7" strokeWidth="2.5" />
+      <path d="M245 58 H268 L264 90 H249 Z" fill="#e0f2fe" stroke="#0284c7" strokeWidth="2" />
+      <text x="256" y="108" fontSize="8.5" fontWeight="bold" textAnchor="middle" fill="#0284c7">PLENTY FLUIDS</text>
+      <text x="256" y="122" fontSize="7" textAnchor="middle" fill="#64748b">Clear Hydration</text>
+      <text x="256" y="136" fontSize="7" fontWeight="bold" textAnchor="middle" fill="#ca8a04">Or Glucose Fluids</text>
+    </g>
+  );
+  else if (kind === 'drivingpen') art = (
+    <g>
+      <rect x="110" y="45" width="100" height="70" rx="8" fill="#fff" stroke={accent} strokeWidth="3" strokeDasharray="6 5" />
+      <circle cx="130" cy="63" r="7" fill={accent} opacity=".4" />
+      <path d="M118 105 L145 78 L165 98 L185 70 L202 105 Z" fill={accent} opacity=".18" />
+      <text x="160" y="135" fontSize="13" fontWeight="700" textAnchor="middle" fill={accent}>Photo coming soon</text>
+      <text x="160" y="152" fontSize="10" textAnchor="middle" fill={accent} opacity=".75">Insulin pen kept within reach while driving</text>
+    </g>
+  );
   else art = <><circle cx="160" cy="95" r="56" fill="#fff" stroke={accent} strokeWidth="4" /><path d="M160 60 v70 M125 95 h70" stroke={accent} strokeWidth="7" strokeLinecap="round" /><circle cx="254" cy="70" r="20" fill={accent} opacity=".18" /></>;
   return <svg className={large ? 'topic-illustration large' : 'topic-illustration'} {...common}>{bg}{dot}{art}</svg>;
 }
