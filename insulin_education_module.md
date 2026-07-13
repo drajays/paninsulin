@@ -314,7 +314,22 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 71. How does accidental intramuscular injection cause painful stinging, and how can patients prevent it?
 **Answer:** Skeletal muscle tissue contains a far higher density of sensory nerve endings and blood vessels than subcutaneous adipose fat. If a needle is too long (> 6 mm) or if a patient presses the plastic pen base too forcefully into lean skin, the needle penetrates muscle, causing sharp pain and erratic rapid insulin absorption. To prevent intramuscular entry, use a 4 mm pen needle, insert straight at a 90-degree angle, and make gentle skin contact without pressing the pen base deeply.
 
-**Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); FIT India Consensus Guidelines; ADA insulin-administration guidance; manufacturer product labeling (NovoRapid FlexTouch, NovoRapid FlexPen, Lantus SoloStar, Sanofi AllStar, Lilly KwikPen, Lyumjev, HumaPen, NovoPen; BD Insulin Syringes; FIASP/insulin aspart FDA prescribing information); Ito et al., factors causing insulin precipitation and amyloid formation, J Pharm Health Care Sci 2019.
+### 72. What do pen needle color codes and gauge numbers indicate?
+**Answer:** Pen needles follow standard ISO color coding and gauge (G) sizes: 29G (0.33 mm, Red) has a fast flow rate but higher pain level; 30G (0.30 mm, Yellow) has moderate pain and good flow; 31G (0.25 mm, Blue) has low pain and moderate flow; and 32G (0.20 mm, Green) has minimal pain with a slightly slower flow rate. For patient comfort, 31G and 32G needles are strongly recommended. Always use a new sterile needle for each injection.
+
+### 73. What are the four primary categories of insulin pens and their specific clinical benefits?
+**Answer:** 1) Disposable Prefilled pens come ready-to-use and are discarded when empty (convenient, no cartridge loading); 2) Reusable Cartridge pens use replaceable 3 mL cartridges (cost-effective and eco-friendly); 3) Smart Connected pens offer digital dose tracking and memory log reminders; and 4) Junior pens allow dosing in 0.5-unit increments for precise pediatric or low-dose titrations.
+
+### 74. How does syringe and cap color coding distinguish different insulin concentrations?
+**Answer:** Insulin concentrations use standardized color coding to prevent dosing errors: U-40 (40 units/mL, Red syringe/cap, traditional 10 mL vial); U-100 (100 units/mL, Orange syringe/cap, the global standard for 10 mL vials and 3 mL cartridges); U-200 (200 units/mL, Yellow); U-300 (300 units/mL, Blue, used for concentrated glargine/Toujeo); and U-500 (500 units/mL, Purple, for very high insulin resistance).
+
+### 75. Why must an insulin cartridge always be paired with a U-100 syringe if emergency syringe aspiration is needed?
+**Answer:** Standard pen cartridges (such as 3 mL cartridges of regular, NPH, rapid-acting, or basal analogues) contain U-100 insulin (100 units/mL). In an emergency where a pen device breaks and insulin must be aspirated from the cartridge with a syringe, you must use a U-100 (Orange) syringe. Drawing U-100 insulin into a U-40 syringe causes a severe 2.5-fold overdose.
+
+### 76. How do insulin cartridges compare to standard vials in terms of wastage and compliance?
+**Answer:** While standard 10 mL vials have a lower upfront cost per unit, they often result in higher wastage if the patient does not use 10 mL within the 28–30 day open room-temperature window. By contrast, 3 mL cartridges (1.5 mL for U-300) result in up to 10x less wastage, integrate seamlessly with reusable pens, and improve patient adherence and transport convenience.
+
+**Evidence anchors:** ADA Standards of Care 2026, Section 9; FITTER Forward expert recommendations (Mayo Clinic Proceedings 2025); FIT India Consensus Guidelines; ISO pen needle and syringe color coding standards; manufacturer product labeling.
 
 ---
 
@@ -447,6 +462,12 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 20. What should I carry every day?
 **Answer:** Fast-acting glucose, meter or CGM supplies, prescribed medication, medical identification and emergency contact information. If prescribed, carry glucagon. Store supplies where they are accessible and tell trusted people how to help.
 
+### 21. What are practical 15-gram fast-acting carbohydrate exchanges commonly available in India?
+**Answer:** Standard 15-gram fast-acting carbohydrate exchanges that rapidly raise blood glucose include: 3 glucose biscuits (e.g., Parle-G), 100 mL of fruit juice (half of a small pack), 1 slice of white bread, or half of a large banana. Always measure 15 grams precisely and recheck blood glucose after 15 minutes.
+
+### 22. What essential instructions should be printed on a patient's Emergency Medical Diabetes Card?
+**Answer:** A complete emergency medical card should state: "I have diabetes. If I become unconscious or my behavior is not normal, it may be due to diabetes or medicines given for diabetes. If I am able to swallow, please give me a glass of juice or 3 teaspoons of sugar. If in 10 minutes I do not regain consciousness, please call a doctor or emergency services for intravenous glucose. If I am unconscious and unable to swallow, DO NOT give anything by mouth."
+
 **Evidence anchors:** ADA Standards of Care 2026, Section 6; ADA severe-hypoglycemia education; International Consensus on CGM metrics; Endocrine Society hypoglycemia guidance where applicable.
 
 ---
@@ -515,6 +536,9 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 ### 20. What is the goal of monitoring?
 **Answer:** The goal is safe, informed action: prevent severe lows and DKA, understand patterns, guide treatment, protect organs, support pregnancy or activity and improve quality of life. A number is information, not a measure of personal worth.
 
+### 21. What are the consensus continuous glucose monitoring (CGM) time-in-range targets for most adults with diabetes?
+**Answer:** According to international consensus CGM targets, most adults with type 1 or type 2 diabetes should aim for: Time in Range (TIR, 70–180 mg/dL) > 70% of the day (~16+ hours 48 mins); Time Below Range (TBR, < 70 mg/dL) < 4% (with < 1% below 54 mg/dL); and Time Above Range (TAR, > 180 mg/dL) < 25% (with < 5% above 250 mg/dL). For older or high-risk individuals, TIR target is > 50% with TBR < 1%.
+
 **Evidence anchors:** ADA Standards of Care 2026, Sections 4, 6, 7, 10–12; International Consensus on CGM; IDF 2025; KDIGO 2022; IWGDF 2023.
 
 ---
@@ -582,6 +606,9 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 
 ### 20. How can I make activity sustainable?
 **Answer:** Choose enjoyable movement, schedule it, start small, use social support, vary intensity, track benefits beyond glucose and address pain or access barriers. A physiotherapist, exercise professional or diabetes educator can tailor a safe plan.
+
+### 21. What pre-exercise blood sugar thresholds guide safe sports and physical activity?
+**Answer:** Clinical pre-exercise blood glucose thresholds guide nutrition and safety: 1) Less than 90 mg/dL: take 10–20 grams of fast-acting carbohydrate, recheck in 10–15 minutes, and start activity only when > 90 mg/dL; 2) 90–125 mg/dL: take 10 grams of carbohydrate before starting play; 3) 125–250 mg/dL: safe to start activity without extra carbohydrates; and 4) 250 mg/dL and above: check urine or blood ketones first—do not exercise if ketones are elevated.
 
 **Evidence anchors:** ADA Standards of Care 2026, Section 5; ADA physical-activity recommendations; IDF physical activity guidance; IWGDF foot-prevention guidance.
 # 7. Precautions during illness
@@ -662,6 +689,9 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 
 ### 25. When does Table 7.3 advise contacting a doctor or diabetes team immediately?
 **Answer:** Contact your doctor or diabetes emergency team immediately if vomiting, hyperketonemia (elevated blood ketones), or ketonuria (ketones in urine) is persistent, or if you cannot keep fluids down.
+
+### 26. How is extra insulin calculated during sick days based on blood and urine ketone levels?
+**Answer:** Clinical sick-day correction tables guide supplemental fast-acting insulin as a percentage of Total Daily Dose (TDD): 1) Blood ketones < 0.6 mmol/L (Urine 0/Trace): add 5% of TDD extra if blood glucose is > 250 mg/dL; 2) Blood ketones 0.6–1.0 mmol/L (Starvation ketones): add 5% extra if glucose 180–250 mg/dL, and 5–10% extra if > 250 mg/dL; 3) Blood ketones 1.0–1.5 mmol/L (Medium ketones): add 10% extra if glucose 180–250 mg/dL, and 10–15% extra if > 250 mg/dL; and 4) Blood ketones > 1.5 mmol/L (High ketones): seek urgent medical assessment immediately.
 
 **Evidence anchors:** ADA Standards of Care 2026, Section 6; Table 7.3 Sick-day rules for people with type 1 diabetes; ADA/EASD/JBDS/AACE/DTS hyperglycemic-crisis consensus 2024; CDC sick-day guidance.
 
@@ -1118,6 +1148,9 @@ The module is aligned primarily with the **American Diabetes Association (ADA) S
 
 ### 37. Since Basalog One, Basugine, Glaritus DispoPen-2 and Nobeglar Uno are all glargine biosimilars, can they be swapped for one another?
 **Answer:** No. Even though they deliver the same molecule, insulin glargine, switching between biosimilar brands, devices or manufacturers should only be done with the treating physician's guidance, since device handling, absorption and monitoring needs can differ.
+
+### 38. How do Indian insulin brands map across action profiles according to clinical reference tables?
+**Answer:** Indian insulin reference tables categorize major manufacturer portfolios across five profiles: 1) Novo Nordisk: Actrapid (short), Insulatard (intermediate NPH), Human Mixtard 30/70 (premixed human), NovoRapid (rapid aspart), Levemir/Tresiba (long); 2) Eli Lilly: Huminsulin R (short), Huminsulin N (intermediate), Huminsulin 30/70 (premix), Humalog (rapid lispro); 3) Biocon: Insugen R (short), Insugen N (intermediate), Insugen 30/70 (premix), Basalog (long glargine); 4) Shreya: Recosulin R, Recosulin N, Recosulin 30/70; 5) Sanofi: Insuman R, Insuman N, Insuman 25/50, Apidra (rapid glulisine), Lantus (long glargine); and 6) Wockhardt: Wosulin R, Wosulin N, Wosulin 30/70.
 
 **Evidence anchors:** Manufacturer product labeling (Novo Nordisk, Sanofi, Eli Lilly, Biocon, Wockhardt, Lupin, Mankind Pharma); FDA-approved US prescribing information (Admelog, Afrezza, Apidra, Fiasp, Humalog, NovoLog, Humulin, Novolin, Basaglar, Lantus, Levemir, Toujeo, Tresiba, Ryzodeg, KwikPen, Lyumjev); ADA Standards of Care 2026, insulin therapy section; CDSCO Schedule H1 prescription drug rules.
 

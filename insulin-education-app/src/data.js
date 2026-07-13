@@ -489,6 +489,31 @@ export const modules = [
         "id": "2-71",
         "question": "How does accidental intramuscular injection cause painful stinging, and how can patients prevent it?",
         "answer": "Skeletal muscle tissue contains a far higher density of sensory nerve endings and blood vessels than subcutaneous adipose fat. If a needle is too long (> 6 mm) or if a patient presses the plastic pen base too forcefully into lean skin, the needle penetrates muscle, causing sharp pain and erratic rapid insulin absorption. To prevent intramuscular entry, use a 4 mm pen needle, insert straight at a 90-degree angle, and make gentle skin contact without pressing the pen base deeply."
+      },
+      {
+        "id": "2-72",
+        "question": "What do pen needle color codes and gauge numbers indicate?",
+        "answer": "Pen needles follow standard ISO color coding and gauge (G) sizes: 29G (0.33 mm, Red) has a fast flow rate but higher pain level; 30G (0.30 mm, Yellow) has moderate pain and good flow; 31G (0.25 mm, Blue) has low pain and moderate flow; and 32G (0.20 mm, Green) has minimal pain with a slightly slower flow rate. For patient comfort, 31G and 32G needles are strongly recommended. Always use a new sterile needle for each injection."
+      },
+      {
+        "id": "2-73",
+        "question": "What are the four primary categories of insulin pens and their specific clinical benefits?",
+        "answer": "1) Disposable Prefilled pens come ready-to-use and are discarded when empty (convenient, no cartridge loading); 2) Reusable Cartridge pens use replaceable 3 mL cartridges (cost-effective and eco-friendly); 3) Smart Connected pens offer digital dose tracking and memory log reminders; and 4) Junior pens allow dosing in 0.5-unit increments for precise pediatric or low-dose titrations."
+      },
+      {
+        "id": "2-74",
+        "question": "How does syringe and cap color coding distinguish different insulin concentrations?",
+        "answer": "Insulin concentrations use standardized color coding to prevent dosing errors: U-40 (40 units/mL, Red syringe/cap, traditional 10 mL vial); U-100 (100 units/mL, Orange syringe/cap, the global standard for 10 mL vials and 3 mL cartridges); U-200 (200 units/mL, Yellow); U-300 (300 units/mL, Blue, used for concentrated glargine/Toujeo); and U-500 (500 units/mL, Purple, for very high insulin resistance)."
+      },
+      {
+        "id": "2-75",
+        "question": "Why must an insulin cartridge always be paired with a U-100 syringe if emergency syringe aspiration is needed?",
+        "answer": "Standard pen cartridges (such as 3 mL cartridges of regular, NPH, rapid-acting, or basal analogues) contain U-100 insulin (100 units/mL). In an emergency where a pen device breaks and insulin must be aspirated from the cartridge with a syringe, you must use a U-100 (Orange) syringe. Drawing U-100 insulin into a U-40 syringe causes a severe 2.5-fold overdose."
+      },
+      {
+        "id": "2-76",
+        "question": "How do insulin cartridges compare to standard vials in terms of wastage and compliance?",
+        "answer": "While standard 10 mL vials have a lower upfront cost per unit, they often result in higher wastage if the patient does not use 10 mL within the 28–30 day open room-temperature window. By contrast, 3 mL cartridges (1.5 mL for U-300) result in up to 10x less wastage, integrate seamlessly with reusable pens, and improve patient adherence and transport convenience."
       }
     ],
     "kind": "insulin",
@@ -506,8 +531,9 @@ export const modules = [
       "Most routine insulin is delivered into subcutaneous tissue. The current ADA guidance supports short pen needles such as 4 mm for many people, with individualized technique review.",
       "Rotate injections systematically within approved sites. Do not inject into lumps, scars, bruises, wounds or areas of infection.",
       "Never stop basal insulin in type 1 diabetes without urgent professional advice. Missed doses and incorrect insulin can be emergencies.",
-      "Pen devices vary: spring-loaded pens (e.g., NovoRapid FlexTouch) need only a light push and their button does not extend, while manual pens (e.g., NovoRapid FlexPen) require active thumb pressure and an extending button—ask for a re-demonstration whenever your device model changes.",
-      "Pen hardware details (maximum single dose, dosing increments, battery/replacement guidance) can change when a manufacturer updates or discontinues a model, as already happened with NovoRapid FlexTouch. Treat the specific numbers in this module as a general guide and confirm the current figure on the pack insert or instructions for use for the exact pen in hand."
+      "Pen needle color coding & gauges: 29G (Red, fast flow/higher pain), 30G (Yellow), 31G (Blue, recommended comfort), 32G (Green, minimal pain). Always use a fresh needle.",
+      "Pen categories: Disposable prefilled, Reusable 3mL cartridge (10x less wastage than vials), Smart connected, and Junior pens with 0.5-unit increments.",
+      "Concentration color coding: U-40 (Red), U-100 (Orange), U-200 (Yellow), U-300 (Blue), U-500 (Purple). Cartridges are ALWAYS U-100 (100 units/mL); if aspirating with a syringe in an emergency, you must use a U-100 syringe."
     ],
     "practice": [
       "Demonstrate your injection technique to an educator",
@@ -757,6 +783,16 @@ export const modules = [
         "id": "4-20",
         "question": "What should I carry every day?",
         "answer": "Fast-acting glucose, meter or CGM supplies, prescribed medication, medical identification and emergency contact information. If prescribed, carry glucagon. Store supplies where they are accessible and tell trusted people how to help."
+      },
+      {
+        "id": "4-21",
+        "question": "What are practical 15-gram fast-acting carbohydrate exchanges commonly available in India?",
+        "answer": "Standard 15-gram fast-acting carbohydrate exchanges that rapidly raise blood glucose include: 3 glucose biscuits (e.g., Parle-G), 100 mL of fruit juice (half of a small pack), 1 slice of white bread, or half of a large banana. Always measure 15 grams precisely and recheck blood glucose after 15 minutes."
+      },
+      {
+        "id": "4-22",
+        "question": "What essential instructions should be printed on a patient's Emergency Medical Diabetes Card?",
+        "answer": "A complete emergency medical card should state: \"I have diabetes. If I become unconscious or my behavior is not normal, it may be due to diabetes or medicines given for diabetes. If I am able to swallow, please give me a glass of juice or 3 teaspoons of sugar. If in 10 minutes I do not regain consciousness, please call a doctor or emergency services for intravenous glucose. If I am unconscious and unable to swallow, DO NOT give anything by mouth.\""
       }
     ],
     "kind": "hypo",
@@ -772,8 +808,8 @@ export const modules = [
     ],
     "notes": [
       "A glucose below 70 mg/dL (3.9 mmol/L) is a warning value. A level below 54 mg/dL (3.0 mmol/L) is clinically significant; severe hypoglycemia requires help from another person.",
-      "For a conscious person who can swallow, use measured fast-acting glucose and recheck after 15 minutes. Fat-rich foods are slower for initial treatment.",
-      "If a person is unconscious, confused or having a seizure, do not give food or drink by mouth. Use glucagon if prescribed and call emergency services."
+      "Practical Indian 15-gram fast carbohydrate exchanges: 3 glucose biscuits (e.g., Parle-G), 100 mL fruit juice (half small pack), 1 slice white bread, or half of a large banana. Recheck blood glucose after 15 minutes.",
+      "Emergency Medical Card instruction: If alert and able to swallow, give a glass of juice or 3 teaspoons of sugar. If unconscious or unable to swallow, DO NOT give anything by mouth; seek urgent medical care/IV glucose immediately."
     ],
     "practice": [
       "Carry measured fast-acting glucose",
@@ -889,6 +925,11 @@ export const modules = [
         "id": "5-20",
         "question": "What is the goal of monitoring?",
         "answer": "The goal is safe, informed action: prevent severe lows and DKA, understand patterns, guide treatment, protect organs, support pregnancy or activity and improve quality of life. A number is information, not a measure of personal worth."
+      },
+      {
+        "id": "5-21",
+        "question": "What are the consensus continuous glucose monitoring (CGM) time-in-range targets for most adults with diabetes?",
+        "answer": "According to international consensus CGM targets, most adults with type 1 or type 2 diabetes should aim for: Time in Range (TIR, 70–180 mg/dL) > 70% of the day (~16+ hours 48 mins); Time Below Range (TBR, < 70 mg/dL) < 4% (with < 1% below 54 mg/dL); and Time Above Range (TAR, > 180 mg/dL) < 25% (with < 5% above 250 mg/dL). For older or high-risk individuals, TIR target is > 50% with TBR < 1%."
       }
     ],
     "kind": "monitor",
@@ -904,7 +945,7 @@ export const modules = [
     ],
     "notes": [
       "SMBG gives a point-in-time result; CGM adds trends and alerts. Neither replaces a personalized plan or a meter check when symptoms and a device reading disagree.",
-      "A1C shows average exposure but not daily variability or lows. Time in range, time below range and pattern review add context.",
+      "Consensus CGM Time-in-Range (TIR) targets for adults: TIR (70–180 mg/dL) > 70% (>16h 48m); Time Below Range (<70 mg/dL) < 4% (with <1% below 54 mg/dL); and Time Above Range (>180 mg/dL) < 25%.",
       "Diabetes follow-up also includes blood pressure, lipids, kidney, eye, foot, dental, vaccine and emotional-health care as appropriate."
     ],
     "practice": [
@@ -1021,6 +1062,11 @@ export const modules = [
         "id": "6-20",
         "question": "How can I make activity sustainable?",
         "answer": "Choose enjoyable movement, schedule it, start small, use social support, vary intensity, track benefits beyond glucose and address pain or access barriers. A physiotherapist, exercise professional or diabetes educator can tailor a safe plan."
+      },
+      {
+        "id": "6-21",
+        "question": "What pre-exercise blood sugar thresholds guide safe sports and physical activity?",
+        "answer": "Clinical pre-exercise blood glucose thresholds guide nutrition and safety: 1) Less than 90 mg/dL: take 10–20 grams of fast-acting carbohydrate, recheck in 10–15 minutes, and start activity only when > 90 mg/dL; 2) 90–125 mg/dL: take 10 grams of carbohydrate before starting play; 3) 125–250 mg/dL: safe to start activity without extra carbohydrates; and 4) 250 mg/dL and above: check urine or blood ketones first—do not exercise if ketones are elevated."
       }
     ],
     "kind": "exercise",
@@ -1036,7 +1082,7 @@ export const modules = [
     ],
     "notes": [
       "Many adults work toward 150 minutes of moderate-to-vigorous activity weekly across at least 3 days, with resistance exercise 2–3 times weekly when appropriate.",
-      "Activity can lower glucose during exercise or later, including overnight. Insulin and sulfonylurea users need a plan for monitoring and rescue carbohydrate.",
+      "Pre-exercise blood glucose thresholds: <90 mg/dL take 10–20g carbohydrate and recheck in 10–15 min; 90–125 mg/dL take 10g carbohydrate and play; 125–250 mg/dL go play without extra carbs; >250 mg/dL check ketones and avoid vigorous activity if elevated.",
       "Avoid vigorous exercise with elevated ketones. Adapt activity for retinopathy, neuropathy, kidney disease, heart disease, pregnancy and foot risk."
     ],
     "practice": [
@@ -1178,6 +1224,11 @@ export const modules = [
         "id": "7-25",
         "question": "When does Table 7.3 advise contacting a doctor or diabetes team immediately?",
         "answer": "Contact your doctor or diabetes emergency team immediately if vomiting, hyperketonemia (elevated blood ketones), or ketonuria (ketones in urine) is persistent, or if you cannot keep fluids down."
+      },
+      {
+        "id": "7-26",
+        "question": "How is extra insulin calculated during sick days based on blood and urine ketone levels?",
+        "answer": "Clinical sick-day correction tables guide supplemental fast-acting insulin as a percentage of Total Daily Dose (TDD): 1) Blood ketones < 0.6 mmol/L (Urine 0/Trace): add 5% of TDD extra if blood glucose is > 250 mg/dL; 2) Blood ketones 0.6–1.0 mmol/L (Starvation ketones): add 5% extra if glucose 180–250 mg/dL, and 5–10% extra if > 250 mg/dL; 3) Blood ketones 1.0–1.5 mmol/L (Medium ketones): add 10% extra if glucose 180–250 mg/dL, and 10–15% extra if > 250 mg/dL; and 4) Blood ketones > 1.5 mmol/L (High ketones): seek urgent medical assessment immediately."
       }
     ],
     "kind": "illness",
@@ -2057,6 +2108,11 @@ export const modules = [
         "id": "13-37",
         "question": "Since Basalog One, Basugine, Glaritus DispoPen-2 and Nobeglar Uno are all glargine biosimilars, can they be swapped for one another?",
         "answer": "No. Even though they deliver the same molecule, insulin glargine, switching between biosimilar brands, devices or manufacturers should only be done with the treating physician's guidance, since device handling, absorption and monitoring needs can differ."
+      },
+      {
+        "id": "13-38",
+        "question": "How do Indian insulin brands map across action profiles according to clinical reference tables?",
+        "answer": "Indian insulin reference tables categorize major manufacturer portfolios across five profiles: 1) Novo Nordisk: Actrapid (short), Insulatard (intermediate NPH), Human Mixtard 30/70 (premixed human), NovoRapid (rapid aspart), Levemir/Tresiba (long); 2) Eli Lilly: Huminsulin R (short), Huminsulin N (intermediate), Huminsulin 30/70 (premix), Humalog (rapid lispro); 3) Biocon: Insugen R (short), Insugen N (intermediate), Insugen 30/70 (premix), Basalog (long glargine); 4) Shreya: Recosulin R, Recosulin N, Recosulin 30/70; 5) Sanofi: Insuman R, Insuman N, Insuman 25/50, Apidra (rapid glulisine), Lantus (long glargine); and 6) Wockhardt: Wosulin R, Wosulin N, Wosulin 30/70."
       }
     ],
     "kind": "insulintypes",
@@ -2074,6 +2130,7 @@ export const modules = [
       "Insulins fall into five broad categories by action profile: rapid-acting, short-acting/regular, intermediate-acting (NPH), long/ultra-long-acting basal, and premixed products that blend two profiles.",
       "The same molecule is often sold under different brand names in different countries—for example insulin glargine is Lantus in both India and the US, but also Basaglar in the US and Basalog or Glaritus in India—so the molecule name matters more than the brand.",
       "Brand names can look or sound alike despite very different action profiles—for example Humalog (rapid-acting analog) versus Huminsulin (regular/NPH human insulin)—so always confirm both the molecule and the brand on the label.",
+      "Indian Insulin Brands Reference Table: Novo Nordisk (Actrapid, Insulatard, Mixtard, NovoRapid, Levemir/Tresiba); Eli Lilly (Huminsulin R/N/30-70, Humalog); Biocon (Insugen R/N/30-70, Basalog); Shreya (Recosulin R/N/30-70); Sanofi (Insuman R/N/25-50, Apidra, Lantus); Wockhardt (Wosulin R/N/30-70). Always verify molecule and concentration.",
       "Biosimilar and generic versions (such as Basalog, Glaritus, Eglucent or Admelog) are not automatically interchangeable with the original product; switching brands, routes (like inhaled Afrezza) or concentrations (like U100 vs U300) must be directed by the treating physician.",
       "Brand availability, pen hardware specifications and even brand names themselves change over time and by country. Where this module cites a specific device figure (maximum dose, dosing increments) for a regional or lesser-known brand, treat it as a general guide and confirm the current, country-specific prescribing information or pack insert before relying on it."
     ],
